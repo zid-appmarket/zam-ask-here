@@ -20,6 +20,7 @@ knowledge/
 ├── zam/            # ZAM (Zid App Market) documents  -> product: zam
 ├── theme-market/   # Theme Market documents          -> product: theme_market
 ├── general/        # company-wide documents           -> product: general
+├── _inbox/         # drafts captured from Slack, never ingested
 └── _examples/      # format examples, never ingested
 ```
 
@@ -97,3 +98,19 @@ matter:
 
 `python scripts/report_gaps.py` lists the questions that got escalated, most
 frequent first. That list is the backlog for this directory.
+
+## Answers captured from Slack
+
+When the agent cannot answer, it tags an owner. If that owner answers in the
+thread and adds :white_check_mark:, the agent keeps their answer. Then:
+
+```bash
+python scripts/report_gaps.py --resolved    # see what was captured
+python scripts/report_gaps.py --draft-all   # write drafts into _inbox/
+```
+
+Each draft arrives as `status: draft` with a review checklist in its front
+matter. **`_inbox/` is not indexed**, so nothing there can be quoted by the
+agent. Promoting a draft means confirming the wording, giving it a stable `id`
+and a real `updated` date, setting `status: verified`, and moving it into the
+product directory — a reviewed git change, like any other document here.

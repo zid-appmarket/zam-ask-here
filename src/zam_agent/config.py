@@ -73,6 +73,12 @@ def _looks_like_slack_actor_id(value: str) -> bool:
     return len(value) >= 9 and value[0] in {"U", "W", "S"} and value[1:].isalnum()
 
 
+def _normalize_reaction(value: str | None) -> str:
+    """Accept ``:white_check_mark:`` or ``white_check_mark``; Slack sends bare."""
+
+    return (value or "").strip().strip(":")
+
+
 def _looks_like_slack_channel_id(value: str) -> bool:
     return len(value) >= 9 and value[0] in {"C", "G", "D"} and value[1:].isalnum()
 
@@ -97,6 +103,10 @@ class SlackConfig:
     answer_general_questions: bool
     escalate_general_questions: bool
     include_sources: bool
+    enable_slack_resolution: bool
+    resolve_reaction: str
+    broadcast_reaction: str
+    enable_broadcast: bool
 
     def is_watched_channel(self, channel_id: str) -> bool:
         return channel_id in self.channel_ids
@@ -108,6 +118,7 @@ class EscalationConfig:
     zam_user_id: str
     theme_market_user_id: str
     cooldown_hours: int
+    knowledge_editor_user_ids: tuple[str, ...] = ()
 
     def owner_for(self, product: str | None) -> str:
         if product == "zam":
@@ -115,6 +126,23 @@ class EscalationConfig:
         if product == "theme_market":
             return self.theme_market_user_id
         return self.default_user_id
+
+    @property
+    def owner_ids(self) -> tuple[str, ...]:
+        seen = (self.default_user_id, self.zam_user_id, self.theme_market_user_id)
+        return tuple(dict.fromkeys(uid for uid in seen if uid))
+
+    def may_resolve(self, user_id: str) -> bool:
+        """Only a configured owner or knowledge editor may close a gap.
+
+        Anyone can add a reaction in a public channel, so the authorisation
+        check has to live here rather than relying on the reaction itself.
+        """
+
+        uid = (user_id or "").strip()
+        if not uid:
+            return False
+        return uid in self.owner_ids or uid in self.knowledge_editor_user_ids
 
 
 @dataclass(frozen=True)
@@ -146,6 +174,8 @@ class KnowledgeConfig:
     notion_page_ids: tuple[str, ...]
     gdrive_credentials_file: str | None
     gdrive_folder_ids: tuple[str, ...]
+    gdrive_file_ids: tuple[str, ...] = ()
+    draft_directory: str = "./knowledge/_inbox"
 
     @property
     def notion_enabled(self) -> bool:
@@ -153,7 +183,7 @@ class KnowledgeConfig:
 
     @property
     def gdrive_enabled(self) -> bool:
-        return bool(self.gdrive_credentials_file) and bool(self.gdrive_folder_ids)
+        return bool(self.gdrive_credentials_file) and bool(self.gdrive_folder_ids or self.gdrive_file_ids)
 
 
 @dataclass(frozen=True)
@@ -249,6 +279,13 @@ def load_config(*, require_secrets: bool = True) -> AppConfig:
             "all escalations go to ESCALATION_USER_ID."
         )
 
+    editors = _env_list("KNOWLEDGE_EDITOR_USER_IDS")
+    for editor in editors:
+        if not _looks_like_slack_actor_id(editor):
+            raise ConfigError(
+                f"KNOWLEDGE_EDITOR_USER_IDS entry {editor!r} does not look like a Slack user or group ID"
+            )
+
     model = _env("CLAUDE_MODEL", "claude-opus-5-5") or "claude-opus-5-5"
     llm = LLMConfig(
         api_key=(_require("ANTHROPIC_API_KEY") if require_secrets else _env("ANTHROPIC_API_KEY", "") or ""),
@@ -285,6 +322,8 @@ def load_config(*, require_secrets: bool = True) -> AppConfig:
         notion_page_ids=_env_list("NOTION_PAGE_IDS"),
         gdrive_credentials_file=_env("GOOGLE_DRIVE_CREDENTIALS_FILE"),
         gdrive_folder_ids=_env_list("GOOGLE_DRIVE_FOLDER_IDS"),
+        gdrive_file_ids=_env_list("GOOGLE_DRIVE_FILE_IDS"),
+        draft_directory=_env("KNOWLEDGE_DRAFT_DIR", "./knowledge/_inbox") or "./knowledge/_inbox",
     )
 
     high = _env_float("CONFIDENCE_THRESHOLD", 0.68)
@@ -321,6 +360,10 @@ def load_config(*, require_secrets: bool = True) -> AppConfig:
         answer_general_questions=_env_bool("ANSWER_GENERAL_QUESTIONS", True),
         escalate_general_questions=_env_bool("ESCALATE_GENERAL_QUESTIONS", False),
         include_sources=_env_bool("INCLUDE_SOURCE_LINKS", True),
+        enable_slack_resolution=_env_bool("ENABLE_SLACK_RESOLUTION", True),
+        resolve_reaction=_normalize_reaction(_env("RESOLVE_REACTION", "white_check_mark")),
+        broadcast_reaction=_normalize_reaction(_env("BROADCAST_REACTION", "mega")),
+        enable_broadcast=_env_bool("ENABLE_BROADCAST", False),
     )
 
     database_url = _env("DATABASE_URL", "sqlite:///./data/zam_agent.db") or "sqlite:///./data/zam_agent.db"
@@ -332,6 +375,7 @@ def load_config(*, require_secrets: bool = True) -> AppConfig:
             zam_user_id=zam_owner,
             theme_market_user_id=theme_owner,
             cooldown_hours=_env_int("ESCALATION_COOLDOWN_HOURS", 24),
+            knowledge_editor_user_ids=editors,
         ),
         llm=llm,
         knowledge=knowledge,

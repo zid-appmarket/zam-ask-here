@@ -105,14 +105,36 @@ messages without telling the agent each reader's entitlements, so anything
 posted is visible to the whole channel. For genuinely need-to-know material the
 right answer is to keep it out of the index — not to rely on a label.
 
-## 6. No autonomous authority
+## 6. Resolving a gap is an authorised action
+
+Anyone in a public channel can add any reaction, so the reaction itself carries
+no authority. `EscalationConfig.may_resolve` allows only the three configured
+escalation owners plus `KNOWLEDGE_EDITOR_USER_IDS`; every other reaction is
+counted (`resolution.unauthorized`), logged with the actor, and ignored.
+
+It is ignored *silently*. Replying "you are not allowed to do that" in a
+company-wide channel is worse than doing nothing, and it would also tell an
+attacker exactly which reaction is the interesting one.
+
+What a resolution can and cannot do:
+
+- It can mark a gap closed and store the answer an owner typed.
+- It **cannot** make that answer citable. The captured text goes through
+  `sanitize_outbound` (mentions stripped, secrets redacted, length bounded) and
+  is written as `status: draft` into `knowledge/_inbox/`, a folder the loader
+  ignores. Promotion to `verified` is a human edit in git.
+
+So the worst case for a compromised or careless owner account is a bad draft
+sitting in a review folder — not a false answer the agent will repeat.
+
+## 7. No autonomous authority
 
 The `requires_human_approval` category exists so that "approve my app", "waive
 this fee", "give me production access" never get an answer. They go straight to
 the configured owner with no answer attempt. The agent has no write scope for
 anything but posting messages.
 
-## 7. Supply chain and runtime
+## 8. Supply chain and runtime
 
 - Five direct dependencies, all pinned to a major version: `slack-bolt`,
   `slack-sdk`, `anthropic`, `PyYAML` (`safe_load` only), `python-dotenv`.
@@ -122,7 +144,7 @@ anything but posting messages.
 - Request verification is enabled for HTTP mode (Bolt verifies the Slack
   signature); Socket Mode has no inbound HTTP surface at all.
 
-## 8. Reporting
+## 9. Reporting
 
 If you find a way to make this agent assert something it cannot cite, ping
 someone it was not told to ping, or surface a document a channel should not

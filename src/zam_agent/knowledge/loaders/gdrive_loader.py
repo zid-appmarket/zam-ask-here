@@ -5,9 +5,10 @@ Requires the optional extra::
     pip install '.[gdrive]'      # google-api-python-client + google-auth
 
 Authentication is a **service account** with read-only Drive scope; share the
-approved folder with the service account's e-mail. Only the folder IDs listed
-in ``GOOGLE_DRIVE_FOLDER_IDS`` are read, so the agent cannot reach documents
-nobody approved. Google Docs are exported as plain text; metadata comes from
+approved folder (or document) with the service account's e-mail. Only the IDs
+listed in ``GOOGLE_DRIVE_FOLDER_IDS`` and ``GOOGLE_DRIVE_FILE_IDS`` are read,
+so the agent cannot reach documents nobody approved. Use ``_FILE_IDS`` when the
+canonical source is one Doc rather than a folder. Google Docs are exported as plain text; metadata comes from
 Drive ``appProperties`` (preferred) or the file's own description, using the
 same keys as Markdown front matter.
 """
@@ -37,29 +38,65 @@ DOWNLOADABLE = {"text/plain", "text/markdown", "text/x-markdown"}
 class GoogleDriveLoader(KnowledgeLoader):
     credentials_file: str | None
     folder_ids: tuple[str, ...] = ()
+    file_ids: tuple[str, ...] = ()
     name: str = "gdrive"
 
     def enabled(self) -> bool:
-        return bool(self.credentials_file) and bool(self.folder_ids)
+        return bool(self.credentials_file) and bool(self.folder_ids or self.file_ids)
 
     def load(self) -> Iterator[Document]:
         if not self.enabled():
             raise LoaderNotConfigured(
-                "GOOGLE_DRIVE_CREDENTIALS_FILE plus GOOGLE_DRIVE_FOLDER_IDS required"
+                "GOOGLE_DRIVE_CREDENTIALS_FILE plus GOOGLE_DRIVE_FOLDER_IDS "
+                "and/or GOOGLE_DRIVE_FILE_IDS required"
             )
         service = self._build_service()
+        seen: set[str] = set()
+
         for folder_id in self.folder_ids:
             for meta in self._list_folder(service, folder_id):
-                try:
-                    document = self._file_to_document(service, meta)
-                except LoaderError as exc:
-                    log.warning(
-                        "skipping Drive file",
-                        extra={"context": {"file_id": meta.get("id"), "error": str(exc)}},
-                    )
+                if meta["id"] in seen:
                     continue
+                seen.add(meta["id"])
+                document = self._safe_convert(service, meta)
                 if document is not None:
                     yield document
+
+        # Individually approved documents, for when the canonical source is a
+        # single Doc rather than a folder.
+        for file_id in self.file_ids:
+            if file_id in seen:
+                continue
+            seen.add(file_id)
+            single = self._file_metadata(service, file_id)
+            if single is None:
+                continue
+            document = self._safe_convert(service, single)
+            if document is not None:
+                yield document
+
+    def _safe_convert(self, service: Any, meta: dict[str, Any]) -> Document | None:
+        try:
+            return self._file_to_document(service, meta)
+        except LoaderError as exc:
+            log.warning(
+                "skipping Drive file",
+                extra={"context": {"file_id": meta.get("id"), "error": str(exc)}},
+            )
+            return None
+
+    def _file_metadata(self, service: Any, file_id: str) -> dict[str, Any] | None:
+        fields = "id, name, mimeType, modifiedTime, description, webViewLink, appProperties"
+        try:
+            return dict(
+                service.files().get(fileId=file_id, fields=fields, supportsAllDrives=True).execute()
+            )
+        except Exception as exc:  # noqa: BLE001 - the client raises its own error types
+            log.warning(
+                "could not read Drive file metadata",
+                extra={"context": {"file_id": file_id, "error": type(exc).__name__}},
+            )
+            return None
 
     def _build_service(self) -> Any:
         try:

@@ -36,6 +36,8 @@ BOT_USER = "U0BOTUSER01"
 OWNER_DEFAULT = "U0OWNERDEF1"
 OWNER_ZAM = "U0OWNERZAM1"
 OWNER_THEME = "U0OWNERTHM1"
+KB_EDITOR = "U0EDITOR0001"
+OUTSIDER = "U0OUTSIDER1"
 
 TODAY = _dt.date(2026, 11, 10)
 
@@ -61,6 +63,7 @@ def knowledge_config(directory: str | None = None, **overrides: Any) -> Knowledg
 
 def make_config(**overrides: Any) -> AppConfig:
     slack_overrides = overrides.pop("slack", {})
+    escalation_overrides = overrides.pop("escalation", {})
     confidence_overrides = overrides.pop("confidence", {})
     knowledge_overrides = overrides.pop("knowledge", {})
 
@@ -83,6 +86,10 @@ def make_config(**overrides: Any) -> AppConfig:
         answer_general_questions=True,
         escalate_general_questions=False,
         include_sources=True,
+        enable_slack_resolution=True,
+        resolve_reaction="white_check_mark",
+        broadcast_reaction="mega",
+        enable_broadcast=False,
     )
     slack_defaults.update(slack_overrides)
 
@@ -94,6 +101,15 @@ def make_config(**overrides: Any) -> AppConfig:
         max_unsupported_claims=0,
     )
     confidence_defaults.update(confidence_overrides)
+
+    escalation_defaults: dict[str, Any] = dict(
+        default_user_id=OWNER_DEFAULT,
+        zam_user_id=OWNER_ZAM,
+        theme_market_user_id=OWNER_THEME,
+        cooldown_hours=24,
+        knowledge_editor_user_ids=(KB_EDITOR,),
+    )
+    escalation_defaults.update(escalation_overrides)
 
     app_defaults: dict[str, Any] = dict(
         database_url="sqlite://:memory:",
@@ -107,12 +123,7 @@ def make_config(**overrides: Any) -> AppConfig:
 
     return AppConfig(
         slack=SlackConfig(**slack_defaults),
-        escalation=EscalationConfig(
-            default_user_id=OWNER_DEFAULT,
-            zam_user_id=OWNER_ZAM,
-            theme_market_user_id=OWNER_THEME,
-            cooldown_hours=24,
-        ),
+        escalation=EscalationConfig(**escalation_defaults),
         llm=LLMConfig(
             api_key="sk-ant-test-not-a-real-key",
             model="claude-opus-5-5",

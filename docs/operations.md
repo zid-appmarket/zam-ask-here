@@ -1,15 +1,30 @@
 # Operations
 
-## The weekly loop
+## The loop
 
-Escalations are the backlog, not failures.
+Escalations are the backlog, not failures. Most of it happens in Slack.
+
+**Owners, in the channel.** When the agent tags you, answer in the thread and
+add :white_check_mark: (`RESOLVE_REACTION`). The agent saves what you wrote,
+marks the gap closed and confirms in the thread. Removing the reaction reopens
+it. That is the whole owner-facing workflow — no CLI.
+
+**Whoever maintains the knowledge base, weekly:**
 
 ```bash
-python scripts/report_gaps.py          # unanswered questions, most frequent first
-# → write the answers into knowledge/ (see knowledge/README.md)
+python scripts/report_gaps.py --resolved    # what owners confirmed, with their answers
+python scripts/report_gaps.py --draft-all   # write each one into knowledge/_inbox/
+# review each draft: confirm the wording, set `status: verified` and a date,
+# then move it into knowledge/zam|theme-market|general/
 python scripts/ingest.py --validate --query "<the question an employee asked>"
-python scripts/report_gaps.py --resolve <question_key>
+python scripts/report_gaps.py              # whatever nobody closed
 ```
+
+A draft in `knowledge/_inbox/` is **not** retrievable — the loader skips any
+path starting with `_`. So a captured Slack answer cannot be quoted by the
+agent until a human promotes it. Review the wording while you do: the verifier
+rejects hedging, so "promptly" has to become "within N business days" before
+the agent will state it confidently.
 
 Monthly:
 
@@ -47,6 +62,8 @@ Counters worth watching:
 |---|---|
 | `pipeline.action.answer` / `.escalate` / `.ignore` / `.clarify` | the decision mix |
 | `pipeline.escalation_suppressed` | repeat asks inside the cooldown |
+| `resolution.resolved` / `.reopened` | owners closing gaps from Slack |
+| `resolution.unauthorized` | someone without permission tried to close one |
 | `pipeline.unhandled_error` | a bug — should be flat at zero |
 | `llm.timeout` / `llm.rate_limited` / `llm.refusal` | Claude-side trouble |
 | `slack.duplicate_event` | retries being dropped correctly |
@@ -71,6 +88,9 @@ tuning, `reason=…` for why a message was skipped.
 | Duplicate answers after a restart | the database path is not on a volume | mount `DATABASE_URL`'s directory |
 | Answers in the wrong language | the question is mixed-script | expected: it follows the dominant script |
 | An owner pinged repeatedly | `ESCALATION_COOLDOWN_HOURS=0` | raise it |
+| A ✅ does nothing | the reactor is not an owner or editor | add them to `KNOWLEDGE_EDITOR_USER_IDS` |
+| A ✅ does nothing, and `slack.reaction_filtered.*` is rising | `reactions:read` missing, or events not subscribed | re-check the manifest, reinstall |
+| `--draft-all` says nothing to draft | owners resolved without writing an answer in the thread | the reply has to be *in the thread*, after the question |
 | Costs higher than expected | `PREFILTER_ENABLED=false`, or a busy channel | re-enable the prefilter; check `llm.calls` |
 | `llm.refusal` climbing | safety classifier declines | fallbacks are on by default; check `CLAUDE_ENABLE_REFUSAL_FALLBACK` |
 
@@ -91,7 +111,9 @@ Change documents before changing numbers. When you do change numbers:
 
 ## Backup and recovery
 
-The only durable state is the SQLite file. Back it up with
+The only durable state is the SQLite file — which now also holds the answers
+owners wrote in Slack, until somebody folds them into `knowledge/`. Draft them
+out (`--draft-all`) rather than leaving them only in the database. Back it up with
 `sqlite3 <path> ".backup out.db"` (safe while running, unlike `cp`). Losing it
 is survivable: the agent re-answers any message Slack redelivers and may
 re-ping owners about open questions. The knowledge base lives in git.

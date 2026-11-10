@@ -28,8 +28,16 @@ from ..llm.base import LLMClient
 from ..observability.logging import get_logger
 from ..observability.metrics import METRICS
 from ..pipeline import AgentDecision, IncomingMessage, SupportPipeline
+from ..resolution import ResolutionManager, ResolutionResult
 from ..store.base import Store
-from .filters import event_key, is_directly_addressed, should_handle, strip_bot_mention
+from .filters import (
+    event_key,
+    is_directly_addressed,
+    reaction_event_key,
+    should_handle,
+    should_handle_reaction,
+    strip_bot_mention,
+)
 from .retry import SlackCallFailed, call_with_retry
 from .thread_context import EMPTY, fetch_thread_context
 
@@ -46,6 +54,7 @@ class SlackAgent:
         store: Store,
         app: App | None = None,
         pipeline: SupportPipeline | None = None,
+        resolution: ResolutionManager | None = None,
     ) -> None:
         self.config = config
         self.knowledge = knowledge
@@ -72,6 +81,12 @@ class SlackAgent:
         self._bot_user_id: str | None = None
         self._bot_id: str | None = None
         self._identity_lock = threading.Lock()
+        self.resolution = resolution or ResolutionManager(
+            config,
+            store,
+            thread_lookup=self._thread_parent_ts,
+            thread_fetcher=self._thread_messages,
+        )
         self._register()
 
     # --------------------------------------------------------------- identity
@@ -111,12 +126,30 @@ class SlackAgent:
                 ack()
             self._submit(body, event)
 
+        @self.app.event("reaction_added")
+        def _on_reaction_added(body: dict[str, Any], event: dict[str, Any], ack: Any) -> None:  # noqa: ANN401
+            with contextlib.suppress(Exception):
+                ack()
+            self._submit_reaction(dict(body), dict(event), added=True)
+
+        @self.app.event("reaction_removed")
+        def _on_reaction_removed(body: dict[str, Any], event: dict[str, Any], ack: Any) -> None:  # noqa: ANN401
+            with contextlib.suppress(Exception):
+                ack()
+            self._submit_reaction(dict(body), dict(event), added=False)
+
     def _submit(self, body: Mapping[str, Any], event: Mapping[str, Any]) -> None:
         METRICS.incr("slack.events_received")
         retry_num = _retry_number(body)
         if retry_num:
             METRICS.incr("slack.events_retried")
         self._executor.submit(self._guarded_process, dict(body), dict(event))
+
+    def _submit_reaction(self, body: Mapping[str, Any], event: Mapping[str, Any], *, added: bool) -> None:
+        if not self.config.slack.enable_slack_resolution:
+            return
+        METRICS.incr("slack.reactions_received")
+        self._executor.submit(self._guarded_reaction, dict(body), dict(event), added)
 
     def _guarded_process(self, body: Mapping[str, Any], event: Mapping[str, Any]) -> None:
         try:
@@ -127,6 +160,13 @@ class SlackAgent:
                 "unhandled error processing Slack event",
                 extra={"context": {"channel_id": event.get("channel"), "ts": event.get("ts")}},
             )
+
+    def _guarded_reaction(self, body: Mapping[str, Any], event: Mapping[str, Any], added: bool) -> None:
+        try:
+            self.process_reaction(body, event, added=added)
+        except Exception:  # pragma: no cover
+            METRICS.incr("pipeline.unhandled_error")
+            log.exception("unhandled error processing a reaction event")
 
     # ---------------------------------------------------------------- handling
 
@@ -178,6 +218,104 @@ class SlackAgent:
 
         self._post(message, decision)
         return decision
+
+    def process_reaction(
+        self, body: Mapping[str, Any], event: Mapping[str, Any], *, added: bool
+    ) -> ResolutionResult | None:
+        """An owner marking a gap resolved (or undoing it) with a reaction."""
+
+        decision = should_handle_reaction(
+            event, config=self.config.slack, bot_user_id=self.bot_user_id
+        )
+        if not decision.handle:
+            METRICS.incr(f"slack.reaction_filtered.{decision.reason.split(':')[0]}")
+            return None
+
+        key = reaction_event_key(event, _event_id(body))
+        item = event.get("item") or {}
+        if not self.store.claim_event(
+            key, channel_id=str(item.get("channel", "")), message_ts=str(item.get("ts", ""))
+        ):
+            METRICS.incr("slack.duplicate_event")
+            return None
+
+        self.resolution.bot_user_id = self.bot_user_id
+        try:
+            result = self.resolution.handle_reaction(event, added=added)
+        except Exception:
+            self.store.release_event(key)
+            raise
+
+        if not result.changed_state:
+            log.debug(
+                "reaction did not change anything",
+                extra={"context": {"outcome": result.outcome, "actor": result.actor_user_id}},
+            )
+            return result
+
+        if self.config.dry_run:
+            log.info(
+                "DRY_RUN -- resolution confirmation not sent",
+                extra={
+                    "context": {
+                        "outcome": result.outcome,
+                        "question_key": result.question_key,
+                        "captured_answer_chars": len(result.captured_answer),
+                        "text": result.reply,
+                    }
+                },
+            )
+            return result
+
+        if result.should_reply:
+            try:
+                call_with_retry(
+                    self.app.client.chat_postMessage,
+                    operation="chat.postMessage(resolution)",
+                    channel=str(item.get("channel", "")),
+                    thread_ts=result.thread_ts,
+                    text=result.reply,
+                    mrkdwn=True,
+                    unfurl_links=False,
+                )
+                METRICS.incr(f"slack.posted.{result.outcome}")
+            except SlackCallFailed as exc:
+                log.warning(
+                    "could not confirm the resolution in Slack",
+                    extra={"context": {"error": exc.error, "outcome": result.outcome}},
+                )
+        return result
+
+    def _thread_parent_ts(self, channel_id: str, message_ts: str) -> str | None:
+        """The thread a message belongs to; the message itself if it is a root."""
+
+        try:
+            response = call_with_retry(
+                self.app.client.conversations_replies,
+                operation="conversations.replies(thread_lookup)",
+                channel=channel_id,
+                ts=message_ts,
+                limit=1,
+                inclusive=True,
+            )
+        except SlackCallFailed as exc:
+            log.warning("could not resolve the thread of a reaction", extra={"context": {"error": exc.error}})
+            return None
+        messages = response.get("messages") or []
+        if not messages:
+            return None
+        return str(messages[0].get("thread_ts") or messages[0].get("ts") or message_ts)
+
+    def _thread_messages(self, channel_id: str, thread_ts: str) -> list[dict[str, Any]]:
+        response = call_with_retry(
+            self.app.client.conversations_replies,
+            operation="conversations.replies(capture)",
+            channel=channel_id,
+            ts=thread_ts,
+            limit=100,
+            inclusive=True,
+        )
+        return list(response.get("messages") or [])
 
     def _build_message(self, event: Mapping[str, Any], key: str) -> IncomingMessage:
         channel_id = str(event.get("channel", ""))
@@ -325,6 +463,12 @@ class SlackAgent:
             "mode": self.config.slack.mode,
             "dry_run": self.config.dry_run,
             "watched_channels": len(self.config.slack.channel_ids),
+            "slack_resolution": {
+                "enabled": self.config.slack.enable_slack_resolution,
+                "reaction": self.config.slack.resolve_reaction,
+                "authorized_actors": len(self.config.escalation.owner_ids)
+                + len(self.config.escalation.knowledge_editor_user_ids),
+            },
             "knowledge": self.knowledge.status(),
             "store": self.store.stats(),
             "metrics": METRICS.snapshot(),

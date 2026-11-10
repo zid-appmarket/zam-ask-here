@@ -135,6 +135,26 @@ def slack_message_event(
     return event
 
 
+def reaction_event(
+    *,
+    reaction: str = "white_check_mark",
+    user: str = "U0OWNERZAM1",
+    channel: str = CHANNEL,
+    ts: str = "1762790400.000100",
+    event_type: str = "reaction_added",
+    item_type: str = "message",
+    item_user: str = "U0BOTUSER01",
+) -> dict[str, Any]:
+    return {
+        "type": event_type,
+        "user": user,
+        "reaction": reaction,
+        "item_user": item_user,
+        "item": {"type": item_type, "channel": channel, "ts": ts},
+        "event_ts": "1762790900.000100",
+    }
+
+
 def slack_envelope(event: dict[str, Any], *, event_id: str = "Ev0TEST0001", retry_num: int | None = None) -> dict[str, Any]:
     body: dict[str, Any] = {
         "token": "verification-token-placeholder",

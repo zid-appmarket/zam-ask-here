@@ -26,12 +26,38 @@
 │ prompts/ +    │ knowledge/    │ confidence.py    │ escalation.py     │
 │ llm/          │ retrieval     │ the gate         │ human hand-off    │
 ├───────────────┴───────────────┴──────────────────┴───────────────────┤
-│ store/ · security.py · language.py · observability/                  │
+│ store/ · security.py · language.py · resolution.py · observability/  │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
 The pipeline being Slack-free is what makes the decision path testable without
 a workspace: `tests/test_samples.py` drives it directly.
+
+## Reaction path
+
+Reactions take a separate, much shorter path than messages:
+
+```
+reaction_added / reaction_removed
+   ├─ should_handle_reaction   message? watched channel? human? ──► drop
+   ├─ claim_event              its own de-duplication key ──► drop retries
+   └─ ResolutionManager
+        ├─ is it the configured reaction?        ──► no: stop
+        ├─ which thread is this message in?      (cheap case first, then one Slack call)
+        ├─ is there an escalation for it?        ──► no: stop
+        ├─ may this person resolve?              ──► no: count, log, stop
+        ├─ capture the human replies after the thread root
+        └─ resolve the gap, confirm in-thread
+```
+
+`ResolutionManager` makes no Slack calls: the thread lookup and thread fetch
+are injected callables, so the whole decision path is testable without a
+workspace — and a failure to read the thread degrades to "resolved with no
+captured answer" rather than blocking the owner.
+
+The capture cut-off is the thread's own root `ts`, not the wall-clock time the
+escalation row was written. Both are Slack timestamps, so the comparison needs
+no assumption that this process's clock agrees with Slack's.
 
 ## Extension points
 
@@ -43,6 +69,11 @@ Each is a `Protocol`, implemented at least twice (real + test double):
 | `KnowledgeLoader` | `knowledge/loaders/base.py` | add Confluence, a wiki, a database |
 | `EmbeddingBackend` | `knowledge/index.py` | add dense retrieval alongside BM25 |
 | `Store` | `store/base.py` | move to Postgres for multi-process |
+
+The store carries its own forward migration (`SQLiteStore.MIGRATIONS`): columns
+added after a database was created are applied with `ALTER TABLE` on startup,
+since SQLite has no `ADD COLUMN IF NOT EXISTS`. Row mappers tolerate a column
+being absent, so a half-migrated database still reads.
 
 ## The three model calls
 

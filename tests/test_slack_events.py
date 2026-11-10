@@ -257,9 +257,9 @@ def test_health_reports_knowledge_and_store_state(
     assert health["mode"] == "socket"
 
 
-def test_listeners_are_registered_for_messages_and_mentions(
+def test_listeners_are_registered_for_every_handled_event(
     config, fixture_knowledge, llm: FakeLLM, store: SQLiteStore
 ) -> None:
     app = FakeBoltApp()
     SlackAgent(config=config, knowledge=fixture_knowledge, llm=llm, store=store, app=app)
-    assert set(app.handlers) == {"message", "app_mention"}
+    assert set(app.handlers) == {"message", "app_mention", "reaction_added", "reaction_removed"}

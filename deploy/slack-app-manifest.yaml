@@ -21,7 +21,8 @@ display_information:
     using only approved internal documentation, cites its sources, and mentions
     the designated owner whenever it cannot verify an answer. It never guesses
     at policies, prices, dates or processes, and it never approves anything on
-    a human's behalf.
+    a human's behalf. Owners close an unanswered question by reacting to the
+    thread; the agent saves their answer for the knowledge base.
   background_color: "#1f2b45"
 
 features:
@@ -44,6 +45,9 @@ oauth_config:
       - chat:write
       # Receive app_mention events so employees can address the agent directly.
       - app_mentions:read
+      # Receive reaction events, so an owner can close a knowledge gap by
+      # adding the resolve reaction to the thread.
+      - reactions:read
       # Optional: only needed when ADD_ACK_REACTION=true.
       - reactions:write
       # Uncomment ONLY if the watched channel is private. Prefer a public
@@ -57,6 +61,9 @@ settings:
     bot_events:
       - message.channels
       - app_mention
+      # An owner marking an escalated question as confirmed (and undoing it).
+      - reaction_added
+      - reaction_removed
       # - message.groups   # only with groups:history, for a private channel
   interactivity:
     is_enabled: false

@@ -2,10 +2,11 @@
 
 A Slack support agent for **ZAM** (Zid App Market) and **Theme Market**.
 
-It watches a configured company channel, answers employees' questions in Arabic
-(including Saudi dialect) or English using only approved internal
+It watches **#zam-ask-here** (`C0204TKHWSZ`), answers employees' questions in
+Arabic (including Saudi dialect) or English using only approved internal
 documentation, cites its sources — and **mentions a designated human whenever it
-cannot verify an answer**, instead of guessing.
+cannot verify an answer**, instead of guessing. When an owner answers in the
+thread and ticks it off, the agent keeps that answer for the knowledge base.
 
 ```
 Employee: وش مدة مراجعة التطبيق في زام؟
@@ -109,6 +110,30 @@ judgement. The model's own `self_confidence` is capped at **10%** of the score.
 - Every escalation is recorded as a knowledge gap, so
   `scripts/report_gaps.py` is the backlog for `knowledge/`.
 
+### Closing the loop from Slack
+
+Owners never need the CLI to close a question:
+
+```
+employee asks ──► agent escalates ──► owner answers in the thread
+                                        └─► owner adds ✅
+                                              │
+                      agent saves that answer, marks the gap resolved,
+                      and confirms in-thread (in the question's language)
+```
+
+Then `python scripts/report_gaps.py --draft-all` turns each saved answer into a
+document in `knowledge/_inbox/` — pre-filled, `status: draft`, with a review
+checklist. Promotion stays manual: `_inbox` is not indexed, so a captured answer
+cannot be quoted until somebody confirms it, dates it and moves it into the
+product directory. Capture is effortless; publication is not.
+
+Who may resolve: the three escalation owners plus `KNOWLEDGE_EDITOR_USER_IDS`.
+Anyone can add a reaction in a public channel, so that list *is* the
+authorisation — a reaction from anyone else is logged and ignored (silently;
+publicly correcting a colleague for clicking an emoji is worse than doing
+nothing). Removing the reaction reopens the gap without re-pinging anybody.
+
 ---
 
 ## Architecture
@@ -169,11 +194,14 @@ want dense retrieval too.
 4. Copy the **Bot User OAuth Token** (`xoxb-…`) into `SLACK_BOT_TOKEN`.
 5. **Invite the bot to the channel**: `/invite @ZAM Ask Here`. Without this it
    receives no events, whatever the scopes say.
-6. Copy the channel ID (channel name → **View channel details** → ID at the
-   bottom, starts with `C`) into `SLACK_CHANNEL_ID`.
+6. Set `SLACK_CHANNEL_ID`. For this deployment that is `C0204TKHWSZ`
+   (**#zam-ask-here**); for any other channel, copy it from channel name →
+   **View channel details** → the ID at the bottom.
 7. Copy the owner's member ID (profile → **⋮** → *Copy member ID*, starts with
    `U`; a user group ID starting with `S` also works) into
-   `ESCALATION_USER_ID`.
+   `ESCALATION_USER_ID`, and ideally `ZAM_ESCALATION_USER_ID` and
+   `THEME_MARKET_ESCALATION_USER_ID` too. Add anyone else who should be able to
+   close a gap to `KNOWLEDGE_EDITOR_USER_IDS`.
 
 **Scopes the agent uses, and why — nothing more:**
 
@@ -183,9 +211,11 @@ want dense retrieval too.
 | `channels:read` | Channel metadata for logs and escalation context. |
 | `chat:write` | Post answers and escalations. |
 | `app_mentions:read` | Let employees address the agent directly. |
+| `reactions:read` | Let an owner close a gap by reacting to the thread. |
 | `reactions:write` | Only used when `ADD_ACK_REACTION=true`. |
 
-Events subscribed: `message.channels`, `app_mention`.
+Events subscribed: `message.channels`, `app_mention`, `reaction_added`,
+`reaction_removed`.
 
 For a **private** channel add `groups:history` and `groups:read` and the
 `message.groups` event. Prefer a public channel: answers in a private channel
@@ -243,9 +273,12 @@ targets:
   draft, so it cannot support a confident answer.
 - **Google Drive** — `pip install '.[gdrive]'`, then
   `GOOGLE_DRIVE_CREDENTIALS_FILE` (a read-only service account) plus
-  `GOOGLE_DRIVE_FOLDER_IDS`. Share the approved folder with the service
-  account's e-mail. Metadata comes from Drive `appProperties` or the file
-  description, using the same keys as Markdown front matter.
+  `GOOGLE_DRIVE_FOLDER_IDS` for whole folders and/or `GOOGLE_DRIVE_FILE_IDS`
+  for individually approved documents — useful when the canonical source is a
+  single Doc, like the *ZAM & Theme Market guideline* linked in the channel
+  topic. Share the folder or document with the service account's e-mail.
+  Metadata comes from Drive `appProperties` or the file description, using the
+  same keys as Markdown front matter.
 
 ---
 
@@ -322,17 +355,27 @@ and escalation state fragment.
 ```bash
 python scripts/report_gaps.py                 # unanswered questions, most frequent first
 python scripts/report_gaps.py --escalations   # what is still waiting on a human
+python scripts/report_gaps.py --resolved      # answers owners confirmed in Slack
+python scripts/report_gaps.py --draft-all     # turn those answers into draft documents
 python scripts/report_gaps.py --interactions  # the recent decision log
-python scripts/report_gaps.py --resolve <key> # after adding the answer to knowledge/
+python scripts/report_gaps.py --reopen <key>  # undo a resolution
 python scripts/report_gaps.py --prune 30      # drop telemetry older than 30 days
 python scripts/ingest.py --stale              # documents past KNOWLEDGE_MAX_AGE_DAYS
 ```
 
 **The maintenance loop.** Escalations are not failures, they are the backlog.
-Each week: read `report_gaps.py`, write the answers into `knowledge/`, run
-`ingest.py --validate --query "<the question>"` to confirm the agent now finds
-it, and `--resolve` the gap. Run `ingest.py --stale` monthly and re-date or
-retire what has aged out.
+Owners close them in Slack with a ✅ as they answer; nobody has to remember a
+command. Then, weekly:
+
+```bash
+python scripts/report_gaps.py --draft-all     # captured answers -> knowledge/_inbox/
+# review each draft: confirm it, set status: verified and a date, move it into
+# knowledge/zam|theme-market|general/
+python scripts/ingest.py --validate --query "<the question an employee asked>"
+```
+
+Anything owners did *not* close still shows up in `report_gaps.py`. Run
+`ingest.py --stale` monthly and re-date or retire what has aged out.
 
 **When the agent gets something wrong**, the fix is almost always a document,
 not a threshold. Raise `CONFIDENCE_THRESHOLD` if it answers when it should
@@ -359,6 +402,9 @@ Every variable is documented inline in
 | `MAX_UNSUPPORTED_CLAIMS` | `0` | Raise this only deliberately. |
 | `KNOWLEDGE_MAX_AGE_DAYS` | `365` | Older, or undated, counts as stale. |
 | `ESCALATION_COOLDOWN_HOURS` | `24` | Re-ping window for the same question. |
+| `ENABLE_SLACK_RESOLUTION` | `true` | Owners can close a gap with a reaction. |
+| `RESOLVE_REACTION` | `white_check_mark` | The reaction that means "confirmed". |
+| `KNOWLEDGE_EDITOR_USER_IDS` | *(empty)* | Extra people allowed to resolve, beyond the three owners. |
 | `PREFILTER_ENABLED` | `true` | Skips the classifier for messages with no question and no product keyword. Set `false` to classify everything (more cost, slightly better recall). |
 | `ESCALATE_GENERAL_QUESTIONS` | `false` | Keep false: otherwise unrelated company chatter pings an owner. |
 | `RESTRICTED_CHANNEL_IDS` | *(empty)* | Leave empty for a company-wide channel. |
@@ -375,7 +421,7 @@ pytest -q
 pytest -k samples   # the sample-message acceptance table
 ```
 
-283 tests, no network access: Claude is replaced by a scripted `FakeLLM` and
+317 tests, no network access: Claude is replaced by a scripted `FakeLLM` and
 Slack by a `FakeSlackClient`.
 
 [`tests/fixtures/sample_messages.yaml`](tests/fixtures/sample_messages.yaml) is
@@ -386,6 +432,12 @@ unanswerable questions that must tag a human, hallucinated facts, fabricated
 citations, conflicting and outdated documentation, approval requests,
 restricted information, ambiguity, irrelevant chatter, acknowledgements and
 prompt injection.
+
+`tests/test_resolution.py` covers the Slack resolve loop: who may and may not
+close a gap, capture that excludes the agent's own messages and the original
+question, mention/secret stripping inside a captured answer, reopening,
+duplicate reaction deliveries, and that a captured answer is always written as
+`status: draft`.
 
 The rest of the suite covers duplicate Slack deliveries, self-reply and loop
 prevention, every ignored event subtype,
@@ -421,6 +473,11 @@ Full detail in [docs/security.md](docs/security.md). The short version:
   rather than answered in a public channel.
 - **Outbound data.** The only external calls are to Slack, the Claude API, and
   any knowledge source you explicitly configure. Nothing is sent anywhere else.
+- **Resolution is authorised, not implied.** Closing a knowledge gap requires
+  a configured owner or knowledge editor. A reaction from anyone else changes
+  nothing. A captured answer passes through the same sanitiser as any other
+  text, and lands as `status: draft` in a folder the loader ignores — so a
+  Slack message can never become a citable source without human review.
 - **No autonomous authority.** The agent never approves, commits or decides on
   anyone's behalf; those requests go straight to a human.
 
@@ -452,10 +509,16 @@ Stated explicitly, because the brief left them open:
 
 Worth confirming before rollout, none of which blocks it:
 
-- The real channel ID, and the owner IDs for ZAM and Theme Market.
+- The owner IDs for ZAM and Theme Market, and who belongs in
+  `KNOWLEDGE_EDITOR_USER_IDS`.
 - Whether `RESTRICTED_CHANNEL_IDS` should ever be non-empty, or whether
   restricted documents should simply not be in the index at all.
-- Whether answers should also appear in the channel (not only in-thread) for
-  high-traffic questions.
-- Whether the owner should be able to resolve a gap from Slack (a reaction or a
-  slash command) rather than via `scripts/report_gaps.py --resolve`.
+- Whether a confirmed answer should be re-posted to the channel rather than
+  staying in its thread. `BROADCAST_REACTION` / `ENABLE_BROADCAST` are
+  reserved for this and currently do nothing; see the note in `.env.example`.
+
+The channel is **#zam-ask-here** (`C0204TKHWSZ`), and its topic says to keep
+technical issues, merchant incidents and escalations out of it. The agent's
+hand-off is a "please confirm this" ping, not an incident report, so it fits —
+but it is worth saying so when the bot is introduced, so nobody reads a ✅
+request as an incident.

@@ -69,6 +69,7 @@ def default_loaders(config: KnowledgeConfig, *, strict: bool = False) -> list[Kn
         GoogleDriveLoader(
             credentials_file=config.gdrive_credentials_file,
             folder_ids=config.gdrive_folder_ids,
+            file_ids=config.gdrive_file_ids,
         ),
     ]
 

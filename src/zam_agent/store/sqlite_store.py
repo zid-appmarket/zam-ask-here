@@ -45,7 +45,9 @@ CREATE TABLE IF NOT EXISTS escalations (
     question       TEXT NOT NULL DEFAULT '',
     status         TEXT NOT NULL DEFAULT 'open',
     created_at     REAL NOT NULL,
-    resolved_at    REAL
+    resolved_at    REAL,
+    resolved_by    TEXT,
+    resolution_note TEXT
 );
 CREATE INDEX IF NOT EXISTS idx_escalations_lookup
     ON escalations (question_key, channel_id, created_at DESC);
@@ -83,7 +85,10 @@ CREATE TABLE IF NOT EXISTS knowledge_gaps (
     last_seen        REAL NOT NULL,
     last_channel_id  TEXT NOT NULL DEFAULT '',
     last_thread_ts   TEXT,
-    resolved         INTEGER NOT NULL DEFAULT 0
+    resolved         INTEGER NOT NULL DEFAULT 0,
+    resolved_at      REAL,
+    resolved_by      TEXT,
+    resolution_note  TEXT
 );
 """
 
@@ -154,8 +159,29 @@ class SQLiteStore(Store):
                 if not self.in_memory:
                     conn.close()
 
+    # (table, column, declaration) -- applied to databases created before the
+    # column existed. SQLite has no "ADD COLUMN IF NOT EXISTS".
+    MIGRATIONS: tuple[tuple[str, str, str], ...] = (
+        ("escalations", "resolved_by", "TEXT"),
+        ("escalations", "resolution_note", "TEXT"),
+        ("knowledge_gaps", "resolved_at", "REAL"),
+        ("knowledge_gaps", "resolved_by", "TEXT"),
+        ("knowledge_gaps", "resolution_note", "TEXT"),
+    )
+
     def setup(self) -> None:
         self._execute(SCHEMA, script=True)
+        self._migrate()
+
+    def _migrate(self) -> None:
+        for table, column, declaration in self.MIGRATIONS:
+            existing = {row["name"] for row in self._query(f"PRAGMA table_info({table})")}
+            if column not in existing:
+                self._execute(f"ALTER TABLE {table} ADD COLUMN {column} {declaration}")  # noqa: S608
+                log.info(
+                    "added missing column",
+                    extra={"context": {"table": table, "column": column}},
+                )
 
     def close(self) -> None:
         with self._lock:
@@ -237,11 +263,37 @@ class SQLiteStore(Store):
             resolved_at=None,
         )
 
-    def resolve_escalation(self, escalation_id: int) -> None:
+    def resolve_escalation(self, escalation_id: int, *, note: str = "", resolved_by: str = "") -> None:
         self._execute(
-            "UPDATE escalations SET status = 'resolved', resolved_at = ? WHERE id = ?",
-            (time.time(), escalation_id),
+            "UPDATE escalations SET status = 'resolved', resolved_at = ?, resolved_by = ?, "
+            "resolution_note = ? WHERE id = ?",
+            (time.time(), resolved_by, note, escalation_id),
         )
+
+    def reopen_escalation(self, escalation_id: int) -> None:
+        """Undo a resolution (a mis-clicked reaction), without re-pinging."""
+
+        self._execute(
+            "UPDATE escalations SET status = 'open', resolved_at = NULL, resolved_by = NULL, "
+            "resolution_note = NULL WHERE id = ?",
+            (escalation_id,),
+        )
+
+    def escalation(self, escalation_id: int) -> EscalationRecord | None:
+        rows = self._query("SELECT * FROM escalations WHERE id = ?", (escalation_id,))
+        return _to_escalation(rows[0]) if rows else None
+
+    def escalation_for_thread(self, channel_id: str, thread_ts: str | None) -> EscalationRecord | None:
+        """The most recent escalation in a thread, open or already resolved."""
+
+        if not thread_ts:
+            return None
+        rows = self._query(
+            "SELECT * FROM escalations WHERE channel_id = ? AND thread_ts = ? "
+            "ORDER BY created_at DESC LIMIT 1",
+            (channel_id, thread_ts),
+        )
+        return _to_escalation(rows[0]) if rows else None
 
     def open_escalations(self, *, limit: int = 50) -> list[EscalationRecord]:
         rows = self._query(
@@ -300,24 +352,32 @@ class SQLiteStore(Store):
             f"SELECT * FROM knowledge_gaps {clause} ORDER BY occurrences DESC, last_seen DESC LIMIT ?",
             (limit,),
         )
-        return [
-            KnowledgeGap(
-                question_key=row["question_key"],
-                question=row["question"],
-                topic=row["topic"],
-                product=row["product"],
-                occurrences=int(row["occurrences"]),
-                first_seen=float(row["first_seen"]),
-                last_seen=float(row["last_seen"]),
-                last_channel_id=row["last_channel_id"],
-                last_thread_ts=row["last_thread_ts"],
-                resolved=bool(row["resolved"]),
-            )
-            for row in rows
-        ]
+        return [_to_gap(row) for row in rows]
 
-    def resolve_knowledge_gap(self, question_key: str) -> None:
-        self._execute("UPDATE knowledge_gaps SET resolved = 1 WHERE question_key = ?", (question_key,))
+    def resolved_knowledge_gaps(self, *, limit: int = 50) -> list[KnowledgeGap]:
+        rows = self._query(
+            "SELECT * FROM knowledge_gaps WHERE resolved = 1 ORDER BY resolved_at DESC LIMIT ?",
+            (limit,),
+        )
+        return [_to_gap(row) for row in rows]
+
+    def knowledge_gap(self, question_key: str) -> KnowledgeGap | None:
+        rows = self._query("SELECT * FROM knowledge_gaps WHERE question_key = ?", (question_key,))
+        return _to_gap(rows[0]) if rows else None
+
+    def resolve_knowledge_gap(self, question_key: str, *, note: str = "", resolved_by: str = "") -> None:
+        self._execute(
+            "UPDATE knowledge_gaps SET resolved = 1, resolved_at = ?, resolved_by = ?, "
+            "resolution_note = ? WHERE question_key = ?",
+            (time.time(), resolved_by, note, question_key),
+        )
+
+    def reopen_knowledge_gap(self, question_key: str) -> None:
+        self._execute(
+            "UPDATE knowledge_gaps SET resolved = 0, resolved_at = NULL, resolved_by = NULL, "
+            "resolution_note = NULL WHERE question_key = ?",
+            (question_key,),
+        )
 
     # -------------------------------------------------------------- operations
 
@@ -355,7 +415,28 @@ def _default_for(name: str) -> Any:
     return ""
 
 
+def _to_gap(row: sqlite3.Row) -> KnowledgeGap:
+    keys = row.keys()
+    return KnowledgeGap(
+        question_key=row["question_key"],
+        question=row["question"],
+        topic=row["topic"],
+        product=row["product"],
+        occurrences=int(row["occurrences"]),
+        first_seen=float(row["first_seen"]),
+        last_seen=float(row["last_seen"]),
+        last_channel_id=row["last_channel_id"],
+        last_thread_ts=row["last_thread_ts"],
+        resolved=bool(row["resolved"]),
+        resolved_at=float(row["resolved_at"]) if "resolved_at" in keys and row["resolved_at"] else None,
+        resolved_by=row["resolved_by"] if "resolved_by" in keys else None,
+        resolution_note=row["resolution_note"] if "resolution_note" in keys else None,
+    )
+
+
 def _to_escalation(row: sqlite3.Row) -> EscalationRecord:
+    # `in row` would test the VALUES, not the column names, so keep .keys().
+    keys = row.keys()
     return EscalationRecord(
         id=int(row["id"]),
         question_key=row["question_key"],
@@ -368,4 +449,6 @@ def _to_escalation(row: sqlite3.Row) -> EscalationRecord:
         status=row["status"],
         created_at=float(row["created_at"]),
         resolved_at=float(row["resolved_at"]) if row["resolved_at"] is not None else None,
+        resolved_by=row["resolved_by"] if "resolved_by" in keys else None,
+        resolution_note=row["resolution_note"] if "resolution_note" in keys else None,
     )

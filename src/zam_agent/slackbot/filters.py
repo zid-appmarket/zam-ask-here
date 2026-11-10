@@ -120,6 +120,55 @@ def should_handle(
     return FilterDecision(True)
 
 
+def should_handle_reaction(
+    event: Mapping[str, Any],
+    *,
+    config: SlackConfig,
+    bot_user_id: str | None,
+) -> FilterDecision:
+    """Reactions the agent may act on (gap resolution).
+
+    Only a reaction on a *message* in a watched channel, added by a human who
+    is not the agent. Authorisation (owner / knowledge editor) is a separate
+    check in :mod:`zam_agent.resolution`.
+    """
+
+    if not isinstance(event, Mapping):
+        return FilterDecision(False, "not_an_event")
+    if event.get("type") not in ("reaction_added", "reaction_removed"):
+        return FilterDecision(False, f"unsupported_event_type:{event.get('type')}")
+
+    item = event.get("item") or {}
+    if not isinstance(item, Mapping) or item.get("type") != "message":
+        return FilterDecision(False, f"reaction_on:{(item or {}).get('type', 'unknown')}")
+
+    user = str(event.get("user") or "")
+    if not user:
+        return FilterDecision(False, "no_user")
+    if bot_user_id and user == bot_user_id:
+        return FilterDecision(False, "self_reaction")
+
+    channel = str(item.get("channel") or "")
+    if not config.is_watched_channel(channel):
+        return FilterDecision(False, "channel_not_watched")
+    if not item.get("ts"):
+        return FilterDecision(False, "no_message_ts")
+
+    return FilterDecision(True)
+
+
+def reaction_event_key(event: Mapping[str, Any], envelope_event_id: str | None = None) -> str:
+    """De-duplication key for a reaction event."""
+
+    if envelope_event_id:
+        return f"evt:{envelope_event_id}"
+    item = event.get("item") or {}
+    return (
+        f"rxn:{event.get('type', '')}:{event.get('reaction', '')}:"
+        f"{event.get('user', '')}:{item.get('channel', '')}:{item.get('ts', '')}"
+    )
+
+
 def is_directly_addressed(event: Mapping[str, Any], bot_user_id: str | None) -> bool:
     if event.get("type") == "app_mention":
         return True
