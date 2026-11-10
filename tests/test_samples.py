@@ -52,7 +52,7 @@ def test_the_sample_table_is_well_formed() -> None:
     for sample in SAMPLES:
         assert sample.get("description"), f"{sample['id']} needs a description"
         expect = sample["expect"]
-        assert expect["action"] in {"answer", "clarify", "escalate", "ignore"}
+        assert expect["action"] in {"answer", "clarify", "escalate", "ignore", "deflect"}
         if expect["action"] == "ignore":
             assert expect.get("skip_reason"), f"{sample['id']} must state why it is ignored"
 
@@ -170,6 +170,9 @@ def test_every_required_behaviour_has_at_least_one_sample() -> None:
     ids = {sample["id"] for sample in SAMPLES}
     required = {
         "zam-review-english",
+        "hubspot-link-posted",
+        "jira-link-posted",
+        "technical-issue-described",
         "theme-pricing-english",
         "zam-review-arabic",
         "theme-refunds-saudi-dialect",

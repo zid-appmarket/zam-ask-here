@@ -14,6 +14,23 @@ from typing import Literal
 
 Language = Literal["ar", "en", "mixed", "unknown"]
 
+# A URL, a channel/user reference or a code span says nothing about which
+# language the person is writing in, and their Latin characters can easily
+# outweigh a short Arabic question. Strip them before counting scripts.
+_NON_LINGUISTIC = re.compile(
+    r"""
+      <https?://[^>]*>          # Slack-wrapped link, label included
+    | https?://\S+              # bare URL
+    | www\.\S+                  # bare host
+    | <[@#!][^>]*>              # mention / channel reference
+    | :[a-z0-9_+-]+:            # :emoji:
+    | ```.*?```                 # fenced code
+    | `[^`]*`                   # inline code
+    | \b[\w.+-]+@[\w.-]+\.\w+    # e-mail address
+    """,
+    re.VERBOSE | re.DOTALL | re.IGNORECASE,
+)
+
 _ARABIC_RANGE = re.compile(r"[؀-ۿݐ-ݿࢠ-ࣿﭐ-﷿ﹰ-﻿]")
 _LATIN_RANGE = re.compile(r"[A-Za-z]")
 
@@ -93,9 +110,16 @@ def tokenize(text: str) -> list[str]:
     return [tok for tok in tokens if len(tok) > 1 or tok.isdigit()]
 
 
+def strip_non_linguistic(text: str) -> str:
+    """Remove URLs, mentions, emoji and code before judging the language."""
+
+    return _NON_LINGUISTIC.sub(" ", text or "")
+
+
 def detect_language(text: str) -> Language:
-    arabic = len(_ARABIC_RANGE.findall(text))
-    latin = len(_LATIN_RANGE.findall(text))
+    stripped = strip_non_linguistic(text)
+    arabic = len(_ARABIC_RANGE.findall(stripped))
+    latin = len(_LATIN_RANGE.findall(stripped))
     total = arabic + latin
     if total == 0:
         return "unknown"
@@ -115,8 +139,9 @@ def reply_language(text: str) -> Literal["ar", "en"]:
         return "ar"
     if detected == "en":
         return "en"
-    arabic = len(_ARABIC_RANGE.findall(text))
-    latin = len(_LATIN_RANGE.findall(text))
+    stripped = strip_non_linguistic(text)
+    arabic = len(_ARABIC_RANGE.findall(stripped))
+    latin = len(_LATIN_RANGE.findall(stripped))
     return "ar" if arabic >= latin else "en"
 
 

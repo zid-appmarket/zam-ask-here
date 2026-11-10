@@ -107,6 +107,19 @@ class SlackConfig:
     resolve_reaction: str
     broadcast_reaction: str
     enable_broadcast: bool
+    broadcast_approver_user_ids: tuple[str, ...]
+    deflect_technical_issues: bool
+    hubspot_ticket_url: str | None
+
+    def may_broadcast(self, user_id: str) -> bool:
+        """Only a named approver may push an answer to the whole channel.
+
+        Fails closed: with no approver configured, nothing is ever broadcast.
+        A reaction is visible to everybody, so it cannot be the authorisation.
+        """
+
+        uid = (user_id or "").strip()
+        return bool(uid) and uid in self.broadcast_approver_user_ids
 
     def is_watched_channel(self, channel_id: str) -> bool:
         return channel_id in self.channel_ids
@@ -273,11 +286,12 @@ def load_config(*, require_secrets: bool = True) -> AppConfig:
     for name, value in (("ZAM_ESCALATION_USER_ID", zam_owner), ("THEME_MARKET_ESCALATION_USER_ID", theme_owner)):
         if value and not _looks_like_slack_actor_id(value):
             raise ConfigError(f"{name} {value!r} does not look like a Slack user or group ID")
-    if require_secrets and zam_owner == theme_owner == default_owner:
-        warnings.append(
-            "ZAM_ESCALATION_USER_ID and THEME_MARKET_ESCALATION_USER_ID are unset; "
-            "all escalations go to ESCALATION_USER_ID."
-        )
+    approvers = _env_list("BROADCAST_APPROVER_USER_IDS")
+    for approver in approvers:
+        if not _looks_like_slack_actor_id(approver):
+            raise ConfigError(
+                f"BROADCAST_APPROVER_USER_IDS entry {approver!r} does not look like a Slack user ID"
+            )
 
     editors = _env_list("KNOWLEDGE_EDITOR_USER_IDS")
     for editor in editors:
@@ -285,6 +299,25 @@ def load_config(*, require_secrets: bool = True) -> AppConfig:
             raise ConfigError(
                 f"KNOWLEDGE_EDITOR_USER_IDS entry {editor!r} does not look like a Slack user or group ID"
             )
+
+    if require_secrets and _env_bool("ENABLE_BROADCAST", True) and not approvers:
+        warnings.append(
+            "ENABLE_BROADCAST is on but BROADCAST_APPROVER_USER_IDS is empty, so no answer "
+            "can ever be pushed to the channel. Set the approvers, or ENABLE_BROADCAST=false."
+        )
+
+    hubspot_url = _env("HUBSPOT_TICKET_URL")
+    if require_secrets and _env_bool("DEFLECT_TECHNICAL_ISSUES", True) and not hubspot_url:
+        warnings.append(
+            "DEFLECT_TECHNICAL_ISSUES is on but HUBSPOT_TICKET_URL is unset, so the nudge will "
+            "name HubSpot without linking the form."
+        )
+
+    if require_secrets and zam_owner == theme_owner == default_owner:
+        warnings.append(
+            "ZAM_ESCALATION_USER_ID and THEME_MARKET_ESCALATION_USER_ID are unset; "
+            "all escalations go to ESCALATION_USER_ID."
+        )
 
     model = _env("CLAUDE_MODEL", "claude-opus-5-5") or "claude-opus-5-5"
     llm = LLMConfig(
@@ -363,7 +396,10 @@ def load_config(*, require_secrets: bool = True) -> AppConfig:
         enable_slack_resolution=_env_bool("ENABLE_SLACK_RESOLUTION", True),
         resolve_reaction=_normalize_reaction(_env("RESOLVE_REACTION", "white_check_mark")),
         broadcast_reaction=_normalize_reaction(_env("BROADCAST_REACTION", "mega")),
-        enable_broadcast=_env_bool("ENABLE_BROADCAST", False),
+        enable_broadcast=_env_bool("ENABLE_BROADCAST", True),
+        broadcast_approver_user_ids=approvers,
+        deflect_technical_issues=_env_bool("DEFLECT_TECHNICAL_ISSUES", True),
+        hubspot_ticket_url=_env("HUBSPOT_TICKET_URL"),
     )
 
     database_url = _env("DATABASE_URL", "sqlite:///./data/zam_agent.db") or "sqlite:///./data/zam_agent.db"

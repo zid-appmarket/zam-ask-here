@@ -40,6 +40,8 @@ class Action(StrEnum):
     CLARIFY = "clarify"
     ESCALATE = "escalate"
     IGNORE = "ignore"
+    # Not an answer: a technical issue redirected to a support ticket.
+    DEFLECT = "deflect"
 
 
 # Weights sum to 1.0. The model's self-report is capped at 10% on purpose.

@@ -95,6 +95,15 @@ exist.
 unrecognised `status` becomes `draft`. A typo therefore hides a document or
 makes it non-authoritative — never the reverse.
 
+### Technical issues
+
+`technical_issue_or_incident` messages are redirected to HubSpot rather than
+answered. That is a containment property as much as a tidiness one: incident
+chatter in a company-wide channel tends to carry merchant IDs, order numbers
+and error output, and the agent neither retrieves against it nor quotes it
+back. The nudge itself states no facts, links only the configured form URL, and
+tags nobody.
+
 The classifier also flags `asks_for_restricted_info` (individual partner
 revenue, another employee's compensation, unreleased roadmap, legal disputes,
 credentials, a named person's personal data). Those escalate without an answer
@@ -105,7 +114,29 @@ messages without telling the agent each reader's entitlements, so anything
 posted is visible to the whole channel. For genuinely need-to-know material the
 right answer is to keep it out of the index — not to rely on a label.
 
-## 6. Resolving a gap is an authorised action
+## 6. Reaching the channel is an authorised action
+
+An answer is posted in the thread of the question that prompted it. Getting it
+to channel level takes two checks, both failing closed:
+
+1. **Who.** `SlackConfig.may_broadcast` allows only
+   `BROADCAST_APPROVER_USER_IDS`. Escalation owners and knowledge editors are
+   deliberately *not* included — approving an answer for the whole channel is a
+   different decision from confirming a fact. An empty list means nothing is
+   ever broadcast, and configuration emits a warning saying so.
+2. **What.** Only a message the agent itself wrote can be amplified. Reacting
+   📣 on an employee's message is rejected (`not_an_agent_message`):
+   broadcasting someone's words at channel level, under the bot's name, would
+   misrepresent them.
+
+The broadcast text is rebuilt through `sanitize_outbound`, so an answer that
+somehow contained mention syntax or a credential cannot acquire channel-wide
+reach. One broadcast per answer is enforced by an atomic claim, so several
+approvers reacting does not post several times. Removing 📣 does nothing — a
+channel message cannot be un-sent, and pretending otherwise would be worse than
+saying so.
+
+## 7. Resolving a gap is an authorised action
 
 Anyone in a public channel can add any reaction, so the reaction itself carries
 no authority. `EscalationConfig.may_resolve` allows only the three configured
@@ -127,14 +158,14 @@ What a resolution can and cannot do:
 So the worst case for a compromised or careless owner account is a bad draft
 sitting in a review folder — not a false answer the agent will repeat.
 
-## 7. No autonomous authority
+## 8. No autonomous authority
 
 The `requires_human_approval` category exists so that "approve my app", "waive
 this fee", "give me production access" never get an answer. They go straight to
 the configured owner with no answer attempt. The agent has no write scope for
 anything but posting messages.
 
-## 8. Supply chain and runtime
+## 9. Supply chain and runtime
 
 - Five direct dependencies, all pinned to a major version: `slack-bolt`,
   `slack-sdk`, `anthropic`, `PyYAML` (`safe_load` only), `python-dotenv`.
@@ -144,7 +175,7 @@ anything but posting messages.
 - Request verification is enabled for HTTP mode (Bolt verifies the Slack
   signature); Socket Mode has no inbound HTTP surface at all.
 
-## 9. Reporting
+## 10. Reporting
 
 If you find a way to make this agent assert something it cannot cite, ping
 someone it was not told to ping, or surface a document a channel should not

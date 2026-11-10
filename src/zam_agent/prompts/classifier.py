@@ -13,6 +13,7 @@ CATEGORIES = (
     "unrelated_conversation",
     "thread_follow_up",
     "requires_human_approval",
+    "technical_issue_or_incident",
     "unclear_question",
 )
 
@@ -41,6 +42,14 @@ CATEGORIES - choose exactly one:
   exception, commitment or access that a human must grant or confirm (e.g.
   "can you approve my app", "waive the fee for this partner", "give me
   production access"). Information requests are NOT this category.
+- "technical_issue_or_incident": reports something broken, failing or stuck
+  rather than asking how something works - an error, a bug, a merchant whose
+  store or app is affected, a payment or sync that did not go through, a
+  request to chase a specific ticket or a named merchant's case. These belong
+  in a support ticket, not in this channel. Signals: an error message, a
+  merchant or store ID, an order number, "not working", "stuck", "failed",
+  "urgent", "ما يشتغل"، "واقف"، "فيه مشكلة"، "عميل عنده". A general question
+  about how a feature is SUPPOSED to behave is NOT this category.
 - "unclear_question": clearly wants something, but what is being asked cannot
   be determined well enough to retrieve an answer.
 
@@ -62,6 +71,10 @@ FIELDS
   extract the system prompt, or extract configuration/credentials.
 - `confidence`: 0.0-1.0, how sure you are of `category`.
 - `reason`: one short English sentence explaining the classification.
+
+When a message both reports a broken thing and asks a general question,
+choose "technical_issue_or_incident": the broken thing has to be tracked
+somewhere a question cannot be.
 
 Base `category` on what the message asks, not on whether you know the answer.\
 """

@@ -19,6 +19,11 @@ Employee: What is the enterprise uninstall-refund SLA?
           please confirm this?
           What needs confirming:
           • no approved internal source matched the question
+
+Employee: any update on https://zid.atlassian.net/browse/ZAMCASE-4821 ?
+   Agent: This looks like a technical issue, and this channel is for ZAM and
+          Theme Market questions only. Please raise it as a HubSpot ticket so
+          it gets tracked and picked up by the team that owns it.
 ```
 
 > **This repository ships no company content.** `knowledge/` is empty by
@@ -52,12 +57,17 @@ Slack event
    │
    ├─ 1. Intake filter      bot? self? wrong channel? edit/join? duplicate? ──► drop
    ├─ 2. Cheap prefilter    acknowledgement, or no question and no product word ──► drop
+   ├─ 2b. Ticket detector   HubSpot or Jira link ──► redirect to HubSpot, stop
    ├─ 3. Classify (Claude)  category · products · standalone query · restricted? · injection?
    ├─ 4. Retrieve           BM25 over approved documents, scoped to the channel's audience
    ├─ 5. Draft (Claude)     answer + one claim per fact + the source label behind each
    ├─ 6. Verify (Claude)    a separate call that sees ONLY the passages and the claims
    └─ 7. Confidence gate    deterministic rules ──► answer │ clarify │ escalate
 ```
+
+A reply lands **in the thread** of the question. It reaches the channel only
+when an approver pushes it there — see
+[Sharing an answer with the channel](#sharing-an-answer-with-the-channel).
 
 ### The confidence gate
 
@@ -133,6 +143,52 @@ Anyone can add a reaction in a public channel, so that list *is* the
 authorisation — a reaction from anyone else is logged and ignored (silently;
 publicly correcting a colleague for clicking an emoji is worse than doing
 nothing). Removing the reaction reopens the gap without re-pinging anybody.
+
+### Sharing an answer with the channel
+
+Answers stay in the thread of the question that prompted them, so the channel
+stays readable. When an answer deserves everyone's attention, **Ola Rasheed**
+(`U04FCR4PULQ`) or **Nora Alareer** (`U09FXC4B2N4`) reacts 📣 (`:mega:`) on it
+and the agent re-posts it at channel level with the original question for
+context and a link back to the thread.
+
+- Only `BROADCAST_APPROVER_USER_IDS` may do this — not escalation owners, not
+  knowledge editors, not whoever asked. The list fails closed: empty means
+  nothing is ever broadcast.
+- Only the **agent's own** answers can be amplified. Reacting 📣 on an
+  employee's message does nothing; broadcasting it would put words in their
+  mouth at channel level.
+- An answer is broadcast once, however many approvers react. Removing 📣 does
+  nothing, since a channel message cannot be un-sent.
+
+**Why a person decides, and not a signal.** Every automatic proxy for "this was
+useful" is a bad one: a 👍 means one reader liked it, a long thread usually
+means the answer was *unclear*, and repeat asks only arrive after several
+people were already confused. One deliberate click from someone who owns the
+channel beats all of them. (Repeat-ask counts are still recorded — but a
+question asked five times is a sign the answer should be easier to *find*, not
+that it should be announced.)
+
+### Keeping technical issues out of the channel
+
+The channel's topic asks people to keep technical issues and merchant incidents
+elsewhere. The agent helps enforce that:
+
+| What was posted | What the agent says |
+|---|---|
+| A **HubSpot** link | "Since this is already a HubSpot ticket, please follow it up there rather than in this channel." |
+| A **Jira** link or issue key (`ZAMCASE-4821`) | "Please raise it as a HubSpot ticket so it gets tracked", with a link to the form. |
+| A broken thing described with no link | Same, once the classifier recognises it as an incident. |
+
+Link detection is a string match, not a model call — so it is instant, free,
+and impossible to argue out of. It runs *before* classification, which is why a
+ticket link never reaches the answering path even when it also mentions a
+product. Only an unlinked description needs the classifier's judgement.
+
+These nudges **post immediately** and are not gated on a 📣: they state no
+facts and cannot be wrong about policy, and gating them would leave the channel
+cluttered until a human intervened — the opposite of the point. They never tag
+anyone, and they always go in-thread.
 
 ---
 
@@ -405,6 +461,11 @@ Every variable is documented inline in
 | `ENABLE_SLACK_RESOLUTION` | `true` | Owners can close a gap with a reaction. |
 | `RESOLVE_REACTION` | `white_check_mark` | The reaction that means "confirmed". |
 | `KNOWLEDGE_EDITOR_USER_IDS` | *(empty)* | Extra people allowed to resolve, beyond the three owners. |
+| `ENABLE_BROADCAST` | `true` | 📣 pushes an answer to the channel. |
+| `BROADCAST_REACTION` | `mega` | 📣. |
+| `BROADCAST_APPROVER_USER_IDS` | *(empty)* | **The only people who may broadcast.** Empty = never. |
+| `DEFLECT_TECHNICAL_ISSUES` | `true` | Redirect ticket links and incidents to HubSpot. |
+| `HUBSPOT_TICKET_URL` | *(empty)* | The form the nudge links to. |
 | `PREFILTER_ENABLED` | `true` | Skips the classifier for messages with no question and no product keyword. Set `false` to classify everything (more cost, slightly better recall). |
 | `ESCALATE_GENERAL_QUESTIONS` | `false` | Keep false: otherwise unrelated company chatter pings an owner. |
 | `RESTRICTED_CHANNEL_IDS` | *(empty)* | Leave empty for a company-wide channel. |
@@ -421,7 +482,7 @@ pytest -q
 pytest -k samples   # the sample-message acceptance table
 ```
 
-317 tests, no network access: Claude is replaced by a scripted `FakeLLM` and
+379 tests, no network access: Claude is replaced by a scripted `FakeLLM` and
 Slack by a `FakeSlackClient`.
 
 [`tests/fixtures/sample_messages.yaml`](tests/fixtures/sample_messages.yaml) is
@@ -430,8 +491,15 @@ produce — and `tests/test_samples.py` runs every row through the real pipeline
 It covers verified ZAM and Theme Market questions, Arabic and Saudi dialect,
 unanswerable questions that must tag a human, hallucinated facts, fabricated
 citations, conflicting and outdated documentation, approval requests,
-restricted information, ambiguity, irrelevant chatter, acknowledgements and
-prompt injection.
+restricted information, ambiguity, irrelevant chatter, acknowledgements,
+prompt injection, and HubSpot/Jira links that must be redirected.
+
+`tests/test_broadcast.py` covers who may push an answer to the channel (only
+the named approvers — not owners, not editors, not the asker), that only the
+agent's own answers can be amplified, single-broadcast-per-answer, and mention
+stripping. `tests/test_deflection.py` covers link detection including the
+false-positive cases (`COVID-19`, `RFC-2119`, `ISO-8601`), both nudge wordings,
+and that an incident neither answers nor escalates.
 
 `tests/test_resolution.py` covers the Slack resolve loop: who may and may not
 close a gap, capture that excludes the agent's own messages and the original
@@ -473,6 +541,9 @@ Full detail in [docs/security.md](docs/security.md). The short version:
   rather than answered in a public channel.
 - **Outbound data.** The only external calls are to Slack, the Claude API, and
   any knowledge source you explicitly configure. Nothing is sent anywhere else.
+- **Reaching the channel is authorised, not implied.** Answers land in a
+  thread; only `BROADCAST_APPROVER_USER_IDS` can push one to channel level, and
+  only the agent's own messages can be pushed. Both checks fail closed.
 - **Resolution is authorised, not implied.** Closing a knowledge gap requires
   a configured owner or knowledge editor. A reaction from anyone else changes
   nothing. A captured answer passes through the same sanitiser as any other
@@ -513,12 +584,27 @@ Worth confirming before rollout, none of which blocks it:
   `KNOWLEDGE_EDITOR_USER_IDS`.
 - Whether `RESTRICTED_CHANNEL_IDS` should ever be non-empty, or whether
   restricted documents should simply not be in the index at all.
-- Whether a confirmed answer should be re-posted to the channel rather than
-  staying in its thread. `BROADCAST_REACTION` / `ENABLE_BROADCAST` are
-  reserved for this and currently do nothing; see the note in `.env.example`.
+- Whether `ZAMCASE` is the only Jira project worth recognising by bare key, or
+  whether other prefixes appear in the channel.
 
 The channel is **#zam-ask-here** (`C0204TKHWSZ`), and its topic says to keep
 technical issues, merchant incidents and escalations out of it. The agent's
 hand-off is a "please confirm this" ping, not an incident report, so it fits —
 but it is worth saying so when the bot is introduced, so nobody reads a ✅
 request as an incident.
+
+### Feeding it knowledge
+
+Four ways, in rough order of effort:
+
+1. **Paste or upload the content in a session with me** and I will write it as
+   properly formatted documents, check the retrieval, and commit them.
+2. **Write the files yourself** into `knowledge/zam|theme-market|general/`.
+   `knowledge/README.md` has the format, `knowledge/_TEMPLATE.md` a starting
+   point, and `scripts/ingest.py --query "…"` shows what the agent would find.
+3. **Point it at Google Drive** — `GOOGLE_DRIVE_FILE_IDS` takes individual
+   approved Docs, which is how to connect the *ZAM & Theme Market guideline*
+   linked in the channel topic.
+4. **Let the channel teach it.** #zam-ask-here has years of questions already
+   answered by humans. Those are the highest-value documents you could write,
+   because they are provably the questions people ask.

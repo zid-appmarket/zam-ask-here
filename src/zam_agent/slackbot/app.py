@@ -20,6 +20,7 @@ from typing import Any
 from slack_bolt import App
 from slack_sdk.errors import SlackApiError
 
+from ..broadcast import BroadcastManager, BroadcastResult
 from ..confidence import Action
 from ..config import AppConfig
 from ..escalation import EscalationManager
@@ -55,6 +56,7 @@ class SlackAgent:
         app: App | None = None,
         pipeline: SupportPipeline | None = None,
         resolution: ResolutionManager | None = None,
+        broadcast: BroadcastManager | None = None,
     ) -> None:
         self.config = config
         self.knowledge = knowledge
@@ -86,6 +88,11 @@ class SlackAgent:
             store,
             thread_lookup=self._thread_parent_ts,
             thread_fetcher=self._thread_messages,
+        )
+        self.broadcast = broadcast or BroadcastManager(
+            config,
+            thread_fetcher=self._thread_messages,
+            permalink_fetcher=self._permalink,
         )
         self._register()
 
@@ -146,7 +153,7 @@ class SlackAgent:
         self._executor.submit(self._guarded_process, dict(body), dict(event))
 
     def _submit_reaction(self, body: Mapping[str, Any], event: Mapping[str, Any], *, added: bool) -> None:
-        if not self.config.slack.enable_slack_resolution:
+        if not (self.config.slack.enable_slack_resolution or self.config.slack.enable_broadcast):
             return
         METRICS.incr("slack.reactions_received")
         self._executor.submit(self._guarded_reaction, dict(body), dict(event), added)
@@ -221,8 +228,8 @@ class SlackAgent:
 
     def process_reaction(
         self, body: Mapping[str, Any], event: Mapping[str, Any], *, added: bool
-    ) -> ResolutionResult | None:
-        """An owner marking a gap resolved (or undoing it) with a reaction."""
+    ) -> ResolutionResult | BroadcastResult | None:
+        """A reaction from a human: push an answer to the channel, or close a gap."""
 
         decision = should_handle_reaction(
             event, config=self.config.slack, bot_user_id=self.bot_user_id
@@ -238,6 +245,14 @@ class SlackAgent:
         ):
             METRICS.incr("slack.duplicate_event")
             return None
+
+        reaction = str(event.get("reaction") or "").strip().strip(":")
+        if reaction == self.config.slack.broadcast_reaction and self.config.slack.enable_broadcast:
+            try:
+                return self._handle_broadcast(event, added=added, claim_key=key)
+            except Exception:
+                self.store.release_event(key)
+                raise
 
         self.resolution.bot_user_id = self.bot_user_id
         try:
@@ -284,6 +299,60 @@ class SlackAgent:
                     "could not confirm the resolution in Slack",
                     extra={"context": {"error": exc.error, "outcome": result.outcome}},
                 )
+        return result
+
+    def _handle_broadcast(
+        self, event: Mapping[str, Any], *, added: bool, claim_key: str
+    ) -> BroadcastResult:
+        self.broadcast.bot_user_id = self.bot_user_id
+        result = self.broadcast.handle_reaction(event, added=added)
+        if not result.should_post:
+            return result
+
+        # One broadcast per answer, however many approvers react to it.
+        if not self.store.claim_event(
+            f"bcast:{result.channel_id}:{result.source_ts}",
+            channel_id=result.channel_id,
+            message_ts=result.source_ts,
+        ):
+            METRICS.incr("broadcast.duplicate")
+            log.info(
+                "answer was already broadcast",
+                extra={"context": {"channel_id": result.channel_id, "source_ts": result.source_ts}},
+            )
+            return BroadcastResult(
+                outcome="already_broadcast",
+                channel_id=result.channel_id,
+                source_ts=result.source_ts,
+                actor_user_id=result.actor_user_id,
+            )
+
+        if self.config.dry_run:
+            log.info(
+                "DRY_RUN -- broadcast not sent",
+                extra={"context": {"channel_id": result.channel_id, "text": result.text}},
+            )
+            return result
+
+        try:
+            call_with_retry(
+                self.app.client.chat_postMessage,
+                operation="chat.postMessage(broadcast)",
+                channel=result.channel_id,
+                text=result.text,
+                mrkdwn=True,
+                unfurl_links=False,
+                unfurl_media=False,
+            )
+            METRICS.incr("slack.posted.broadcast")
+        except SlackCallFailed as exc:
+            # Let a retry of the same reaction try again.
+            self.store.release_event(f"bcast:{result.channel_id}:{result.source_ts}")
+            self.store.release_event(claim_key)
+            log.error(
+                "could not broadcast the answer",
+                extra={"context": {"error": exc.error, "channel_id": result.channel_id}},
+            )
         return result
 
     def _thread_parent_ts(self, channel_id: str, message_ts: str) -> str | None:
@@ -463,6 +532,12 @@ class SlackAgent:
             "mode": self.config.slack.mode,
             "dry_run": self.config.dry_run,
             "watched_channels": len(self.config.slack.channel_ids),
+            "broadcast": {
+                "enabled": self.config.slack.enable_broadcast,
+                "reaction": self.config.slack.broadcast_reaction,
+                "approvers": len(self.config.slack.broadcast_approver_user_ids),
+            },
+            "deflect_technical_issues": self.config.slack.deflect_technical_issues,
             "slack_resolution": {
                 "enabled": self.config.slack.enable_slack_resolution,
                 "reaction": self.config.slack.resolve_reaction,

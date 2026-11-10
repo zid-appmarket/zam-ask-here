@@ -9,6 +9,10 @@ add :white_check_mark: (`RESOLVE_REACTION`). The agent saves what you wrote,
 marks the gap closed and confirms in the thread. Removing the reaction reopens
 it. That is the whole owner-facing workflow — no CLI.
 
+**Approvers (Ola, Nora), in the channel.** Answers stay in their thread. React
+📣 on one to put it in front of the whole channel. Nobody else's 📣 does
+anything, and only the agent's own answers can be pushed.
+
 **Whoever maintains the knowledge base, weekly:**
 
 ```bash
@@ -64,6 +68,9 @@ Counters worth watching:
 | `pipeline.escalation_suppressed` | repeat asks inside the cooldown |
 | `resolution.resolved` / `.reopened` | owners closing gaps from Slack |
 | `resolution.unauthorized` | someone without permission tried to close one |
+| `broadcast.posted` | answers pushed to the channel by an approver |
+| `broadcast.unauthorized` | a 📣 from someone who is not an approver |
+| `pipeline.deflected.*` | ticket links and incidents redirected to HubSpot |
 | `pipeline.unhandled_error` | a bug — should be flat at zero |
 | `llm.timeout` / `llm.rate_limited` / `llm.refusal` | Claude-side trouble |
 | `slack.duplicate_event` | retries being dropped correctly |
@@ -89,6 +96,10 @@ tuning, `reason=…` for why a message was skipped.
 | Answers in the wrong language | the question is mixed-script | expected: it follows the dominant script |
 | An owner pinged repeatedly | `ESCALATION_COOLDOWN_HOURS=0` | raise it |
 | A ✅ does nothing | the reactor is not an owner or editor | add them to `KNOWLEDGE_EDITOR_USER_IDS` |
+| A 📣 does nothing | the reactor is not in `BROADCAST_APPROVER_USER_IDS`, or that list is empty | add them; the startup warning names this |
+| A 📣 on someone's question does nothing | only the agent's own answers can be broadcast | react on the agent's reply instead |
+| A real question gets the HubSpot nudge | it contained a ticket link, which always wins | ask it without the link, or set `DEFLECT_TECHNICAL_ISSUES=false` |
+| A ticket link is not deflected | an unrecognised host | check `pipeline.deflected.*`; the host list is in `src/zam_agent/triage.py` |
 | A ✅ does nothing, and `slack.reaction_filtered.*` is rising | `reactions:read` missing, or events not subscribed | re-check the manifest, reinstall |
 | `--draft-all` says nothing to draft | owners resolved without writing an answer in the thread | the reply has to be *in the thread*, after the question |
 | Costs higher than expected | `PREFILTER_ENABLED=false`, or a busy channel | re-enable the prefilter; check `llm.calls` |

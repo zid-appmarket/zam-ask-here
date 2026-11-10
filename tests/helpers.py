@@ -37,6 +37,8 @@ OWNER_DEFAULT = "U0OWNERDEF1"
 OWNER_ZAM = "U0OWNERZAM1"
 OWNER_THEME = "U0OWNERTHM1"
 KB_EDITOR = "U0EDITOR0001"
+APPROVER_OLA = "U0APPROVER1"
+APPROVER_NORA = "U0APPROVER2"
 OUTSIDER = "U0OUTSIDER1"
 
 TODAY = _dt.date(2026, 11, 10)
@@ -89,7 +91,10 @@ def make_config(**overrides: Any) -> AppConfig:
         enable_slack_resolution=True,
         resolve_reaction="white_check_mark",
         broadcast_reaction="mega",
-        enable_broadcast=False,
+        enable_broadcast=True,
+        broadcast_approver_user_ids=(APPROVER_OLA, APPROVER_NORA),
+        deflect_technical_issues=True,
+        hubspot_ticket_url="https://example.invalid/hubspot-ticket-form",
     )
     slack_defaults.update(slack_overrides)
 

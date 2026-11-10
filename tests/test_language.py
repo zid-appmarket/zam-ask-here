@@ -101,6 +101,37 @@ def test_msa_is_not_flagged_as_dialect() -> None:
     assert is_saudi_dialect("ما هي مدة مراجعة التطبيق؟") is False
 
 
+@pytest.mark.parametrize(
+    "text",
+    [
+        "التكت ما فيها رد https://app.hubspot.com/contacts/1234/ticket/5678",
+        "وش مدة المراجعة؟ شوف <https://docs.google.com/document/d/1PKh|الدليل>",
+        "نسبة الإيرادات؟ :white_check_mark:",
+        "شكراً <@U0123456789>",
+        "ليش `installApp()` ما يشتغل",
+    ],
+)
+def test_a_link_or_mention_does_not_flip_an_arabic_message_to_english(text: str) -> None:
+    """A URL's Latin characters are not evidence of the writer's language."""
+
+    assert reply_language(text) == "ar"
+
+
+def test_an_english_message_with_a_link_stays_english() -> None:
+    assert reply_language("How long does review take? see https://example.invalid/x") == "en"
+
+
+def test_strip_non_linguistic_removes_markup_but_keeps_words() -> None:
+    from zam_agent.language import strip_non_linguistic
+
+    stripped = strip_non_linguistic("وش الحل https://x.co/y <@U0123456789> :tada: `code`")
+    assert "وش الحل" in stripped
+    assert "https" not in stripped
+    assert "U0123456789" not in stripped
+    assert "tada" not in stripped
+    assert "code" not in stripped
+
+
 def test_profile_bundles_everything() -> None:
     result = profile("وش مدة مراجعة التطبيق في زام؟")
     assert result.detected == "ar"

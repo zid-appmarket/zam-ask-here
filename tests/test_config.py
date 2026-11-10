@@ -22,6 +22,9 @@ def apply(monkeypatch: pytest.MonkeyPatch, env: dict[str, str], *, clear: bool =
             "THEME_MARKET_ESCALATION_USER_ID", "CONFIDENCE_THRESHOLD", "MEDIUM_CONFIDENCE_THRESHOLD",
             "CLAUDE_MODEL", "CLAUDE_CLASSIFIER_MODEL", "CLAUDE_EFFORT", "DATABASE_URL",
             "RESPOND_TO_UNRELATED", "DRY_RUN", "ANSWER_IN_THREAD",
+            "BROADCAST_APPROVER_USER_IDS", "BROADCAST_REACTION", "ENABLE_BROADCAST",
+            "HUBSPOT_TICKET_URL", "DEFLECT_TECHNICAL_ISSUES", "KNOWLEDGE_EDITOR_USER_IDS",
+            "RESOLVE_REACTION", "ENABLE_SLACK_RESOLUTION",
         ]:
             monkeypatch.delenv(key, raising=False)
     for key, value in env.items():
@@ -107,12 +110,59 @@ def test_per_product_owners_override_the_default(monkeypatch: pytest.MonkeyPatch
     assert config.escalation.owner_for("zam") == "U0OWNERZAM1"
     assert config.escalation.owner_for("theme_market") == "U0OWNERTHM1"
     assert config.escalation.owner_for(None) == "U0OWNERDEF1"
-    assert config.warnings == ()
+    assert not any("ESCALATION_USER_ID" in warning for warning in config.warnings)
 
 
 def test_a_warning_is_raised_when_no_per_product_owner_is_set(monkeypatch: pytest.MonkeyPatch) -> None:
     apply(monkeypatch, MINIMAL)
     assert any("ESCALATION_USER_ID" in warning for warning in load_config().warnings)
+
+
+def test_broadcasting_warns_when_nobody_is_allowed_to_approve(
+    monkeypatch: pytest.MonkeyPatch,
+) -> None:
+    """Broadcasting on with no approver would silently never fire."""
+
+    apply(monkeypatch, MINIMAL)
+    config = load_config()
+    assert config.slack.enable_broadcast is True
+    assert config.slack.broadcast_approver_user_ids == ()
+    assert any("BROADCAST_APPROVER_USER_IDS" in warning for warning in config.warnings)
+    assert config.slack.may_broadcast("U0ANYONE001") is False, "must fail closed"
+
+
+def test_only_configured_approvers_may_broadcast(monkeypatch: pytest.MonkeyPatch) -> None:
+    apply(monkeypatch, {**MINIMAL, "BROADCAST_APPROVER_USER_IDS": "U0APPROVER1, U0APPROVER2"})
+    config = load_config()
+
+    assert config.slack.broadcast_approver_user_ids == ("U0APPROVER1", "U0APPROVER2")
+    assert config.slack.may_broadcast("U0APPROVER1") is True
+    assert config.slack.may_broadcast("U0APPROVER2") is True
+    assert config.slack.may_broadcast("U0OWNERDEF1") is False, "an escalation owner is not an approver"
+    assert config.slack.may_broadcast("") is False
+    assert not any("BROADCAST_APPROVER_USER_IDS" in w for w in config.warnings)
+
+
+@pytest.mark.parametrize("value", ["mega", ":mega:", " :mega: "])
+def test_reaction_names_accept_colons(monkeypatch: pytest.MonkeyPatch, value: str) -> None:
+    apply(monkeypatch, {**MINIMAL, "BROADCAST_REACTION": value})
+    assert load_config().slack.broadcast_reaction == "mega"
+
+
+def test_a_bad_approver_id_is_rejected(monkeypatch: pytest.MonkeyPatch) -> None:
+    apply(monkeypatch, {**MINIMAL, "BROADCAST_APPROVER_USER_IDS": "@ola"})
+    with pytest.raises(ConfigError, match="BROADCAST_APPROVER_USER_IDS"):
+        load_config()
+
+
+def test_deflection_warns_without_a_ticket_url(monkeypatch: pytest.MonkeyPatch) -> None:
+    apply(monkeypatch, MINIMAL)
+    assert any("HUBSPOT_TICKET_URL" in warning for warning in load_config().warnings)
+
+    apply(monkeypatch, {**MINIMAL, "HUBSPOT_TICKET_URL": "https://example.invalid/form"}, clear=False)
+    config = load_config()
+    assert config.slack.hubspot_ticket_url == "https://example.invalid/form"
+    assert not any("HUBSPOT_TICKET_URL" in warning for warning in config.warnings)
 
 
 def test_multiple_channels_can_be_watched(monkeypatch: pytest.MonkeyPatch) -> None:

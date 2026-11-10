@@ -16,6 +16,7 @@ from typing import Any, Literal
 
 from .confidence import Action, ConfidenceInputs, ConfidenceVerdict, GradingSummary, evaluate
 from .config import AppConfig
+from .deflection import deflection_message
 from .escalation import EscalationManager
 from .knowledge.index import RetrievalResult
 from .knowledge.ingest import KnowledgeBase, format_evidence_block
@@ -30,6 +31,7 @@ from .prompts import grader as grader_prompt
 from .security import allowed_audiences, sanitize_outbound
 from .store.base import Store
 from .store.sqlite_store import question_key
+from .triage import TicketSignal, detect_ticket_links
 
 log = get_logger(__name__)
 
@@ -78,6 +80,9 @@ class SourceRef:
     url: str | None
     status: str
     updated: str | None
+
+
+DEFLECTION_REASON_BY_SIGNAL = {"hubspot": "hubspot_link", "jira": "jira_link"}
 
 
 @dataclass(frozen=True)
@@ -161,6 +166,13 @@ class SupportPipeline:
                 AgentDecision(action=Action.IGNORE, skip_reason=skip, language=lang.reply_in)
             )
 
+        # A ticket link is a string, not a judgement call: redirect it before
+        # spending a model call, and before the prefilter's product keywords can
+        # route it into the answering path.
+        ticket = detect_ticket_links(message.text)
+        if ticket.found and self.config.slack.deflect_technical_issues:
+            return finish(self._deflect(message, lang, ticket=ticket))
+
         # -------------------------------------------------------- 1. classify
         try:
             classification = self._classify(message, lang)
@@ -214,6 +226,13 @@ class SupportPipeline:
             topic=topic,
             thread_ts=message.reply_thread_ts,
         )
+
+        if category == "technical_issue_or_incident":
+            if not self.config.slack.deflect_technical_issues:
+                return finish(
+                    _decide(context, Action.IGNORE, skip_reason="technical_issue_deflection_disabled")
+                )
+            return finish(self._deflect(message, lang, context=context))
 
         # ----------------------------------------------------------- 2. route
         gate = self._route(
@@ -513,6 +532,52 @@ class SupportPipeline:
             max_tokens=2048,
         )
         return result.data
+
+    def _deflect(
+        self,
+        message: IncomingMessage,
+        lang: LanguageProfile,
+        *,
+        ticket: TicketSignal | None = None,
+        context: DecisionContext | None = None,
+    ) -> AgentDecision:
+        """Point a technical issue at HubSpot instead of answering it."""
+
+        reason = (
+            DEFLECTION_REASON_BY_SIGNAL[ticket.kind]
+            if ticket is not None and ticket.found
+            else "technical_issue"
+        )
+
+        text = deflection_message(
+            reason=reason,  # type: ignore[arg-type]
+            language=lang.reply_in,
+            hubspot_ticket_url=self.config.slack.hubspot_ticket_url,
+        )
+        METRICS.incr(f"pipeline.deflected.{reason}")
+        log.info(
+            "redirected a technical issue out of the channel",
+            extra={
+                "context": {
+                    "reason": reason,
+                    "channel_id": message.channel_id,
+                    "message_ts": message.message_ts,
+                    "matched": list(ticket.matched) if ticket else [],
+                }
+            },
+        )
+        base = context or DecisionContext(
+            category="technical_issue_or_incident",
+            language=lang.reply_in,
+            thread_ts=message.reply_thread_ts,
+        )
+        return _decide(
+            base,
+            Action.DEFLECT,
+            text=text,
+            skip_reason=reason,
+            diagnostics={"deflection": {"reason": reason, "matched": list(ticket.matched) if ticket else []}},
+        )
 
     def _escalate(
         self,

@@ -219,6 +219,59 @@
     text_contains: ["Do you mean"]
     text_excludes: ["{{OWNER_ZAM}}"]
 
+- id: hubspot-link-posted
+  description: >
+    A HubSpot ticket link belongs in HubSpot. Redirected immediately, with no
+    model call and no approval needed.
+  message: "No reply on this one yet https://app.hubspot.com/contacts/1234/ticket/5678"
+  expect:
+    action: deflect
+    skip_reason: hubspot_link
+    tagged_owner: false
+    text_contains: ["follow it up there", "rather than in this channel"]
+    text_excludes: ["{{OWNER_ZAM}}", "Raise a ticket"]
+    llm_calls: { classify: 0, answer: 0, grade: 0 }
+
+- id: jira-link-posted
+  description: A Jira link has no HubSpot ticket behind it, so ask for one.
+  message: "any update on https://zid.atlassian.net/browse/ZAMCASE-4821 ?"
+  expect:
+    action: deflect
+    skip_reason: jira_link
+    tagged_owner: false
+    text_contains: ["raise it as a HubSpot ticket"]
+    llm_calls: { classify: 0 }
+
+- id: jira-key-without-a-link
+  description: A bare issue key counts too.
+  message: "ZAMCASE-4821 is still blocking the partner"
+  expect:
+    action: deflect
+    skip_reason: jira_link
+    llm_calls: { classify: 0 }
+
+- id: technical-issue-arabic
+  description: An Arabic ticket link is redirected in Arabic.
+  message: "التكت ما فيها رد https://app.hubspot.com/contacts/1/ticket/2"
+  expect:
+    action: deflect
+    language: ar
+    skip_reason: hubspot_link
+    text_contains: ["تابعها هناك"]
+
+- id: technical-issue-described
+  description: >
+    A broken thing described without any link. The classifier catches it, and
+    it is redirected rather than answered or escalated.
+  message: "The ZAM app install keeps failing for merchant 88213, this is urgent"
+  classify: { category: technical_issue_or_incident, products: [zam] }
+  expect:
+    action: deflect
+    skip_reason: technical_issue
+    tagged_owner: false
+    text_contains: ["raise it as a HubSpot ticket"]
+    llm_calls: { answer: 0, grade: 0 }
+
 - id: unrelated-chatter
   description: Social chatter — ignored by the classifier, no reply.
   message: "Anyone up for lunch? There is a nice app store downstairs"

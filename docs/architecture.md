@@ -26,7 +26,8 @@
 │ prompts/ +    │ knowledge/    │ confidence.py    │ escalation.py     │
 │ llm/          │ retrieval     │ the gate         │ human hand-off    │
 ├───────────────┴───────────────┴──────────────────┴───────────────────┤
-│ store/ · security.py · language.py · resolution.py · observability/  │
+│ store/ · security.py · language.py · triage.py · deflection.py ·     │
+│ resolution.py · broadcast.py · observability/                        │
 └──────────────────────────────────────────────────────────────────────┘
 ```
 
@@ -42,7 +43,8 @@ reaction_added / reaction_removed
    ├─ should_handle_reaction   message? watched channel? human? ──► drop
    ├─ claim_event              its own de-duplication key ──► drop retries
    └─ ResolutionManager
-        ├─ is it the configured reaction?        ──► no: stop
+        ├─ is it 📣?  ──► BroadcastManager (approvers only, agent messages only)
+        ├─ is it the resolve reaction?           ──► no: stop
         ├─ which thread is this message in?      (cheap case first, then one Slack call)
         ├─ is there an escalation for it?        ──► no: stop
         ├─ may this person resolve?              ──► no: count, log, stop
