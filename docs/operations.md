@@ -33,9 +33,16 @@ the agent will state it confidently.
 Monthly:
 
 ```bash
+python scripts/sync_docs.py --dry-run  # what changed in the help centres
+python scripts/sync_docs.py            # take the changes, review the diff
+python scripts/ingest.py --validate
 python scripts/ingest.py --stale       # documents past KNOWLEDGE_MAX_AGE_DAYS
 python scripts/report_gaps.py --prune 90
 ```
+
+The sync is the cheapest maintenance there is: when the docs team updates a
+page, re-running it brings the agent along, and the diff tells you exactly what
+changed. Worth a scheduled job once you trust it.
 
 A document past the freshness limit cannot support a confident answer, so an
 un-refreshed knowledge base degrades into an escalation machine. Re-date what
@@ -100,6 +107,9 @@ tuning, `reason=…` for why a message was skipped.
 | A 📣 on someone's question does nothing | only the agent's own answers can be broadcast | react on the agent's reply instead |
 | A real question gets the HubSpot nudge | it contained a ticket link, which always wins | ask it without the link, or set `DEFLECT_TECHNICAL_ISSUES=false` |
 | A ticket link is not deflected | an unrecognised host | check `pipeline.deflected.*`; the host list is in `src/zam_agent/triage.py` |
+| The sync fetches nothing | the three documentation hosts are not reachable | they are allowed on the `zam-ask-here` cloud environment; locally no setup is needed |
+| A synced page reads as navigation | the site changed its markup | `python scripts/sync_docs.py --url <page> --preview` shows the extraction |
+| An answer quotes a stale synced page | the upstream page is old | fix it upstream, or add a hand-written document that `supersedes:` the synced id |
 | A ✅ does nothing, and `slack.reaction_filtered.*` is rising | `reactions:read` missing, or events not subscribed | re-check the manifest, reinstall |
 | `--draft-all` says nothing to draft | owners resolved without writing an answer in the thread | the reply has to be *in the thread*, after the question |
 | Costs higher than expected | `PREFILTER_ENABLED=false`, or a busy channel | re-enable the prefilter; check `llm.calls` |

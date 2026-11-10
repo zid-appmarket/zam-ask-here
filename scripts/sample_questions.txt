@@ -1,0 +1,44 @@
+# Questions in the shape #zam-ask-here actually asks them, for checking the
+# agent end to end:
+#
+#   python scripts/simulate.py --file scripts/sample_questions.txt
+#   python scripts/ingest.py --query "<one of these>"
+#
+# Paraphrased from real channel traffic. No merchant name, store URL, store ID
+# or phone number appears here, and none should be added — this file is for
+# testing retrieval, not a record of anyone's case.
+#
+# ── Should be answerable from the synced documentation ───────────────────────
+كم مدة مراجعة التطبيق في زام؟
+وش نسبة الإيرادات في زام؟
+متى تُصرف مستحقات الشريك؟
+كيف أرفع قالب للمراجعة في سوق القوالب؟
+وش الفرق بين التطبيق العام والتطبيق الخاص؟
+كم متجر تطوير يقدر الشريك ينشئ؟
+وش يصير لو رُفض التطبيق؟
+What webhook events does Zid support?
+How do I get the app client ID and secret key?
+What are the Theme Market theme types?
+How are partner theme payouts calculated?
+What does the app review checklist require?
+# ── Merchant-dashboard questions, from the Arabic help centre ────────────────
+كيف يغيّر التاجر رقم الواتساب المرتبط بالمتجر؟
+وش طرق الدفع المتاحة في مدفوعات زد؟
+كيف يشتري التاجر ثيم من سوق الثيمات؟
+وش هي محفظة زد وعلى وش تُستخدم؟
+كيف يربط التاجر حسابه في سمسا؟
+وين يتابع التاجر تذاكر الدعم؟
+# ── Should NOT be answerable: needs the live app/theme catalogue ─────────────
+# These are the single most common shape in the channel. The help centres
+# document *how* the market works, not *what is in it today*, so the agent
+# should escalate rather than guess. See the catalogue note in the README.
+هل فيه تطبيق لإدارة الصيانة والضمان؟
+هل ثيم الفا انشال من سوق الثيمات؟
+وش البديل لتطبيق كريسب بعد ما انحذف؟
+فيه تطبيق يحفّز العملاء يقيّمون المنتجات ويعطيهم نقاط؟
+هل تطبيق حاسبة الزكاة متوقف؟
+# ── Should NOT get an answer at all ──────────────────────────────────────────
+# A ticket link is redirected to HubSpot; chatter and thanks are ignored.
+أي تحديث على https://zid.atlassian.net/browse/ZAMCASE-4821 ؟
+يعطيكم العافية
+الاجتماع اتأجل لبكرة

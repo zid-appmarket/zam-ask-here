@@ -26,10 +26,17 @@ Employee: any update on https://zid.atlassian.net/browse/ZAMCASE-4821 ?
           it gets tracked and picked up by the team that owns it.
 ```
 
-> **This repository ships no company content.** `knowledge/` is empty by
-> design — see [Fill the knowledge base](#4-fill-the-knowledge-base). Until
-> somebody adds documents, the agent escalates every question, which is the
-> correct behaviour for an agent with nothing to cite.
+Its knowledge comes from Zid's own published documentation, synced into
+`knowledge/` as reviewable Markdown by `scripts/sync_docs.py`:
+
+| Source | Pages | Covers |
+|---|---:|---|
+| [help-partner.zid.sa](https://help-partner.zid.sa/en/) | ~97 | ZAM and Theme Market partner process: payouts, review, publishing, troubleshooting |
+| [docs.zid.sa](https://docs.zid.sa/) | ~228 | Partner developer guides — OAuth, webhooks, plans, Vitrin/Jinja themes (the endpoint reference is excluded on purpose) |
+| [help.zid.sa/ar](https://help.zid.sa/ar) | ~243 | Arabic merchant help centre — the dashboard, apps, themes, wallet, subscriptions |
+
+Nothing is written by hand and nothing is invented: every document carries the
+`source_url` it came from, so each Slack answer links back to the real page.
 
 ---
 
@@ -208,6 +215,8 @@ src/zam_agent/
 │   ├── documents.py       front matter → Document, heading-aware chunking
 │   ├── index.py           BM25 + coverage + conflict/supersession resolution
 │   ├── ingest.py          loaders → index, atomic swap, audit snapshot
+│   ├── websync.py         help-centre sync: HTML → reviewable Markdown
+│   ├── drafts.py          a confirmed Slack answer → a draft document
 │   └── loaders/           markdown (default) · notion · gdrive
 ├── slackbot/
 │   ├── filters.py         what the agent may act on; de-duplication keys
@@ -307,8 +316,33 @@ missing or malformed — including a Slack ID that does not look like one.
 
 ### 4. Fill the knowledge base
 
-The agent can only say what it can cite. Read
-[`knowledge/README.md`](knowledge/README.md) for the document format, then:
+The agent can only say what it can cite. Most of the corpus is synced from
+Zid's published documentation:
+
+```bash
+python scripts/sync_docs.py --list        # what is configured, and page counts
+python scripts/sync_docs.py --dry-run     # what would change
+python scripts/sync_docs.py               # write it, then review the git diff
+python scripts/ingest.py --validate
+```
+
+[`knowledge/sources.yaml`](knowledge/sources.yaml) configures the sites, which
+pages to include, and how URLs map to products. Synced files are overwritten on
+every run — **never hand-edit one**; fix the upstream page and re-sync. Re-running
+later shows exactly what changed upstream, as a diff somebody reviews.
+
+Synced pages are written `status: verified`: the review that `knowledge/`
+normally provides already happened when the page was published, and the
+`source_url` lets any employee check an answer in one click. The remaining gate
+is the one that matters — a sync produces a diff, somebody reads it, CI runs
+`ingest.py --validate`.
+
+They keep their **real upstream `updated` date**, not the sync date. Some pages
+are genuinely from 2023 and still correct, which is why
+`KNOWLEDGE_MAX_AGE_DAYS` is 3 years here rather than 1; the honest dates mean
+`ingest.py --stale` still surfaces the pages worth re-checking.
+
+For anything the help centres do not cover, write it yourself:
 
 ```bash
 cp knowledge/_TEMPLATE.md knowledge/zam/app-review.md   # edit it
@@ -320,7 +354,10 @@ The `--query` output shows exactly what the agent would retrieve, which term
 coverage it got, and whether it would escalate. That loop — write a document,
 check the query, repeat — is how this agent gets good.
 
-Optional sources, both read-only and both limited to explicitly listed
+Running the sync needs the three documentation hosts reachable. They are
+allowed on the `zam-ask-here` cloud environment; a local run needs no setup.
+
+Further optional sources, both read-only and both limited to explicitly listed
 targets:
 
 - **Notion** — `NOTION_API_KEY` plus `NOTION_DATABASE_IDS` / `NOTION_PAGE_IDS`.
@@ -417,6 +454,7 @@ python scripts/report_gaps.py --interactions  # the recent decision log
 python scripts/report_gaps.py --reopen <key>  # undo a resolution
 python scripts/report_gaps.py --prune 30      # drop telemetry older than 30 days
 python scripts/ingest.py --stale              # documents past KNOWLEDGE_MAX_AGE_DAYS
+python scripts/sync_docs.py --dry-run         # what changed upstream since the last sync
 ```
 
 **The maintenance loop.** Escalations are not failures, they are the backlog.
@@ -456,7 +494,7 @@ Every variable is documented inline in
 | `MIN_EVIDENCE_COVERAGE` | `0.34` | Hard gate on key-term coverage. |
 | `MIN_SUPPORTED_CLAIM_RATIO` | `0.75` | Hard gate on verified grounding. |
 | `MAX_UNSUPPORTED_CLAIMS` | `0` | Raise this only deliberately. |
-| `KNOWLEDGE_MAX_AGE_DAYS` | `365` | Older, or undated, counts as stale. |
+| `KNOWLEDGE_MAX_AGE_DAYS` | `1095` | Older, or undated, counts as stale. 3 years because synced help-centre pages keep their real upstream dates. |
 | `ESCALATION_COOLDOWN_HOURS` | `24` | Re-ping window for the same question. |
 | `ENABLE_SLACK_RESOLUTION` | `true` | Owners can close a gap with a reaction. |
 | `RESOLVE_REACTION` | `white_check_mark` | The reaction that means "confirmed". |
@@ -578,7 +616,53 @@ Stated explicitly, because the brief left them open:
    (`claude-opus-5-5`) rather than silently downgrading to a cheaper model. The
    knobs are there; the choice is yours.
 
-Worth confirming before rollout, none of which blocks it:
+### What this agent cannot answer yet
+
+I read the last ~100 messages in #zam-ask-here (2 Sep – 4 Nov 2026) before
+wiring the knowledge sources, and the traffic is not what the design assumed.
+
+The channel is mostly **Zid's own CS and account teams asking on behalf of a
+merchant** — nearly every message carries a store URL or store ID and the words
+"استفسار التاجر". Roughly in order of frequency:
+
+| Shape | Example | Can the synced docs answer it? |
+|---|---|---|
+| "Do we have an app that does X?" | maintenance/warranty, affiliate marketing, review incentives, delivery-rep notifications | **No** |
+| "Is app X still available / what replaced it?" | a chat app removed, an accounting app that vanished, a calculator app that stopped | **No** |
+| "Does theme X support Y / which theme should we suggest?" | banner colour, flexible bundles, voice-note reviews | **Partly** |
+| "Can we integrate with X?" | accounting systems, ERPs, call systems, tag managers | **Partly** — the API docs answer the mechanism |
+| Partner/developer waiting on a reply | theme approval or portal access with no response for 2–3 weeks | **No** — operational, not documentary |
+| Process, payouts, review, publishing | review duration, revenue share, payout timing | **Yes** |
+| Team announcements | a new integration package price, a bug fixed, an offer's rules | **Yes, once written down** |
+
+So the honest expectation: **the synced documentation answers the process
+questions well and the two most common shapes not at all.** The help centres
+document *how* the market works, not *what is in it today*. Asking "is there an
+app for warranties?" needs the live catalogue — which apps exist, which are
+published, what each does, what it costs.
+
+That is the highest-value thing to add next, and it is a data source rather
+than a change to the agent: `KnowledgeLoader` is the extension point, and a
+catalogue loader would turn the most frequent question in the channel from an
+escalation into an answer. Zid's partner administration tooling looks like it
+exposes this (app, theme and marketplace listings) — worth checking what it
+returns before building anything.
+
+Two smaller things the overview suggests:
+
+- **Announcements are knowledge.** Several of the most useful messages in the
+  window were the ZAM team explaining a change — an integration package's
+  price, a bug fixed, how an offer applies. Those are exactly the documents
+  that stop a question being asked five times. The 📣 reaction already captures
+  the ones the agent answers; the ones a human announces still need writing
+  down.
+- **Ticket links really do appear.** HubSpot ticket URLs were posted in the
+  window despite the channel topic asking people not to, so the deflection is
+  not hypothetical.
+
+### Worth confirming before rollout
+
+None of these block it:
 
 - The owner IDs for ZAM and Theme Market, and who belongs in
   `KNOWLEDGE_EDITOR_USER_IDS`.

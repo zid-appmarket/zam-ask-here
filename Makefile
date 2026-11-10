@@ -1,4 +1,4 @@
-.PHONY: help install dev test lint typecheck check ingest validate gaps simulate run docker-build docker-up clean
+.PHONY: help install dev test lint typecheck check ingest validate gaps simulate sync sync-check run docker-build docker-up clean
 
 PY ?= .venv/bin/python
 PIP ?= .venv/bin/pip
@@ -31,6 +31,12 @@ validate: ## Fail if any knowledge document is malformed
 
 ingest: ## Rebuild the index and write an audit snapshot
 	$(PY) scripts/ingest.py
+
+sync: ## Sync the Zid help centres into knowledge/ (review the diff after)
+	$(PY) scripts/sync_docs.py
+
+sync-check: ## Show what changed upstream, without writing
+	$(PY) scripts/sync_docs.py --dry-run --quiet
 
 gaps: ## Show questions the agent could not answer
 	$(PY) scripts/report_gaps.py

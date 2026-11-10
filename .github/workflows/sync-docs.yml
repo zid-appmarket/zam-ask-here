@@ -1,0 +1,57 @@
+# Re-sync Zid's published documentation into knowledge/ and open a PR.
+#
+# It never pushes to the default branch: a human reads the diff, which is the
+# whole point of keeping the knowledge base in git. Run it by hand from the
+# Actions tab, or let the weekly schedule pick up upstream edits.
+name: Sync documentation
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Mondays, 05:17 UTC — off the hour so it does not queue behind everything
+    # else, and before the working week starts in Riyadh.
+    - cron: "17 5 * * 1"
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install
+        run: pip install -e '.[dev]'
+
+      - name: Sync
+        run: python scripts/sync_docs.py --quiet
+
+      - name: Validate what was written
+        run: python scripts/ingest.py --validate
+
+      - name: Open a pull request if anything changed
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: chore/sync-docs
+          title: "Sync Zid documentation into knowledge/"
+          commit-message: "Sync Zid documentation into knowledge/"
+          body: |
+            Automated re-sync of the documentation sites listed in
+            `knowledge/sources.yaml`.
+
+            **Read the diff as a change to what the agent is allowed to say.**
+            Each file carries the `source_url` it came from, so anything that
+            looks wrong should be checked against — and fixed on — the upstream
+            page rather than edited here.
+
+            A page that disappears upstream leaves its file behind; delete it
+            in this PR if it is genuinely gone.
+          labels: knowledge-base
+          delete-branch: true

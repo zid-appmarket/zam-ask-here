@@ -61,6 +61,8 @@ ignore = [
 
 [tool.ruff.lint.per-file-ignores]
 "tests/*" = ["S", "E501", "C408"]
+# The URL scheme is validated before the request is opened.
+"src/zam_agent/knowledge/websync.py" = ["S310"]
 # Jitter for retry backoff is not a cryptographic use.
 "src/zam_agent/slackbot/retry.py" = ["S311"]
 # Column and clause names interpolated into SQL are module-level literals,

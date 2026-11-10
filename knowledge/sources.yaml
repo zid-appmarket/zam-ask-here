@@ -1,0 +1,90 @@
+# Public documentation that `scripts/sync_docs.py` turns into knowledge
+# documents under `knowledge/`.
+#
+# These are Zid's own published documentation sites. They are the authoritative
+# answer to most of what gets asked, so synced pages are written with
+# `status: verified` — the review that normally happens in `knowledge/` already
+# happened when the page was published, and each document carries its
+# `source_url` so every Slack answer links back to the real page. The remaining
+# gate is the one that matters: a sync produces a git diff, somebody reads it,
+# and CI runs `ingest.py --validate`.
+#
+# Never hand-edit a synced file. Fix the upstream page and re-run the sync.
+#
+# Re-run after any upstream change:
+#   python scripts/sync_docs.py --dry-run     # see what would change
+#   python scripts/sync_docs.py               # write it
+#   python scripts/ingest.py --validate
+#
+# This needs the three hosts below to be reachable. They are allowed on the
+# `zam-ask-here` cloud environment; a local run needs no special setup.
+
+sources:
+  # ── Partner help centre ────────────────────────────────────────────────────
+  # The bullseye for this agent: ZAM and Theme Market partner-facing process,
+  # payouts, review, publishing, troubleshooting. ~100 articles.
+  - name: partner-help
+    sitemap: https://help-partner.zid.sa/sitemap.xml
+    directory: partner-help
+    id_prefix: ph
+    product: zam
+    audience: all
+    status: verified
+    language: auto
+    tags: [partner-help-center]
+    include:
+      - "/en/articles/"
+    exclude:
+      # Collection pages are just lists of links to the articles.
+      - "/collections/"
+      # Explicitly superseded by the current dashboard article.
+      - "old-explore-the-previous-partner-dashboard"
+    product_rules:
+      - { match: "theme|vitrin|landing-page", product: theme_market }
+
+  # ── Partner developer documentation ───────────────────────────────────────
+  # Guides and concepts only. The endpoint reference (slugs ending in a numeric
+  # id plus `e0`, and `f0` section folders) is excluded: ~400 near-identical
+  # stubs would dilute retrieval badly without answering the kind of question
+  # this channel asks.
+  - name: partner-docs
+    sitemap: https://docs.zid.sa/sitemap.xml
+    directory: partner-docs
+    id_prefix: pd
+    product: zam
+    audience: all
+    status: verified
+    language: auto
+    tags: [partner-docs]
+    exclude:
+      - "-\\d{5,}e0$"
+      - "-\\d{5,}f0$"
+    product_rules:
+      - { match: "theme|jinja|vitrin|twig|preset|storefront|landing-page", product: theme_market }
+
+  # ── Merchant help centre ──────────────────────────────────────────────────
+  # Arabic, merchant-facing. Included because most of what #zam-ask-here
+  # actually asks is "can a merchant do X" — the dashboard, apps, themes,
+  # wallet, subscriptions. Mostly `general`, with app and theme pages mapped to
+  # their product so those rank first.
+  - name: merchant-help
+    sitemap: https://help.zid.sa/sitemap.xml
+    directory: merchant-help
+    id_prefix: mh
+    product: general
+    audience: all
+    status: verified
+    language: auto
+    tags: [merchant-help-center]
+    include:
+      # Arabic only. The sitemap also carries an English mirror of every page;
+      # including it would double the corpus for no gain, since this channel
+      # asks in Arabic. Add "/en/" here if that changes.
+      - "/ar/"
+    exclude:
+      # Topic hubs and the changelog are indexes, not answers.
+      - "/ar/topics/"
+      - "/ar/updates"
+    product_rules:
+      - { match: "/apps", product: zam }
+      - { match: "theme|/online-store/theme", product: theme_market }

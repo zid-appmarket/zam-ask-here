@@ -69,6 +69,7 @@ Each is a `Protocol`, implemented at least twice (real + test double):
 |---|---|---|
 | `LLMClient` | `llm/base.py` | change AI provider, or stub it out |
 | `KnowledgeLoader` | `knowledge/loaders/base.py` | add Confluence, a wiki, a database |
+| `WebSource` | `knowledge/websync.py` | sync another documentation site |
 | `EmbeddingBackend` | `knowledge/index.py` | add dense retrieval alongside BM25 |
 | `Store` | `store/base.py` | move to Postgres for multi-process |
 
@@ -97,6 +98,27 @@ question, the draft and the claims — not the retrieval scores, not the
 self-reported confidence, and no instruction to be helpful. Its system prompt
 tells it that absence of a statement is `unsupported`, and that plausibility is
 not support.
+
+## Where the knowledge comes from
+
+Most documents are synced from Zid's public help centres by
+`scripts/sync_docs.py` (`knowledge/websync.py`), not fetched at runtime.
+
+That is a deliberate trade. A runtime crawl would always be current, but
+nobody would review what the agent may say, a site outage would become an agent
+outage, and a silent upstream edit would silently change answers. Files in git
+keep the normal gate — a sync produces a diff, somebody reads it, CI validates
+it — and re-running the sync is itself the "what changed upstream" report.
+
+The extractor is dependency-free and generic on purpose. Per-site CSS selectors
+break on the next redeploy, so instead it prefers `<article>`/`<main>`, then a
+container whose class looks like content, and scores candidates by
+**text length discounted by link density** — navigation approaches 1.0 link
+density, prose does not. Then it trims to the first `<h1>`. That combination is
+what keeps a documentation sidebar out of the document.
+
+Fetched HTML is untrusted input: it is converted to text, never executed, and
+the documents it produces are reviewed before they can be cited.
 
 ## Retrieval
 
@@ -160,6 +182,24 @@ One process. Bolt acknowledges the event, then the work runs on a
 `ThreadPoolExecutor` (`WORKER_THREADS`, default 4). The knowledge index is
 immutable once built and swapped atomically on reload, so readers never see a
 half-built index. SQLite runs in WAL mode with a busy timeout.
+
+## Known gap: the market catalogue
+
+The most common question in #zam-ask-here is "do we have an app that does X?",
+closely followed by "is app X still available?". Neither is a documentary
+question, so no amount of help-centre syncing will answer them: the help
+centres describe how the market works, not its current contents.
+
+Answering them needs a catalogue source — published apps and themes, what each
+does, its status and price — behind a `KnowledgeLoader`. That loader would
+differ from the others in one important way: a catalogue is a *live* fact, not
+a reviewed document, so it should be fetched with a short cache rather than
+synced into git, and its documents should carry a same-day `updated` date.
+Everything downstream (retrieval, grounding, the confidence gate) works
+unchanged.
+
+Until then the agent escalates those questions, which is the correct behaviour
+and is why the escalation path got as much attention as the answering path.
 
 ## What is deliberately absent
 
