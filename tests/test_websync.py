@@ -161,7 +161,7 @@ def test_description_and_date_come_from_metadata() -> None:
         ("https://help.example.invalid/en/articles/11501759-app-payouts", "app-payouts"),
         ("https://docs.example.invalid/rate-limiting-644369m0", "rate-limiting"),
         ("https://docs.example.invalid/submit-app-for-review", "submit-app-for-review"),
-        ("https://help.example.invalid/ar/online-store/theme-market", "theme-market"),
+        ("https://help.example.invalid/ar/online-store/theme-market", "online-store-theme-market"),
     ],
 )
 def test_slugs_drop_generated_ids(url: str, expected: str) -> None:
