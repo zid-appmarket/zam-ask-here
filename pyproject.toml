@@ -1,0 +1,74 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zam-ask-here"
+version = "1.0.0"
+description = "Slack AI support agent for ZAM (Zid App Market) and Theme Market questions"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Proprietary" }
+dependencies = [
+    "slack-bolt>=1.21,<2",
+    "slack-sdk>=3.33,<4",
+    "anthropic>=2,<3",
+    "PyYAML>=6,<7",
+    "python-dotenv>=1,<2",
+]
+
+[project.optional-dependencies]
+gdrive = [
+    "google-api-python-client>=2.120",
+    "google-auth>=2.29",
+]
+server = ["gunicorn>=22"]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=5",
+    "ruff>=0.6",
+    "mypy>=1.11",
+]
+
+[project.scripts]
+# The scripts/ helpers are run with `python scripts/<name>.py`; they are
+# development/ops tooling and deliberately not installed into PATH.
+zam-agent = "zam_agent.__main__:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "-q --strict-markers"
+filterwarnings = ["error::DeprecationWarning:zam_agent.*"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+src = ["src", "tests", "scripts"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "S", "A", "C4", "RET", "SIM"]
+ignore = [
+    "S101",  # asserts are the point in tests
+    "B008",  # function calls in defaults are fine for dataclass factories
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S", "E501", "C408"]
+# Jitter for retry backoff is not a cryptographic use.
+"src/zam_agent/slackbot/retry.py" = ["S311"]
+# Column and clause names interpolated into SQL are module-level literals,
+# never user input; every value is bound as a parameter.
+"src/zam_agent/store/sqlite_store.py" = ["S608"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_unused_ignores = true
+ignore_missing_imports = true
+files = ["src"]

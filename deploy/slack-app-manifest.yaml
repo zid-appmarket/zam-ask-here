@@ -1,0 +1,65 @@
+# Slack app manifest for the ZAM / Theme Market support agent.
+#
+# Create the app from this file: https://api.slack.com/apps → "Create New App"
+# → "From an app manifest" → pick the workspace → paste this YAML.
+#
+# This manifest is configured for **Socket Mode** (no public URL needed), which
+# is the recommended way to run the agent. To use the HTTP Events API instead:
+#   1. set `settings.socket_mode_enabled: false`
+#   2. uncomment `settings.event_subscriptions.request_url` and point it at
+#      https://<your-host>/slack/events
+#   3. set SLACK_MODE=http and SLACK_SIGNING_SECRET in the environment
+#
+# Scopes are the minimum the agent actually uses. Do not add more.
+
+display_information:
+  name: ZAM Ask Here
+  description: Answers verified ZAM and Theme Market questions, and tags a human when it cannot.
+  long_description: >-
+    An internal support assistant for ZAM (Zid App Market) and Theme Market.
+    It watches one configured channel, answers questions in Arabic or English
+    using only approved internal documentation, cites its sources, and mentions
+    the designated owner whenever it cannot verify an answer. It never guesses
+    at policies, prices, dates or processes, and it never approves anything on
+    a human's behalf.
+  background_color: "#1f2b45"
+
+features:
+  bot_user:
+    display_name: ZAM Ask Here
+    always_online: true
+  app_home:
+    home_tab_enabled: false
+    messages_tab_enabled: false
+    messages_tab_read_only_enabled: true
+
+oauth_config:
+  scopes:
+    bot:
+      # Read messages in the public channel(s) the agent watches.
+      - channels:history
+      # Resolve channel metadata for logging and the escalation context.
+      - channels:read
+      # Post answers and escalations.
+      - chat:write
+      # Receive app_mention events so employees can address the agent directly.
+      - app_mentions:read
+      # Optional: only needed when ADD_ACK_REACTION=true.
+      - reactions:write
+      # Uncomment ONLY if the watched channel is private. Prefer a public
+      # channel: a private channel makes the agent's answers unauditable.
+      # - groups:history
+      # - groups:read
+
+settings:
+  event_subscriptions:
+    # request_url: https://your-host.example.com/slack/events   # HTTP mode only
+    bot_events:
+      - message.channels
+      - app_mention
+      # - message.groups   # only with groups:history, for a private channel
+  interactivity:
+    is_enabled: false
+  socket_mode_enabled: true
+  org_deploy_enabled: false
+  token_rotation_enabled: false

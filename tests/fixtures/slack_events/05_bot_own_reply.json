@@ -1,0 +1,30 @@
+{
+  "token": "verification-token-placeholder",
+  "team_id": "T0FAKETEAM",
+  "api_app_id": "A0FAKEAPP1",
+  "event": {
+    "type": "message",
+    "subtype": "bot_message",
+    "channel": "C0TESTCHAN1",
+    "channel_type": "channel",
+    "bot_id": "B0FAKEBOT1",
+    "user": "U0BOTUSER01",
+    "text": "App review takes 4 business days.",
+    "ts": "1762790460.000200",
+    "event_ts": "1762790460.000200",
+    "thread_ts": "1762790400.000100",
+    "app_id": "A0FAKEAPP1"
+  },
+  "type": "event_callback",
+  "event_id": "Ev0SELFREP1",
+  "event_time": 1762790400,
+  "authorizations": [
+    {
+      "enterprise_id": null,
+      "team_id": "T0FAKETEAM",
+      "user_id": "U0BOTUSER01",
+      "is_bot": true,
+      "is_enterprise_install": false
+    }
+  ]
+}

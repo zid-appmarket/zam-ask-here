@@ -1,0 +1,41 @@
+{
+  "token": "verification-token-placeholder",
+  "team_id": "T0FAKETEAM",
+  "api_app_id": "A0FAKEAPP1",
+  "event": {
+    "type": "message",
+    "subtype": "message_changed",
+    "channel": "C0TESTCHAN1",
+    "channel_type": "channel",
+    "ts": "1762790700.000100",
+    "event_ts": "1762790700.000100",
+    "message": {
+      "type": "message",
+      "user": "U0EMPLOYEE1",
+      "text": "How long does ZAM app review take? (edited)",
+      "ts": "1762790400.000100",
+      "edited": {
+        "user": "U0EMPLOYEE1",
+        "ts": "1762790700.000000"
+      }
+    },
+    "previous_message": {
+      "type": "message",
+      "user": "U0EMPLOYEE1",
+      "text": "How long does ZAM app review take?",
+      "ts": "1762790400.000100"
+    }
+  },
+  "type": "event_callback",
+  "event_id": "Ev0EDITED01",
+  "event_time": 1762790400,
+  "authorizations": [
+    {
+      "enterprise_id": null,
+      "team_id": "T0FAKETEAM",
+      "user_id": "U0BOTUSER01",
+      "is_bot": true,
+      "is_enterprise_install": false
+    }
+  ]
+}
