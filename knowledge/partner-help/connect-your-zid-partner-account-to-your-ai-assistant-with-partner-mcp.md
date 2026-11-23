@@ -156,7 +156,7 @@ The Partner MCP server address is:
 
 You do not need to create, copy, or store an API key. Authentication happens when you sign in to your Zid partner account.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2718267267/2137410b45f2df5e6179124d7de0/Screenshot+2026-10-07+at+2_50_16%E2%80%AFAM.png?expires=1794346200&signature=ccb7d9f5a61555d776e4fdd4eec23538d9dfdfa1745250009575c607a0a57a64&req=dicmHst4moNZXvMW1HO4zVmN0Ev6beN3nUvcLXsHZ%2FELQKM0EhY4eotLHiHk%0AD%2B9ab1949bH4h%2BpXeF0%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2718267267/2137410b45f2df5e6179124d7de0/Screenshot+2026-10-07+at+2_50_16%E2%80%AFAM.png?expires=1795451400&signature=6692aa363091c1ff3b816b79c76399d8d7dd703ced011f60b1dc8f528a40ec57&req=dicmHst4moNZXvMW1HO4zVmN0Er9bORxnUvcLXsHZ%2FEILqyyPM%2Fyt%2BPsxDAG%0AQ%2FgUE5PfOIzwoSpMHJ8%3D%0A)
 
 ### 2. Add Partner MCP to your AI assistant
 
@@ -384,10 +384,6 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/11501759-app-payouts)
 
-- Guide to Integrating Shipping Systems with the Zid Platform
-
-(https://help-partner.zid.sa/en/articles/15544622-guide-to-integrating-shipping-systems-with-the-zid-platform)
-
 - Create a Private App
 
 (https://help-partner.zid.sa/en/articles/17348249-create-a-private-app)
@@ -395,3 +391,7 @@ Related Articles
 - New: Explore Your Partner Dashboard
 
 (https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard)
+
+- Accepting Zid Partner Terms & Conditions
+
+(https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions)

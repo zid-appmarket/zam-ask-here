@@ -54,7 +54,7 @@ Make sure the following information is accurate and up to date.
 
 ### Industries
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2705624139/fecb0118f62970a7a94d9a1f561f/image.png?expires=1794346200&signature=fcbf389010857336479c1e5b4ebf43cbdd681c7ad96e710a1b05e886354eb962&req=dicnE898mYBcUPMW1HO4za97EFIVafF2KlOaNIN3lz9tr2WzahpH3Rm1wwo5%0A58oWb3aGUQwYe%2FPy1O8%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2705624139/fecb0118f62970a7a94d9a1f561f/image.png?expires=1795451400&signature=36cf2336825980ccdea514e8c43ca16fea6f6bc61d924e4e6f43630497a3eca4&req=dicnE898mYBcUPMW1HO4za97EFMSaPZwKlOaNIN3lz%2B%2BA6V6hVgrd%2BsSHSpJ%0A1gBchGhvDnQvEz%2BJxEk%3D%0A)
 
 The **Industries** field identifies the types of stores your theme is best suited for.
 
@@ -68,7 +68,7 @@ In the Partner Dashboard, you can find this field under **Industries — Pick th
 
 The **Catalog sizes** attribute helps merchants discover themes suitable for their store's number of products.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765333645/3489edaa5c30b8823a057373c8db/image.png?expires=1794346200&signature=a3bc1943e10f407b27e965ab0d2291a827eb5e7147121aae390eeb244f37d349&req=dichE8p9nodbXPMW1HO4zV8KKhkhhHI8gDZgh8Qcs8eBs9dHN2RDM%2F57%2BMJa%0A%2Bhm3O8cH00UaTxQcUCM%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765333645/3489edaa5c30b8823a057373c8db/image.png?expires=1795451400&signature=62bc7dcc622a052015dfbe29cacc5b22eba9c2ada5b4d90b49876adb48db4ad0&req=dichE8p9nodbXPMW1HO4zV8KKhgmhXU6gDZgh8Qcs8dJHso8X5WQ9Y3QF5n%2B%0ARb92JurlYbdHIUZVTCY%3D%0A)
 
 Merchants can filter themes by five catalog sizes:
 
@@ -94,11 +94,11 @@ For detailed instructions, see Create & Update Your Public Theme (https://help-p
 
 ## Preset category tags
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2705623570/c12b1515f1f610e3372b762d5794/image.png?expires=1794346200&signature=9033ada13777a3b0482f9483a15c20ff31c8a137ec261a81e42931ee7c3925f5&req=dicnE898noRYWfMW1HO4zRa%2BngotewlCAWz4%2BYVKo3evY%2Fes4sffSe5sQp%2BH%0Al2tei90CoFdj05D4ZZM%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2705623570/c12b1515f1f610e3372b762d5794/image.png?expires=1795451400&signature=4e64e8bd7e254393e753b09851811d875ec5e3a71d8776426bdce67afc275ea3&req=dicnE898noRYWfMW1HO4zRa%2Bngsqeg5EAWz4%2BYVKo3cNaW%2FDNOGT4wsEsk%2BD%0AX1UsIbwfjPhXnKKiSUA%3D%0A)
 
 Each preset can include category tags that describe the types of stores the preset is designed for. These tags are used for preset availability filtering.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2705625584/86b0ffbbfb4215c38620dc65b0bd/image.png?expires=1794346200&signature=a425538184fdd884f8b8f1e23fe7f127a7ebc80f5efb0ab6379076abc5c99467&req=dicnE898mIRXXfMW1HO4zVQZRtVZdkShxNTpq0qSFh7Lj6Sd4gKeFiIWrxVV%0AwTF8EyfzeA%2FB2zpGHPI%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2705625584/86b0ffbbfb4215c38620dc65b0bd/image.png?expires=1795451400&signature=991b510fe531ea4e8152ea18dd3c1f461e546f05d8f3f95ebaed7981244e99b7&req=dicnE898mIRXXfMW1HO4zVQZRtRed0OnxNTpq0qSFh5cbWsRse48oSnf4oQ4%0ACeLoseovabCN1fqgWTo%3D%0A)
 
 Adding relevant presets for different categories can increase your theme's coverage when merchants search for themes suitable for specific businesses.
 

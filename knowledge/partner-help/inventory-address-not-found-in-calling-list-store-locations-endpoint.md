@@ -46,13 +46,13 @@ Check your API call parameters against the documentation. Confirm that you are s
 
 connect with us via chat support and share the cURL command. This will enable us to conduct a more in-depth analysis and provide thorough support.
 
-(https://downloads.intercomcdn.com/i/o/908115027/26b16809a6cf4ee47c4012ee/IMG_20231112_195857.png?expires=1794345300&signature=0824dbef724e31ac3442c0acd22d5c2f04f5c031e959dcb6746f6c6da49c0ab4&req=fSAvF8h7nYNYFb4f3HP0gK1Y6PYWY9BDnc2W4OjU4QmxP7fEQRhFKXLrUSTZ%0AYdQ%2BC9g6NhjD9oODWA%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/908115027/26b16809a6cf4ee47c4012ee/IMG_20231112_195857.png?expires=1795451400&signature=7130882f4a42111afb306041a45b9fa11baf98ef0f6d82ddb97ec742794a83d4&req=fSAvF8h7nYNYFb4f3HP0gK1Y6fEXZ9dDnc2W4OjU4QmFBqhhkkWwzNJ2pQmI%0A5OHjvD%2B2Wm1InrMyHg%3D%3D%0A)
 
 Related Articles
 
-- Missing Some Details in Get Products Endpoint
+- Troubleshooting the user credentials were incorrect
 
-(https://help-partner.zid.sa/en/articles/8693827-missing-some-details-in-get-products-endpoint)
+(https://help-partner.zid.sa/en/articles/8717946-troubleshooting-the-user-credentials-were-incorrect)
 
 - If you got a bad request in Create a new product endpoint
 
@@ -66,6 +66,6 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/8718056-inventory-id-isn-t-appearing-on-order-details-payload-or-api-request)
 
-- Timeout response in Get Product / Customer endpoint
+- Invalid order status
 
-(https://help-partner.zid.sa/en/articles/8718064-timeout-response-in-get-product-customer-endpoint)
+(https://help-partner.zid.sa/en/articles/8718076-invalid-order-status)

@@ -16,9 +16,9 @@ language: en
 > This article explains the key performance metrics available to Zid theme partners, helping you track sales, activations, and engagement.
 If you are offering themes on the Zid platform, monitoring their performance is essential to understand their impact and optimize your offerings. This section provides a comprehensive overview of the key metrics that help you track the success and usage of your themes across Zid merchants.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1551646494/b3117540ad6be26c18b6b3582455/image-2B-288-29.png?expires=1794346200&signature=fd69639efbb786f145813c6e88be3a34b0545b3fd2837c028f2a8e06092ff824&req=dSUiF896m4VWXfMW1HO4zSgVzhQdcnexLQdTLi80MtW%2FVcO80pgnIHkg5Z%2FT%0AMqSLZvzUqA5A8T1GG%2Bk%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1551646494/b3117540ad6be26c18b6b3582455/image-2B-288-29.png?expires=1795451400&signature=92d06945307b9130d1e74b1fb96f6bccabd4e7b2caa515deb0f33a5d7b567271&req=dSUiF896m4VWXfMW1HO4zSgVzhUac3C3LQdTLi80MtX1MJNlNSv07Q7lm1Nx%0AFLcJ9baLXL7fY%2FAQYZE%3D%0A)
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1551646838/7c9408399627d1af9f441cc932ec/image-2B-289-29.png?expires=1794346200&signature=fbde1a09532b65f3d05aaddca361ca065b747a6cdbaa62cc452dcf16b476475f&req=dSUiF896m4lcUfMW1HO4zUTHNNSsMZ3flRttvIVCBQ8JysFBG1bq7r8RIB1c%0AA%2F2x28%2Fz3PWOZVL3hVk%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1551646838/7c9408399627d1af9f441cc932ec/image-2B-289-29.png?expires=1795451400&signature=1cfbadda4523a8a259c0c2d49b9851a2359d73cfee9e85c168ed167090f9e09c&req=dSUiF896m4lcUfMW1HO4zUTHNNWrMJrZlRttvIVCBQ%2ByW%2FntBKtu3YtyLSrd%0AS3fqtQLavfgmCQZhrSA%3D%0A)
 
 ## Key Metrics Explained
 

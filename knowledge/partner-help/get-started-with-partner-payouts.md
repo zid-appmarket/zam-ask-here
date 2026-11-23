@@ -14,7 +14,7 @@ language: en
 ---
 
 > This article explains how Zid Partner payouts, automatic invoice generation, tax handling, payout statuses, and settlement work in the Partner Dashboard.
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734114331/22989dd43d2657c72618adc0e77e/Payout+Banner.png?expires=1794345300&signature=ab6491130b20e713f7aea090f87f2890ea7cdb020d9b2200a6630b5e4ad6cb51&req=dickEsh%2FmYJcWPMW1HO4za9uDW62VnVYXG%2FLRvIlJx4KWY5wJLh%2FwrkoYd9f%0A4MiGb81H%2FzJxYZA3eyE%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734114331/22989dd43d2657c72618adc0e77e/Payout+Banner.png?expires=1795451400&signature=e7af377dbcc10cf627d2285249a7e54406dbfa1c053cb69479687fe2b28b7616&req=dickEsh%2FmYJcWPMW1HO4za9uDW%2BxV3FfXG%2FLRvIlJx7I4TXNkKjNg4wMNgEr%0At1ZsjO65k%2FJemEOqmKg%3D%0A)
 
 This article explains how partner payouts work in the Partner Dashboard, including payout records, invoice generation, tax handling, Finance review, and settlement.
 
@@ -32,7 +32,7 @@ The invoice and settlement process depends on the **tax type configured in the a
 
 - Navigate to **Payments → Payouts (https://partner.zid.sa/payouts)** in the Partner Dashboard.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734165188/d419c2d2abb1c41090a15a5d4e21/image.png?expires=1794345300&signature=87cc35be1fa769094cf819da23ebd6c6142c29e0e06ddc560242daba1b2c5831&req=dickEsh4mIBXUfMW1HO4zS42coHDEs4qx%2BFjY0dBfYp%2Fa0VdJObP3KR%2BNMTL%0ATYKS%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734165188/d419c2d2abb1c41090a15a5d4e21/image.png?expires=1795451400&signature=a35dc0e04dba6782df415602c4b1d160daa3bada9955fe389bb000a26f8dc140&req=dickEsh4mIBXUfMW1HO4zS42coDEE8otx%2BFjY0dBfYqgCY2Eoy6zA%2FLsp9mi%0AjEK6%0A)
 
 - Select the relevant service type using the available payout tabs, such as:
 
@@ -46,13 +46,13 @@ The invoice and settlement process depends on the **tax type configured in the a
 
 - Review payout records grouped by month along with their current statuses. **Available payout actions include:**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734169643/db5d183922ea73d83c85e3ab9bd2/image.png?expires=1794345300&signature=c714f71a204131f4aa9f8f5e32b5a0c7e50a07d8defb535a7f28eb59e033601c&req=dickEsh4lIdbWvMW1HO4zeRJhgk11UU6o6wGe0CR4OqdIApJNzmdcZNkVGdY%0ANjBO%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734169643/db5d183922ea73d83c85e3ab9bd2/image.png?expires=1795451400&signature=cee35b8e4d9fbe00c56d92acd826ac5fdd9aba187e727d3d26b39aa704db112a&req=dickEsh4lIdbWvMW1HO4zeRJhggy1EE9o6wGe0CR4OqWBRdy%2Fivhxwd7tpff%0AiybS%0A)
 
 - **Payout Details:** Open the payout details to review settlement information, invoice attachments, receipts, or any actions required from you.
 
 - **Payout Report:** Download a detailed sheet containing all transactions associated with a specific payout.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734169119/f8ca6dd206358dce0612a0c15ddd/Screenshot-2B2026-10-12-2Bat-2B3_49_51-E2-80-AFAM.png?expires=1794345300&signature=0eeccad8690f6e357a1fb56d26b5a861170b0c9cb58ab88441da27764a5f18cc&req=dickEsh4lIBeUPMW1HO4zRzDsb2C7FYhm8ds8pvlOoJgciTAmgliK5lalt6f%0AyDrdvNfyNPVolK726lk%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734169119/f8ca6dd206358dce0612a0c15ddd/Screenshot-2B2026-10-12-2Bat-2B3_49_51-E2-80-AFAM.png?expires=1795451400&signature=b458db4c8260472fdaa4bf5a8b77575f84b3f01244320931dc126b7b35db509f&req=dickEsh4lIBeUPMW1HO4zRzDsbyF7VImm8ds8pvlOoJhAIW6CjIvvL%2BgvlkA%0Aplx%2FUJy0mF%2FdgRIyyok%3D%0A)
 
 ## **Understanding the Payment Process**
 
@@ -114,7 +114,7 @@ To access an invoice:
 
 - Navigate to **Payments → Payouts**.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734155045/4ae5402126d851d3518d7613449d/image.png?expires=1794345300&signature=be655fcb008f2b4b77f6bb1cde148c2fa55fd3503b671a9e5e035068da4e3df7&req=dickEsh7mIFbXPMW1HO4zR7azlsbHvmgaIoIValbrgAsXRLQFVFix5aO4iZj%0AIdGV%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734155045/4ae5402126d851d3518d7613449d/image.png?expires=1795451400&signature=7115051be5e3706ae1d61919b15686795c41f52edb567ae090d0cf9bb356aa05&req=dickEsh7mIFbXPMW1HO4zR7azlocH%2F2naIoIValbrgABtM8UpiUs0GQufL2V%0Az6Ce%0A)
 
 - Select the relevant service tab:
 
@@ -130,11 +130,11 @@ To access an invoice:
 
 - Search using the **payout code**.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734154504/1a6500c120891d3445660351bb8c/image.png?expires=1794345300&signature=59d0441bcd93fb528ef571ba1b92d87a9f0385dbff9d7c47af0cbe1160020526&req=dickEsh7mYRfXfMW1HO4zb1iL8PlDSx1YO07uAkB53vOc626DBO4Po8GskhL%0AeQGMH3lN9Pnzun%2FiSyY%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734154504/1a6500c120891d3445660351bb8c/image.png?expires=1795451400&signature=824f88a062b4b56d3bdac6a387a42d0204f3aff6e7750d9370ce42ae3d4136a2&req=dickEsh7mYRfXfMW1HO4zb1iL8LiDChyYO07uAkB53sNGMusCoEkNlXxinMj%0AS6jsGnjk%2F2FljczjpNA%3D%0A)
 
 4. Click **Open details**.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734159981/ef2ffae0ffba0c02f1be3578464c/Screenshot-2B2026-10-12-2Bat-2B3_49_51-E2-80-AFAM.png?expires=1794345300&signature=6d619f572738151b6da194d599f790e145d85148d4ca297ac2f4cb7a27fb3aed&req=dickEsh7lIhXWPMW1HO4zZm%2FhlSz%2BrvfIANcH2TDPxL7KRGMjX%2BOUAyS8GJ3%0ArhIvIABfC6u2vI%2B9nCE%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734159981/ef2ffae0ffba0c02f1be3578464c/Screenshot-2B2026-10-12-2Bat-2B3_49_51-E2-80-AFAM.png?expires=1795451400&signature=830d795d89901ee4fd9974d966d71451add9a0ae1f13239cfa5da4641a32f8ca&req=dickEsh7lIhXWPMW1HO4zZm%2FhlW0%2B7%2FYIANcH2TDPxLPAsyrT0kQO8hj7S5x%0A5p%2FzFtoExLUaQH69gAk%3D%0A)
 
 5. Open **Attachments**.
 
@@ -356,10 +356,6 @@ If automatic regeneration is required, it must be handled by the Zid team throug
 
 Related Articles
 
-- Old: Explore the Previous Partner Dashboard
-
-(https://help-partner.zid.sa/en/articles/8635324-old-explore-the-previous-partner-dashboard)
-
 - For Theme Partners
 
 (https://help-partner.zid.sa/en/articles/8750109-for-theme-partners)
@@ -375,3 +371,7 @@ Related Articles
 - Theme Payouts
 
 (https://help-partner.zid.sa/en/articles/17432699-theme-payouts)
+
+- New: Explore Your Partner Dashboard
+
+(https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard)

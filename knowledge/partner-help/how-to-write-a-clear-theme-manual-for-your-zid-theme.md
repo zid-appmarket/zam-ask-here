@@ -234,6 +234,10 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/11471777-create-update-your-public-theme)
 
+- Maintain Your Theme Support
+
+(https://help-partner.zid.sa/en/articles/11471850-maintain-your-theme-support)
+
 - Creating a New Landing Page
 
 (https://help-partner.zid.sa/en/articles/11646413-creating-a-new-landing-page)
@@ -241,7 +245,3 @@ Related Articles
 - Improve Your Theme Visibility in the Zid Theme Store
 
 (https://help-partner.zid.sa/en/articles/17243601-improve-your-theme-visibility-in-the-zid-theme-store)
-
-- New: Explore Your Partner Dashboard
-
-(https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard)

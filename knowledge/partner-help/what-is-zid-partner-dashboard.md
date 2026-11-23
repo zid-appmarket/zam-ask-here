@@ -16,10 +16,6 @@ Partner Dashboard is a platform that allows partners to create, manage, and publ
 
 Related Articles
 
-- Create your partner account
-
-(https://help-partner.zid.sa/en/articles/8635315-create-your-partner-account)
-
 - Old: Explore the Previous Partner Dashboard
 
 (https://help-partner.zid.sa/en/articles/8635324-old-explore-the-previous-partner-dashboard)
@@ -35,3 +31,7 @@ Related Articles
 - New: Explore Your Partner Dashboard
 
 (https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard)
+
+- Accepting Zid Partner Terms & Conditions
+
+(https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions)

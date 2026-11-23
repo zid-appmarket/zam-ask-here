@@ -72,7 +72,7 @@ The payout has been approved and payment has been completed.
 
 ## View Payout Details and Invoice
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734239563/b1c1501b5eb92a4ae200379fd00b/image+-2-.png?expires=1794345300&signature=aab8008f3d031c6ffd5e117648722654666fd44f1a933631fdb35eaf2c6f3c7f&req=dickEst9lIRZWvMW1HO4zUoX25YJR1abjz5fUvKfdlgrhAIum1PsZgCS4yes%0ARU08CGtsv%2B%2Baij1cJi4%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734239563/b1c1501b5eb92a4ae200379fd00b/image+-2-.png?expires=1795451400&signature=bbdbdd5df37a68b550f33eecaf3ad38ae06103e8ebff49cd76d1a7d6a5f95caa&req=dickEst9lIRZWvMW1HO4zUoX25cORlKcjz5fUvKfdlj3MxbZf1jaejBGFhsW%0ANZSJ%2FGkWH%2BKX32ZvGR4%3D%0A)
 
 To view the details of a payout:
 
@@ -82,7 +82,7 @@ To view the details of a payout:
 
 - Click the **View/Open details** action.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734244134/c6f3e28cba5c7a5772fe5cede6ee/image.png?expires=1794345300&signature=38d60ab4361d0e2044c06df6555ea1b3da40487d113cbaeca671ae4ab14fd375&req=dickEst6mYBcXfMW1HO4zcGz5xkAWB9ATzGFIeSCja4BZmIbAoLrImHU1rii%0Aaf8ugqnIcWjfgE%2Bc75Q%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734244134/c6f3e28cba5c7a5772fe5cede6ee/image.png?expires=1795451400&signature=d6a201aefd3f86c596128fd9d449b75073f4aa991448ba45d1c88ce8168d2870&req=dickEst6mYBcXfMW1HO4zcGz5xgHWRtHTzGFIeSCja5EKq%2Br6ApTJOVW9CIK%0AQB48gPb814UHxYqe9Zs%3D%0A)
 
 The **Payout details** window displays information such as:
 

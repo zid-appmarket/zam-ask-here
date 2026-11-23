@@ -7,7 +7,7 @@ title: "List Carts"
 product: zam
 audience: all
 status: verified
-updated: 2026-11-10
+updated: 2026-11-23
 source_url: https://docs.zid.sa/list-abandoned-carts
 tags: [from-docs-site, partner-docs]
 language: en
@@ -50,6 +50,22 @@ endpoint using the cart's unique ID.
 
 `abandoned_carts.read` - Abandoned Carts Read
 
+### Including Cart Products #
+
+Use the optional `with_products` query parameter to control whether product details are included.
+
+`with_products=1`: Returns the full `products` list for each abandoned cart.
+
+`with_products=0` (default): Excludes the `products` field.
+
+`products_count` is always returned, regardless of the `with_products` parameter.
+
+**Note:** The `products` field returns `null` if the cart's products cannot be retrieved or the cart has no saved currency. In either case, the remaining carts in the list are returned normally.
+
+**Important:** When both `with_products` and `with_product_ids` are provided, failure to retrieve a cart's products causes the entire request to fail instead of returning `products: null` for that cart.
+
+**Product Images:** Product images are not included in this response. To retrieve them, use the Get Abandoned Cart (https://docs.zid.sa/get-abandoned-cart-details) endpoint (`GET /v1/managers/store/abandoned-carts/{id}`).
+
 ## Request
 
 Query Params
@@ -85,7 +101,7 @@ Java
 Swift
 
 ```
-` curl --location 'https://api.zid.sa/v1/managers/store/abandoned-carts?page=1&page_size=15&phase=undefined&search_term=undefined&customer_id=undefined&products_count=undefined&has_reminders=undefined&country_id=undefined&city_id=undefined&currency_code=undefined&date_from=undefined&date_to=undefined&cart_total=undefined&filter_order_by=created_at&filter_sort_by=undefined&customer_type=undefined' \
+` curl --location 'https://api.zid.sa/v1/managers/store/abandoned-carts?page=1&page_size=15&phase=payment_method&search_term=mahmoud&customer_id=15141670&products_count=3&has_reminders=true&country_id=1&city_id=5354&currency_code=EGP&date_from=2025-12-01&date_to=2025-12-31&cart_total=509.8254&filter_order_by=created_at&filter_sort_by=DESC&customer_type=individual&with_products=1&with_product_ids=1' \
 --header 'Authorization: {{Autherization}}' \
 --header 'X-Manager-Token: {{Access-Token}}' \
 --header 'Accept-Language: en' `
@@ -162,7 +178,7 @@ Response Response Example
 } `
 ```
 
-Modified at 2026-08-11 09:19:19
+Modified at 2026-11-16 08:41:15
 
 Previous
 

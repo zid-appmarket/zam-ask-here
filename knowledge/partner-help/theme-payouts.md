@@ -40,7 +40,7 @@ Partners without a VAT agreement follow a separate automatic flow on the **6th o
 
 ## Where to Access Payouts
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734239563/b1c1501b5eb92a4ae200379fd00b/image+-2-.png?expires=1794346200&signature=616260475442eccb44ec01b4ea49a75fc22b30d85872da2b507fd012c689e9be&req=dickEst9lIRZWvMW1HO4zUoX25YJR1Wajz5fUvKfdlhuWafDTfrgxEY4DTli%0AtwqoZzb8naoR%2BXvolVQ%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734239563/b1c1501b5eb92a4ae200379fd00b/image+-2-.png?expires=1795451400&signature=bbdbdd5df37a68b550f33eecaf3ad38ae06103e8ebff49cd76d1a7d6a5f95caa&req=dickEst9lIRZWvMW1HO4zUoX25cORlKcjz5fUvKfdlj3MxbZf1jaejBGFhsW%0ANZSJ%2FGkWH%2BKX32ZvGR4%3D%0A)
 
 - Go to the Partner Dashboard (https://partners.zid.sa).
 
@@ -148,7 +148,7 @@ To access an automatically generated invoice:
 
 - Click **Open details**.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734250505/0a28a808f20f84ac17ad883bc729/image.png?expires=1794346200&signature=aa91a97d057ec898916a2a83bbe135fa94fc93427559c7400bcf451cdff1924e&req=dickEst7nYRfXPMW1HO4zRjp%2FJjOZK18VdZ3%2FGEq3YmxnTOGO2aQFRvDPfS6%0Aj6Hl%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734250505/0a28a808f20f84ac17ad883bc729/image.png?expires=1795451400&signature=f1bc36f5f1a8c62303b2ee52db9d81c0fa79353d127ece5a0cd8c2f00ee6816e&req=dickEst7nYRfXPMW1HO4zRjp%2FJnJZap6VdZ3%2FGEq3YkG9tztAboPneNbw60V%0AiPh1%0A)
 
 - Open **Attachments**.
 
@@ -226,7 +226,7 @@ For themes with an approved VAT agreement:
 
 - The payout status changes to **Settled**.
 
-You can access payment information and receipts from the payout details at any time.Settled (https://downloads.intercomcdn.com/i/o/u7vuis4c/1542502786/9451a25916c2bf7f85dc5dedccc9/image.png?expires=1794474000&signature=6193713f917c4cd58442fc2cc6c6f3ce57dfc0f52f93d77433b46042635be883&req=dSUjFMx%2Bn4ZXX%2FMW3Hu4gYeadfNdlUVD0Bto9Dsc%2BufJsDegOg3jMREQsy89%0AVA%3D%3D%0A)
+You can access payment information and receipts from the payout details at any time.Settled (https://downloads.intercomcdn.com/i/o/u7vuis4c/1542502786/9451a25916c2bf7f85dc5dedccc9/image.png?expires=1795554000&signature=531985c262f940e9c2867df135db9b0e3a7441f7cf072519df33a2f0ad8255a4&req=dSUjFMx%2Bn4ZXX%2FMW3Hu4gYeadfNdlERB0Bto9Dsc%2BufH%2FGY1j4KSBxUOJ%2BhM%0A2A%3D%3D%0A)
 
 ### Non-VAT Payout Flow
 
@@ -298,11 +298,11 @@ Partner legal name; Logo (optional); CR number, if applicable; Invoice date; Zid
 
 - Saudi Account
 
-- With a VAT Certificate (https://downloads.intercomcdn.com/i/o/u7vuis4c/1610814174/fd106173d57bf12b897c3529d56b/Saudi+bank+account+%28themes+%2B+Apps%29+-+has+vat+%285%29.pdf?expires=1794474000&signature=66f603093ec73d745eda4a9efa91e1653d2f7af56aa7e10ba12252e7705cd65d&req=dSYmFsF%2FmYBYXfMW3Hu4gYKzYfQIe44iJFenk5OKBlmz4v2hVt%2BE0BJn7A%2BC%0AdQ%3D%3D%0A)
+- With a VAT Certificate (https://downloads.intercomcdn.com/i/o/u7vuis4c/1610814174/fd106173d57bf12b897c3529d56b/Saudi+bank+account+%28themes+%2B+Apps%29+-+has+vat+%285%29.pdf?expires=1795554000&signature=b6359267dcf7f09464d199262c9cc105ec9d826a3f184bb7e2f85c01e893904c&req=dSYmFsF%2FmYBYXfMW3Hu4gYKzYfQIeo8gJFenk5OKBlkRBzR9WvkX%2FkMyF4cB%0Arw%3D%3D%0A)
 
-- Without a VAT Certificate (https://downloads.intercomcdn.com/i/o/u7vuis4c/1610816722/d38c782ed3583a0f78b778283017/Saudi+bank+account+%28themes+%2B+Apps%29+dont+has+vat.pdf?expires=1794474000&signature=935c7d87b6f82e19e0a415794d9648f313a9039de588f33d2ccdd22debd9af71&req=dSYmFsF%2Fm4ZdW%2FMW3Hu4gVUBNjB2OPRO3XCd%2BnUPQJN3tkYEQUljeINCnXT%2B%0Aqw%3D%3D%0A)
+- Without a VAT Certificate (https://downloads.intercomcdn.com/i/o/u7vuis4c/1610816722/d38c782ed3583a0f78b778283017/Saudi+bank+account+%28themes+%2B+Apps%29+dont+has+vat.pdf?expires=1795554000&signature=75ddda20ed5c07094e42b2d50a6e8ca255aa6027996efcba6f4fef13fef21ece&req=dSYmFsF%2Fm4ZdW%2FMW3Hu4gVUBNjB2OfVM3XCd%2BnUPQJP0luZjJeVsDLVxIl6e%0ACg%3D%3D%0A)
 
-- Non-Saudi (https://downloads.intercomcdn.com/i/o/u7vuis4c/1610814511/3d32edc07e03c328381d7f9fe894/None-Saudi+bank+account+-+Themes.pdf?expires=1794474000&signature=9005d2bc1ac73061717ccfed697433da150d8abef8930d3fa36d67133594b885&req=dSYmFsF%2FmYReWPMW3Hu4gQHSUWy6tdG9VCdQRUl6sBo1tJgwKYQkWh1NOd3G%0Ang%3D%3D%0A)
+- Non-Saudi (https://downloads.intercomcdn.com/i/o/u7vuis4c/1610814511/3d32edc07e03c328381d7f9fe894/None-Saudi+bank+account+-+Themes.pdf?expires=1795554000&signature=de07121e7afd18f27be0a70b116db28f7e11299ff9ea09ca7e9aa9ad6ada7a92&req=dSYmFsF%2FmYReWPMW3Hu4gQHSUWy6tNC%2FVCdQRUl6sBp2GIdxuM9LdLKxPU1p%0ADg%3D%3D%0A)
 
 ## Tax Requirements
 

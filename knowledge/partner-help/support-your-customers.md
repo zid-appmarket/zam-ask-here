@@ -7,32 +7,38 @@ title: "Support your customers"
 product: zam
 audience: all
 status: verified
-updated: 2025-03-26
+updated: 2026-11-23
 source_url: https://help-partner.zid.sa/en/articles/10938425-support-your-customers
 tags: [from-docs-site, partner-help-center]
 language: en
 ---
-## App Support requirements
+## App Support Requirements
 
 It is required to all public apps to provide at least one support channel that allows merchants to get help. Zid App Market doesn’t provide merchant support for apps built by third parties. App developers are required to support merchants in a timely manner.
 
 ​
 
-Maintainer E-mail is a must required field to enter for app support it is the basic support method for merchants to contact you and get help, having an active and valid email address is a must
+Maintainer E-mail is a must required field to enter for app support it is the basic support method for merchants to contact you and get help, having an active and valid email address is a must.
 
 ## How merchants request support
 
-- Merchant can click on "Report Application" and fill the issue type , Issue details and attachments
+- Merchants can click on "Report Application" and fill in the issue type, Issue details, and attachments.
 
-- The issue will received to Zid App Market team evaluate it and looping the app developer to respond
+- Zid's App Market team reviews the reported issue and assigns it to the app partner when their assistance is required. Assigned tickets appear under **Partner Dashboard → Support Tickets**.
 
-- Partner should provide the needed assistance and bug fixes in case required
-
-​
-
-- There is a monitoring mechanism to ensure responding time are adhere to tickets resolution SLA
+- The partner should provide the needed assistance and bug fixes if required.
 
 ​
+
+- There is a monitoring mechanism to ensure response times adhere to the ticket resolution SLA.​
+
+## Manage assigned support tickets
+
+You can manage merchant support tickets directly from **Partner Dashboard → Support Tickets**. From there, you can reply to merchants, add internal notes, escalate issues to Zid, and submit resolutions.
+
+**Note:** The Support Tickets page is available to partners with at least one published app or theme. Shipping app tickets are handled directly by Zid's team.
+
+For detailed instructions, see Manage Merchant Support Tickets (https://help-partner.zid.sa/en/articles/18488807-manage-merchant-support-tickets).
 
 ## Support channels
 
@@ -43,10 +49,6 @@ You can select your preferred contact method for merchants seeking support. The 
 - Optional: Support portal URL (such as a forum or ticketing system)
 
 - Required: Phone number (For shipping apps only)
-
-​
-
-​
 
 ## Set your support channel
 
@@ -59,8 +61,6 @@ You can select your preferred contact method for merchants seeking support. The 
 - for public apps you can set Technical support email
 
 - you can mention Support portal URL (such as a forum or ticketing system) in the app description
-
-​
 
 ## **Best Practices and Recommendations**
 
@@ -86,10 +86,6 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/11471850-maintain-your-theme-support)
 
-- Support & Maintenance for Landing Pages
-
-(https://help-partner.zid.sa/en/articles/11791895-support-maintenance-for-landing-pages)
-
 - Guide to Integrating Shipping Systems with the Zid Platform
 
 (https://help-partner.zid.sa/en/articles/15544622-guide-to-integrating-shipping-systems-with-the-zid-platform)
@@ -97,3 +93,7 @@ Related Articles
 - New: Explore Your Partner Dashboard
 
 (https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard)
+
+- Manage Merchant Support Tickets
+
+(https://help-partner.zid.sa/en/articles/18488807-manage-merchant-support-tickets)

@@ -20,11 +20,11 @@ language: en
 
 ### Go to Development Stores (https://partner.zid.sa/development-stores)
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610780381/f4cf3325a4e35b13b0ecedd4290e/image.png?expires=1794346200&signature=83fd7acbe7e45af21718d6ec3cabb5faca15ef51b0f033f906fe36272e7e5dc8&req=dSYmFs52nYJXWPMW1HO4zeqXGuzJVOsOMocIQ%2BrCxjn3Lr6kvskKKc2%2Bv3qN%0AuumE%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610780381/f4cf3325a4e35b13b0ecedd4290e/image.png?expires=1795451400&signature=242f32b2557d969b4ae74249e0a19e8c143453edbcddf943b3d4c317126b2714&req=dSYmFs52nYJXWPMW1HO4zeqXGu3OVewIMocIQ%2BrCxjnQp%2By4yz5H2nE7W8C4%0AQSKQ%0A)
 
 ### To log in directly, click on ** Dashboard Access **
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610780167/54062690e6011af7f8a97efd5642/image.png?expires=1794346200&signature=19128a35cc4c3449e695f95aa994c84167582cfa81b413d64365ca4523a14b9f&req=dSYmFs52nYBZXvMW1HO4zTZRPLn3KgfdE0AKQ5USDrfuXeFI2FCmszoaOfNd%0AtERP%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610780167/54062690e6011af7f8a97efd5642/image.png?expires=1795451400&signature=fb1722fbc4f2f4c278ba34640f2285f1942fb5cfe71eaca275fb9ebeb5303f51&req=dSYmFs52nYBZXvMW1HO4zTZRPLjwKwDbE0AKQ5USDrdiSiH4tmT%2F5lu8bss3%0AzQro%0A)
 
 ## 2. Install your App in your development store.
 
@@ -36,7 +36,7 @@ language: en
 
 - Click on the " Install on my development store button
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610782623/66ad0e066772013a3f101b543ab3/image.png?expires=1794346200&signature=f9f7875aaa8f093d261a6c121109864536f595099f57a9c81be32c1ae9b32393&req=dSYmFs52n4ddWvMW1HO4zb4R8F9R1FVvAZq43ICFvX95z5lX4%2F6LlO4raRHR%0A8tkN%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610782623/66ad0e066772013a3f101b543ab3/image.png?expires=1795451400&signature=c317da4a2c35cb2dc89bbb0172546c30cfe9c01d76c78d2259556c5eeed70fdc&req=dSYmFs52n4ddWvMW1HO4zb4R8F5W1VJpAZq43ICFvX9RCxwEZLYUlcr2nnak%0AE5ss%0A)
 
 - To view the App in the store and start testing, click on ** View your app here. **Note that, if you want to view it in other store, you have to login to that store first, by going back to step 1.
 
@@ -50,7 +50,7 @@ language: en
 
 - Add Bank account "make sure to add accurate account information"
 
-(https://downloads.intercomcdn.com/i/o/912157071/e3f44b5b1b662e92d662d392/image.png?expires=1794346200&signature=02ee5d22c9859f6169d6bc9530e9d5c5d96ebb13799eba5c9c420d2325f84694&req=fSElF8x5nYZeFb4f3HP0gDClqObxwyCkQ5ByMuENXvZRdqYdKrqdfU%2BkZx5l%0A5Co%3D%0A)
+(https://downloads.intercomcdn.com/i/o/912157071/e3f44b5b1b662e92d662d392/image.png?expires=1795451400&signature=66483d1b098878c3e5f270c16945f334eb9d85bf9a46dcdda4d52709c43ce69b&req=fSElF8x5nYZeFb4f3HP0gDClqeHwxCakQ5ByMuENXvbzLBc4Audz92cUz7lK%0A5lE%3D%0A)
 
 ### Cash On Delivery "COD"
 
@@ -58,11 +58,11 @@ language: en
 
 ​
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610786467/c768ad386932765862789f97fc76/image.png?expires=1794346200&signature=50bd341f813c2fd895beb4a029f4c06bf955d0d1ffd1257dc72e6debb4ca793d&req=dSYmFs52m4VZXvMW1HO4zdZEpOTbHvjiL%2BgXiVuMqZZUO0wrQFltepj%2ByCXe%0AElf6%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610786467/c768ad386932765862789f97fc76/image.png?expires=1795451400&signature=d450947ff45015fc65e067332a8d31fc24fe5ac0e8192985656f11b06ad37d05&req=dSYmFs52m4VZXvMW1HO4zdZEpOXcH%2F%2FkL%2BgXiVuMqZbESf3zMNua5n9aCa7N%0AUanx%0A)
 
 - Activate cash on delivery
 
-(https://downloads.intercomcdn.com/i/o/912160504/81b7c0aa0fd01a7dc1d2fd12/image.png?expires=1794346200&signature=56fd1b6320ec6f6a382bbfee0cabd02c45ff89e78248532a8556c3eb0fb7e807&req=fSElF89%2BmIFbFb4f3HP0gAXXN0nI7jdry99YeWKLo9Ve1yHnTae%2FsB52uHzj%0AWCY%3D%0A)
+(https://downloads.intercomcdn.com/i/o/912160504/81b7c0aa0fd01a7dc1d2fd12/image.png?expires=1795451400&signature=0b257cbb834d839da67e3e1c047d6aa8b1e988a44e3ec57e19c2c362cae77234&req=fSElF89%2BmIFbFb4f3HP0gAXXNk7J6TFry99YeWKLo9VSbm16gwAEaznWLQ3L%0A7B4%3D%0A)
 
 ### Cards payment
 
@@ -78,7 +78,7 @@ You are publishing a new application and you want to test it, but you still don'
 
 - Click the **import products** button to bulk upload a list of products to your store, or click the **Add new Product** button to use the UI form to add a new product.
 
-(https://downloads.intercomcdn.com/i/o/902426949/99856fdd4bd82bbb73baed66/Screenshot+2023-12-06+at+5.41.36%E2%80%AFPM.png?expires=1794346200&signature=c3a8cf38251c58e20338d63621c8f18bbd275c71b876cac0d19968d6395106bf&req=fSAlEst4lIVWFb4f3HP0gKU1i4JUm5wuB3uUYgNYBYk5iqfCbFm3l%2FocJNtP%0ApeU%3D%0A)
+(https://downloads.intercomcdn.com/i/o/902426949/99856fdd4bd82bbb73baed66/Screenshot+2023-12-06+at+5.41.36%E2%80%AFPM.png?expires=1795451400&signature=3ad7196d6bae40d2377ab3512b0f435d76fc27c9764a4736e64c615a32009c43&req=fSAlEst4lIVWFb4f3HP0gKU1ioVVnJouB3uUYgNYBYlr7fay6Ocr9G8m1uQ7%0ADlI%3D%0A)
 
 ### Adding Demo customers (https://web.zid.sa/customers)
 
@@ -86,7 +86,7 @@ You are publishing a new application and you want to test it, but you still don'
 
 - Click on Add new customer
 
-(https://downloads.intercomcdn.com/i/o/912165131/dfbd38ba833b1a06dccc93a8/image.png?expires=1794346200&signature=333aa5e67177f0ecaf08b7880e66a4a8cd33c43061416ed4a47be2d6116ea4d4&req=fSElF897nIJeFb4f3HP0gFLVWzTogWuf%2Bwh21oHsljH%2FsAq1ZDky1bVRKhRb%0Ayk8%3D%0A)
+(https://downloads.intercomcdn.com/i/o/912165131/dfbd38ba833b1a06dccc93a8/image.png?expires=1795451400&signature=954331367949129252510d41b35cb7bf4529320bff2bb3922f15a1e5f53d18e0&req=fSElF897nIJeFb4f3HP0gFLVWjPphm2f%2Bwh21oHsljES3IzbHnkD638J9KMr%0AjNo%3D%0A)
 
 ### Creating Demo Orders (https://web.zid.sa/orders)
 
@@ -94,7 +94,7 @@ You are publishing a new application and you want to test it, but you still don'
 
 - Fill in all required information to be able to place an order.
 
-(https://downloads.intercomcdn.com/i/o/902431142/8404a4175582cc2c611786a5/Screenshot+2023-12-06+at+5.45.24%E2%80%AFPM.png?expires=1794346200&signature=d582f165c318b43134fac870a032f5aed641670669487c4edf72d4ee311f8e87&req=fSAlEsp%2FnIVdFb4f3HP0gDlOpqjRHGlOqbVL%2FcPaN8oX13kv1G7Zirx5LtSU%0ACYM%3D%0A)
+(https://downloads.intercomcdn.com/i/o/902431142/8404a4175582cc2c611786a5/Screenshot+2023-12-06+at+5.45.24%E2%80%AFPM.png?expires=1795451400&signature=111b23498e39bf7e8e91c3edd31566968cc728d92e0a5b823797a2c6832bbb04&req=fSAlEsp%2FnIVdFb4f3HP0gDlOp6%2FQG29OqbVL%2FcPaN8px1sGn%2BqbvfRWDBxnb%0AIvw%3D%0A)
 
 # Start your test
 
@@ -114,7 +114,7 @@ To reach successful testing results, follow the below Scenarios according to the
 
 - Search by your App name.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610790202/6191f6f0176b782753be46d26765/image.png?expires=1794346200&signature=724511f871d957984668757b9e386708ffb9404cf9eed32971ec23f9683ecaba&req=dSYmFs53nYNfW%2FMW1HO4zSBS5oOT%2FwfQ0ES5B%2FL0v8fOHRif5pkFNFWDLloN%0AjkIt%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610790202/6191f6f0176b782753be46d26765/image.png?expires=1795451400&signature=875d2b39f6e00fda5d6376485ac3b1b1803f3078f1b8b60696efc9faf133ca90&req=dSYmFs53nYNfW%2FMW1HO4zSBS5oKU%2FgDW0ES5B%2FL0v8cACqV83WldqvvxLL6u%0AtEjH%0A)
 
 - Access it ​to start the test
 

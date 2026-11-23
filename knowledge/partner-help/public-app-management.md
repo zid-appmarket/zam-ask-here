@@ -20,7 +20,7 @@ language: en
 
 The partner logs into the Zid Partner Dashboard.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1635817522/d87e352c552393bd9964b3511da1/Partner+Dashboard+Login.png?expires=1794345300&signature=2ba5ed1602ff13fade5653bdde184812905824bfbbfd93a398ce51d44a7b72a5&req=dSYkE8F%2FmoRdW%2FMW1HO4zWdd274%2F%2FelHpPqa6W4B3zigMAZw%2BPrWC11ypUR6%0A33%2BH%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1635817522/d87e352c552393bd9964b3511da1/Partner+Dashboard+Login.png?expires=1795451400&signature=75ca51dbb8092877e187aca6a1aca9796b745bb7960f9d787d034c069c72eb70&req=dSYkE8F%2FmoRdW%2FMW1HO4zWdd2784%2FO1ApPqa6W4B3zgMGm6K7AyA%2B9EfZy7O%0AIj9x%0A)
 
 - **Navigate to My Apps**
 
@@ -28,13 +28,13 @@ From the sidebar, go to **"My Apps"**.
 
 A list of the partner’s published applications will be displayed.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1635819528/07d9d973b83612ee39e92f965910/My+Apps.png?expires=1794345300&signature=4e89d12f428128be70fa2004931588ac2b947bb145f85974a6f933b3bef819c5&req=dSYkE8F%2FlIRdUfMW1HO4zZwVlQHwQGjtS1dxJBOt1xGVzAEatozGKuGPoeGg%0ASsao%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1635819528/07d9d973b83612ee39e92f965910/My+Apps.png?expires=1795451400&signature=5467d0466c813024938a4480509c9c25aa8290091dbef8898520871e730cd833&req=dSYkE8F%2FlIRdUfMW1HO4zZwVlQD3QWzqS1dxJBOt1xH9zBayhqWJTmbK%2BOuQ%0ABLbd%0A)
 
 - **Open Partner Reviews**
 
 Click on the **"View"** button under the **Merchant Reviews** column for the desired app.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1635821275/80e2cb4bdf0a580ec30a05165c24/Merchant+Reviews.png?expires=1794345300&signature=c8d243ae33d43858319ce95d371485ee59982169cb5b715b0b730b2937fadca7&req=dSYkE8F8nINYXPMW1HO4zVf0tgLKy%2BQ5OpAa5GhIRTOhnTt4hzmb5m8sjYqf%0A2TjU%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1635821275/80e2cb4bdf0a580ec30a05165c24/Merchant+Reviews.png?expires=1795451400&signature=cf2a8aea3fcfa80bf27ffe11b26315ca38c55c12695c698673a8952ada96f960&req=dSYkE8F8nINYXPMW1HO4zVf0tgPNyuA%2BOpAa5GhIRTPRHn8gm%2FKwHNjtOuO%2B%0AO4OJ%0A)
 
 - **View Ratings & Reviews and Uninstall Reasons**
 
@@ -44,7 +44,7 @@ On the next screen, two tabs will be available:
 
 - **Uninstall Reason**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1635824806/206bbc777dbe994b8c0ee910286c/Rating+-+Reviews.png?expires=1794345300&signature=23f8402e8bbc62ba3be9c818a8ff99ec967ae0bb5266623a8236aada5d6ec5a1&req=dSYkE8F8mYlfX%2FMW1HO4zcKqRs4roSv9cSr0YWfHf2OcX63fkmwzS97%2FuXAK%0ASDNi%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1635824806/206bbc777dbe994b8c0ee910286c/Rating+-+Reviews.png?expires=1795451400&signature=3c91539b20825a03debf4f564966c9fb70348bc1af6da4d4ae897886a27ff9b3&req=dSYkE8F8mYlfX%2FMW1HO4zcKqRs8soC%2F6cSr0YWfHf2OygOw%2FKYMJmsZHkVPE%0ANlBO%0A)
 
 - **Rates & Reviews Section**
 
@@ -54,7 +54,7 @@ On the next screen, two tabs will be available:
 
 - The partner may choose not to publish a review if desired.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1635827835/67b30eca8592f9f6967aa987cab5/Rate+-+Reviews.png?expires=1794345300&signature=06b544dfb957b365b5a87e4e6032d717fef80360854316b6971df6facac0d938&req=dSYkE8F8molcXPMW1HO4zYEua%2BWyPq7uVFMvySq%2F0PdJy5d18fQ1liB6OTKG%0AO0YX%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1635827835/67b30eca8592f9f6967aa987cab5/Rate+-+Reviews.png?expires=1795451400&signature=4ce45f2ede1dc4310eecb629f297bb7c2cb14677883c2110b465aa8e7fd6c392&req=dSYkE8F8molcXPMW1HO4zYEua%2BS1P6rpVFMvySq%2F0Pdw0cRSbOUj3DrygrKf%0AQbN9%0A)
 
 - **Uninstall Reason Section**
 
@@ -64,7 +64,7 @@ On the next screen, two tabs will be available:
 
 Will list all the subscription details in your Apps.
 
-(https://downloads.intercomcdn.com/i/o/912520866/dd42034358c04278634dcb10/image.png?expires=1794345300&signature=96678a41294140442aff9eb93008ba381c4007aa4446e17f068d08b79e3b47be&req=fSElE8t%2BlYdZFb4f3HP0gKyVqTgI78UnaOJX1IKjf%2FNGhNbz%2FizDReYLsx%2BW%0AU48VhkavmT%2BnFLtyIQ%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/912520866/dd42034358c04278634dcb10/image.png?expires=1795451400&signature=e87128168a1b9cbcd9ae514f71829758782b945a160e411570ea404ebdd60a00&req=fSElE8t%2BlYdZFb4f3HP0gKyVqD8J68InaOJX1IKjf%2FO%2BbSVhG%2FHY7xA0bXO6%0AEzWHf0v7hdc4HUwt4w%3D%3D%0A)
 
 ## Subscription Statuses:
 
@@ -84,7 +84,7 @@ Will list all the subscription details in your Apps.
 
 ## Export Subscription lists
 
-(https://downloads.intercomcdn.com/i/o/912521014/b708ef38c7acb52bd3c1cb45/image.png?expires=1794345300&signature=0b6465b260c308ef7fdda66675f2ad2ad1c7772851a7025fbb0e76a710933ef1&req=fSElE8t%2FnYBbFb4f3HP0gIqJCpLwNlRiQu2zVzWUrJCUNN3GSrWrlkq51k8o%0ADiRCEQdAnUiPHlPddA%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/912521014/b708ef38c7acb52bd3c1cb45/image.png?expires=1795451400&signature=46eb1e7c0cc2d7a6ca4d8310e77acfab51c34aa40d26cfa548f105b240083c19&req=fSElE8t%2FnYBbFb4f3HP0gIqJC5XxMlNiQu2zVzWUrJDOu5RnGhIKBBV26s5r%0ACQWHM7RzCOnAClGxVw%3D%3D%0A)
 
 Once you export the list, you'll get more details such as:
 

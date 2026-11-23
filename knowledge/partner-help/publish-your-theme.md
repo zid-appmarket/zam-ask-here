@@ -70,7 +70,7 @@ Make sure all these tasks are complete before submitting your theme for review.
 
 # Steps to Submit Your Theme for Review
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1545483328/aa2542b200529e2cf4da3182e37e/image%2B-2811-29.png?expires=1794346200&signature=3d4de175db4ab73e7f4a02ed71cb777409584923158bd6e49d17c3c9ff940998&req=dSUjE812noJdUfMW1HO4za0dBweOypgqQuNDMH0dXKBq%2BxYbCy7eWewgjIlh%0AJVMexCRTcTY%2BWpHuBTc%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1545483328/aa2542b200529e2cf4da3182e37e/image%2B-2811-29.png?expires=1795451400&signature=0154e55cecb7a8f1b62b24d49a83cdb179d2283fb6fe4ddbd37ad1e1d14b7f09&req=dSUjE812noJdUfMW1HO4za0dBwaJy58sQuNDMH0dXKBT0r0OeS%2BMVOSJ8spE%0AorAMNaDwMecibZwHU5I%3D%0A)
 
 - Log in to your **Partner Dashboard**.
 
@@ -124,6 +124,6 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/11471777-create-update-your-public-theme)
 
-- Improve Your Theme Visibility in the Zid Theme Store
+- Maintain Your Theme Support
 
-(https://help-partner.zid.sa/en/articles/17243601-improve-your-theme-visibility-in-the-zid-theme-store)
+(https://help-partner.zid.sa/en/articles/11471850-maintain-your-theme-support)

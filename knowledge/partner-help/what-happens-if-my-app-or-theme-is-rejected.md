@@ -24,13 +24,13 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/8750109-for-theme-partners)
 
-- Create & Update Your Public Theme
-
-(https://help-partner.zid.sa/en/articles/11471777-create-update-your-public-theme)
-
 - Publish Your Theme
 
 (https://help-partner.zid.sa/en/articles/11471817-publish-your-theme)
+
+- Maintain Your Theme Support
+
+(https://help-partner.zid.sa/en/articles/11471850-maintain-your-theme-support)
 
 - Theme Payouts
 

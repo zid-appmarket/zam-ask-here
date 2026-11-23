@@ -7,14 +7,16 @@ title: "Maintain Your Theme Support"
 product: theme_market
 audience: all
 status: verified
-updated: 2025-05-28
+updated: 2026-11-23
 source_url: https://help-partner.zid.sa/en/articles/11471850-maintain-your-theme-support
 tags: [from-docs-site, partner-help-center]
 language: en
 ---
 
 > This article covers how to provide effective support for your Zid theme users, including required channels and best practices.
-# Support Requirements
+Providing timely and reliable support is crucial to ensuring a positive experience for merchants using your theme. Zid does **not** offer direct merchant support for third-party themes, and this responsibility rests entirely with you as the theme partner.
+
+## **Support Requirements**
 
 - **Active Maintainer Email:**
 
@@ -32,15 +34,23 @@ You can offer one or more of the following support options:
 
 💡 These contact details should be set under your theme’s **General Data** tab or clearly described in the theme’s listing description.
 
-# How Merchants Request Support
+## **How Merchants Request Support**
 
 - Merchants submit support requests by navigating to the **Zid Dashboard → Report Theme** section.
 
-- Zid reviews these submissions and forwards valid tickets to you.
+- Zid reviews the submitted requests and assigns relevant tickets to you under **Partner Dashboard → Support Tickets**.
 
 - You are expected to respond promptly and resolve issues within the agreed-upon Service Level Agreement (SLA) timelines.
 
-# Best Practices for Support
+## **Manage Merchant Support Tickets**
+
+You can manage assigned theme support tickets directly from **Partner Dashboard → Support Tickets**. From there, you can reply to merchants, add internal notes, escalate issues to Zid, and submit resolutions.
+
+**Note:** The Support Tickets page is available to partners with at least one published app or theme.
+
+For step-by-step instructions, see Manage Merchant Support Tickets (https://help-partner.zid.sa/en/articles/18488807-manage-merchant-support-tickets).
+
+## **Best Practices for Support**
 
 - **Respond Quickly:** Timely replies build trust and satisfaction.
 
@@ -62,14 +72,14 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/11471758-theme-type-and-appearance)
 
-- Create & Update Your Public Theme
-
-(https://help-partner.zid.sa/en/articles/11471777-create-update-your-public-theme)
-
 - Publish Your Theme
 
 (https://help-partner.zid.sa/en/articles/11471817-publish-your-theme)
 
-- Support & Maintenance for Landing Pages
+- New: Explore Your Partner Dashboard
 
-(https://help-partner.zid.sa/en/articles/11791895-support-maintenance-for-landing-pages)
+(https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard)
+
+- Manage Merchant Support Tickets
+
+(https://help-partner.zid.sa/en/articles/18488807-manage-merchant-support-tickets)

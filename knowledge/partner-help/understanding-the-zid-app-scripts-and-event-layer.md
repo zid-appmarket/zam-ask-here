@@ -30,7 +30,7 @@ App Scripts allow Zid apps to insert JavaScript directly into merchant storefron
 
 - **Event-Driven Scripts** – triggered by user interactions such as product views, add-to-cart actions, or purchases
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1512104904/e8dd02f85f585157fed6c848e223/image+%281%29.png?expires=1794345300&signature=48512ce0e14cf01d3b9ab69ea046e78796dd0cd45c0470c8fc19626e45280732&req=dSUmFMh%2BmYhfXfMW1HO4zUoZJY0i8Bqck5fZG4hCsnyjGReSD%2FdjuPinnH4R%0AWEPg%2Brjg5YXZKnCFxvU%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1512104904/e8dd02f85f585157fed6c848e223/image+%281%29.png?expires=1795451400&signature=7ff01170a1dcbeddcbd21b213170dc2dfdd289eaf2b6aed4217b661465e90e94&req=dSUmFMh%2BmYhfXfMW1HO4zUoZJYwl8R6bk5fZG4hCsnx4FGGEbxvS2%2ByV0uVX%0AwiIBrcNGZaSllhuh0xk%3D%0A)
 
 ## Accessing the Global & Customer Objects
 
@@ -132,7 +132,7 @@ As a Zid app partner, you can deliver your code to all stores using **Custom Sni
 
 ## How to Add Snippets
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1512105860/b1d94a081954eacb50eaa34a3433/image+%282%29.png?expires=1794345300&signature=b8a97ca3dd30bcfef3fafaf5dfb7c3249224bef6c2e18160e1fe02c86d093a13&req=dSUmFMh%2BmIlZWfMW1HO4zb8jFCchGMHONd69CmyDmMrIjjZIuXW62HtI4vsy%0AxJBIVYf12a45nGaQopY%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1512105860/b1d94a081954eacb50eaa34a3433/image+%282%29.png?expires=1795451400&signature=d5b67e29215bb0b95c6cbafc5431e8ccc969f7d7f3405cf09a479c745f4f3e4d&req=dSUmFMh%2BmIlZWfMW1HO4zb8jFCYmGcXJNd69CmyDmMrMS%2FQe7P9nboQyKlIb%0AU7T2q76UtxqPqqFjOMQ%3D%0A)
 
 - Open the **Partner Dashboard**
 
@@ -176,10 +176,10 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/11642766-introduction-to-landing-pages-on-zid)
 
+- Creating a New Landing Page
+
+(https://help-partner.zid.sa/en/articles/11646413-creating-a-new-landing-page)
+
 - Oddo Integration - Arabic session on how to connect Odoo with Zid App Market APIs
 
 (https://help-partner.zid.sa/en/articles/12867648-oddo-integration-arabic-session-on-how-to-connect-odoo-with-zid-app-market-apis)
-
-- Guide to Integrating Shipping Systems with the Zid Platform
-
-(https://help-partner.zid.sa/en/articles/15544622-guide-to-integrating-shipping-systems-with-the-zid-platform)

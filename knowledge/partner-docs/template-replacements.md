@@ -7,7 +7,7 @@ title: "Template Replacements"
 product: zam
 audience: all
 status: verified
-updated: 2026-11-10
+updated: 2026-11-23
 source_url: https://docs.zid.sa/template-replacements-1938995m0
 tags: [from-docs-site, partner-docs]
 language: en
@@ -158,7 +158,7 @@ File: `templates/cart.jinja`
 
 ### 8. Cart Payment Widgets #
 
-Displays available payment method widgets in the cart, including Tabby, Tamara, and MISPay.
+Displays available payment method widgets in the cart, including Tabby, Tamara, MISPay, and Madfu.
 
 File: `templates/cart.jinja`
 
@@ -166,7 +166,13 @@ File: `templates/cart.jinja`
 `{% include 'vitrin:cart/payment_widgets.jinja' %}`
 ```
 
-**Note:** The MISPay widget is displayed when the merchant enables it for the cart page under **Dashboard → Payments → MISPay**. No additional integration is required for Vitrin themes that already include this shared template. **MISPay widgets are not supported on legacy themes.**
+**Note:** The MISPay and Madfu widgets are displayed based on the merchant's payment settings.
+
+**MISPay:** Displayed when the merchant enables it for the cart page under **Dashboard → Payments → MISPay**. **MISPay widgets are not supported on legacy themes.**
+
+**Madfu:** Displayed by default when the merchant activates Madfu through ZidPayments. Merchants can show or hide it on the cart page under **Dashboard → Payments → Madfu**. Madfu appears as the last payment widget and is supported only on Vitrin themes.
+
+No additional integration is required for Vitrin themes that already include this shared template.
 
 ### 9. Apple Pay Quick Checkout Button #
 
@@ -202,9 +208,13 @@ File: `templates/product.jinja`
 
 ### 12. Product Payment Widgets #
 
-Displays available payment method widgets on the product details page, including Tabby, Tamara, and MISPay.
+Displays available payment method widgets on the product details page, including Tabby, Tamara, MIS Pay, and Madfu.
 
-File: `templates/product.jinja`
+The **Madfu widget** appears automatically when the merchant activates Madfu through ZidPayments. Merchants can control its visibility under **Dashboard → Payments → Madfu → Show Madfu Option on Product Page**.
+
+Madfu appears as the last payment widget.
+
+**File:** `templates/product.jinja`
 
 ```
 `{% include 'vitrin:products/payment_widgets.jinja' %}`
@@ -240,7 +250,7 @@ File: `templates/product.jinja`
 
 When more legacy templates are replaced, they will be added to this page using the same format.
 
-Modified at 2026-10-20 09:51:20
+Modified at 2026-11-16 09:09:01
 
 Previous
 

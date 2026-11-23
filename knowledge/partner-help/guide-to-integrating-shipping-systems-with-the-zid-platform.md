@@ -42,7 +42,7 @@ Here are the steps to create the application in the Partner Dashboard:
 
 - **Define the Exact App Category (Critical Step):** You will be asked to precisely define the type of shipping service. Options include: **Fulfillment & Shipping**, or **Shipping Only / Last Mile**.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484011263/d5009c9585501a3ead3aa217c924/image.png?expires=1794346200&signature=fa9894ad32df976f12754e304d77afcd000324a97f31f514fbfbfd8511e68893&req=diQvEsl%2FnINZWvMW1HO4zZVfc3%2BivAVvaEMVyL1YvbDWFJtkQamrfWqTqOMB%0A2bdx%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484011263/d5009c9585501a3ead3aa217c924/image.png?expires=1795451400&signature=c3180d8b6e267ee02c68fbf23cbcae89fc8abd88b6c9ce7213d16eea6c72c2f1&req=diQvEsl%2FnINZWvMW1HO4zZVfc36lvQJpaEMVyL1YvbCHrxV%2FggH9iQrMJsha%0A51sX%0A)
 
 **Very Important Warning:** Selecting the application type in step (4) is an **irreversible action**. Please ensure you select the exact category that matches your company's business model before saving.
 
@@ -72,7 +72,7 @@ After creating the application through the Partner Dashboard, we now move to und
 
 - **Help Center:** Zid provides a "Help Center," which is a highly important reference for developers and shipping companies before starting. This center helps you understand how the merchant manages their store and how orders are created and processed within the dashboard, giving you an accurate picture of the Order Journey and how your service will intervene.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484007687/aa86a1a11e9b0b336480db26aef6/image.png?expires=1794346200&signature=584c87768752fdde4248340432fb004a39c035a71a1d4a3d4afb3be3aaf40f49&req=diQvEsl%2BmodXXvMW1HO4zRaSOE5UZ%2BacqRxtoMfsINoltSdgjNJBULq6z58s%0ASMRF%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484007687/aa86a1a11e9b0b336480db26aef6/image.png?expires=1795451400&signature=f1e19c1d8f219dcac0f856789303cf680f185fb8d9b67dccaa53192d0d2eac6b&req=diQvEsl%2BmodXXvMW1HO4zRaSOE9TZuGaqRxtoMfsINpKwfPT2XoGXJvYEt0B%0A4NOi%0A)
 
 ## **VI. Technical Documentation & APIs**
 
@@ -92,7 +92,7 @@ This step is the technical backbone of the integration process. For your applica
 
 - Upon clicking "Activate," the merchant views the service details and grants your application the authorization to manage their orders. At this precise moment, the Tokens are sent to your system.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484032985/d9aee5bbace16a37ad7d90b4d1fe/image.png?expires=1794346200&signature=b31a863a7e78d4586a484c0f49a55e371142f1be918eabdf1f4e4fc015b66763&req=diQvEsl9n4hXXPMW1HO4zUUpgKGn44Cr9DW4wCJU9pVdc8bfOJ3NVON7cay%2B%0As3Qp%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484032985/d9aee5bbace16a37ad7d90b4d1fe/image.png?expires=1795451400&signature=25b9efd0d0c39fe7d1f267e004248f5a03af491c8ff67045ba1229cb625fd520&req=diQvEsl9n4hXXPMW1HO4zUUpgKCg4oet9DW4wCJU9pXrg%2FpNKcIC0HfaDlcR%0AMkBX%0A)
 
 **Note on Development Store:** During the development phase, you will be able to see and activate your test application through your own dedicated development store (linked to your account). This application will not be visible to other Zid merchants until it is fully approved and published.
 
@@ -118,10 +118,6 @@ Explore the guides (https://help-partner.zid.sa/en/collections/18315261-shipping
 
 Related Articles
 
-- App type and appearance
-
-(https://help-partner.zid.sa/en/articles/8637255-app-type-and-appearance)
-
 - Create a shipping app or Fulfillment App
 
 (https://help-partner.zid.sa/en/articles/8637270-create-a-shipping-app-or-fulfillment-app)
@@ -133,6 +129,10 @@ Related Articles
 - Oddo Integration - Arabic session on how to connect Odoo with Zid App Market APIs
 
 (https://help-partner.zid.sa/en/articles/12867648-oddo-integration-arabic-session-on-how-to-connect-odoo-with-zid-app-market-apis)
+
+- Creating and Setting Up a Shipping & Fulfillment App - part 2
+
+(https://help-partner.zid.sa/en/articles/15545648-creating-and-setting-up-a-shipping-fulfillment-app-part-2)
 
 - New: Explore Your Partner Dashboard
 

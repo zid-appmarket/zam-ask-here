@@ -12,7 +12,7 @@ source_url: https://help-partner.zid.sa/en/articles/10325692-critical-update-new
 tags: [from-docs-site, partner-help-center]
 language: en
 ---
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1311074413/c1944ac29d9eddcc2d5f684ba80e/image.png?expires=1794345300&signature=9407f23698cccf7244380a31fb0e66220b96ef82809fc529b551de73df60e660&req=dSMmF8l5mYVeWvMW1HO4zZgl5fzK4zE0d7nNNV5Evzqh7UpicMR%2FrfX12YAZ%0AohGlwb7yUrQjT5Qm6t0%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1311074413/c1944ac29d9eddcc2d5f684ba80e/image.png?expires=1795451400&signature=a6772156fd98ba3549732cf41f5572dd2ea5c9b304ea1423f01d55531f01c087&req=dSMmF8l5mYVeWvMW1HO4zZgl5f3N4jUzd7nNNV5Evzop2cJWMzsxA%2FEnzfAh%0A4EJ7HMcG8eeyYPfJHHk%3D%0A)
 
 As part of Zid’s commitment to enhancing our partners' experience and supporting their growth within our modern retail ecosystem, we are implementing a new pricing structure effective January 1, 2025. These updates are designed to create more uniformity and provide added incentives for our valued partners.
 

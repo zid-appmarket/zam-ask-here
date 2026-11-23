@@ -62,7 +62,7 @@ Edit icon that allows updating and re-submitting the landing page.
 
 - Click the **Edit** icon next to any listed landing page.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1594886409/84a92b5caa6dc5e71ce345c6c34c/image+%2841%29.png?expires=1794345300&signature=19d7c400f1bd20cdcb74686c9d263f0d21951452799f2f4a1b3f092222f1a2c9&req=dSUuEsF2m4VfUPMW1HO4zaSs%2FeWRzHLAXHpvQzV5EcxWuYAkzYrVjuXli00C%0AXXqFQYsRxoebvQn2zKY%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1594886409/84a92b5caa6dc5e71ce345c6c34c/image+%2841%29.png?expires=1795451400&signature=f56fcda63f4ea428ec030472d37ba4c6c73553b18f1912a6f4e83e36157df247&req=dSUuEsF2m4VfUPMW1HO4zaSs%2FeSWzXbHXHpvQzV5EcxmFwJqWwc4YSeFJTo4%0AFMnh2ItQaYjfSm4gXzs%3D%0A)
 
 - You’ll be taken back to the multi-step creation form where you can:
 
@@ -72,7 +72,7 @@ Edit icon that allows updating and re-submitting the landing page.
 
 - Upload new images or replace existing ones
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1594887232/ee22e347f9ff67a7202007e5d3e4/Screenshot+2025-06-24+130116+%281%29.png?expires=1794345300&signature=617103893557b06640dc19ad0512a25a83a8a8811d342ac54fb9871de023e86a&req=dSUuEsF2moNcW%2FMW1HO4zU%2F8FkNiaP2rnSPLx0wm4T8dzaBceDdFMCdwzOkl%0Ad69WNW941MtkD2AeWG0%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1594887232/ee22e347f9ff67a7202007e5d3e4/Screenshot+2025-06-24+130116+%281%29.png?expires=1795451400&signature=f8fc4e7706090b32c6fb8aae845fef7d65ef745314b6008ce69b21cd8681a8e5&req=dSUuEsF2moNcW%2FMW1HO4zU%2F8FkJlafmsnSPLx0wm4T85EIVyW6s%2FTzwztQlN%0A1MtdIWGSAvn9WJhrJtI%3D%0A)
 
 ⚠️ Note: Editing a published landing page will require resubmission and a new review cycle.
 
@@ -84,7 +84,7 @@ Currently, landing pages cannot be deleted from the dashboard. If you submitted 
 
 You can track each landing page’s current state:
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1594888492/61bff36aa027cbdf94708794cf4d/image+%2842%29.png?expires=1794345300&signature=ba87ddc77712fe4daed774dd270cd5f58d6fc3336f99323626b66b05bf80f0e5&req=dSUuEsF2lYVWW%2FMW1HO4zZPGLBcNDwvVq7AMcKY6jrsYeZ%2FaYekpJSl347aq%0AYxlsqGpWA4GWyZtW9IY%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1594888492/61bff36aa027cbdf94708794cf4d/image+%2842%29.png?expires=1795451400&signature=8206feca2a52dd768d685ad17fbee1b449bd8aac8e37079e848582a8417fbb67&req=dSUuEsF2lYVWW%2FMW1HO4zZPGLBYKDg%2FSq7AMcKY6jrtem4DQk7NsIlEkT0u4%0AZ6jl4Djm8ch%2FvMkwsUw%3D%0A)
 
 **Status**
 
@@ -108,7 +108,7 @@ Your landing page is live and available in the Theme Market.
 
 # **Landing Page Purchase List**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1594889448/0fd2402d9538dc8b11a0013834e4/image+%2843%29.png?expires=1794345300&signature=0f591ddd3a754b3db6109b8f55c3cdaded9cc4377f762b051cba30ee2b640dcd&req=dSUuEsF2lIVbUfMW1HO4zSClf1Q68yqYEX2DNhYn%2F3SpVthusVhMDJGqwBI1%0Aiu5AIjVy%2B2P2ZEZ2QDY%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1594889448/0fd2402d9538dc8b11a0013834e4/image+%2843%29.png?expires=1795451400&signature=c582ced94dc725b31b02fd051a7b677b59725a7311f1a3d5d57675857763f5c1&req=dSUuEsF2lIVbUfMW1HO4zSClf1U98i6fEX2DNhYn%2F3Sc9u0s3FM1JoXk6ilw%0AJksd37LAG4Z5YeA3ePM%3D%0A)
 
 The **Purchase List** section in the partner dashboard provides detailed information about all the landing pages purchased by merchants. This section helps you keep track of the transactions and provides insight into each purchase.
 

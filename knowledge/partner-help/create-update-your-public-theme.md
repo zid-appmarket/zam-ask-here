@@ -70,17 +70,17 @@ You can modify theme details and images anytime through the partner dashboard. Y
 
 The **Detailed Description** fields (Arabic and English) support a rich-text (HTML) editor, allowing you to format text, add headings and lists, and insert links and images.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2753069481/29077fc20a0f25c66577bcb43e65/image.png?expires=1794345300&signature=3980e0ccae4256bb650273cd4b7cda2277770bf33aac14a1b5e20881aec95fef&req=diciFcl4lIVXWPMW1HO4zUhTtFFKWhs3vrXZgXeXy91d%2B4nEAL%2FkzK11HL7p%0AvImhpK4itq6KnGXZ7Vs%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2753069481/29077fc20a0f25c66577bcb43e65/image.png?expires=1795451400&signature=778b1a5dab71ec99d7057c2a5190d3078f208222a4ddbd1b4bd1256a8e283a55&req=diciFcl4lIVXWPMW1HO4zUhTtFBNWx8wvrXZgXeXy93iN45tZVbtuSD%2FrSdH%0AxC5AnhLfZDQI158fvS0%3D%0A)
 
 When updating your theme details, review the selected **Industries** and make sure they still accurately represent the types of stores your theme is designed for. Accurate listing information helps merchants discover your theme through Theme Store filters.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2705653392/cf739b23d2526172af4ab17bd848/image.png?expires=1794345300&signature=bf9b87b75a289f5213eedf9cf6b476e13a1b08663ec0aca74df20361d17b1f0c&req=dicnE897noJWW%2FMW1HO4zcw50xaV2sPzORAm0%2BN2XyV%2B1xG2E%2BRdPon9FMQ8%0Ae%2BYUK6Rkj7HJv1GRMFQ%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2705653392/cf739b23d2526172af4ab17bd848/image.png?expires=1795451400&signature=cabcde9aef71518f787c0c970768c436a99fe7c7644076c8d2f20e616c467bae&req=dicnE897noJWW%2FMW1HO4zcw50xeS28f0ORAm0%2BN2XyXupTXwjJxq2vqHN9k2%0AxLmOZKmDx7cpRyl0Xwk%3D%0A)
 
 ## Update Catalog Sizes
 
 You can update the **Catalog sizes** of an existing theme to ensure merchants can find it using the Theme Store's catalog size filters.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765324137/5a703daaa464e4b877efcae480b5/image.png?expires=1794345300&signature=374353dcda84356d70998b2ef78de070810af487745992ec592c06d169a3a39b&req=dichE8p8mYBcXvMW1HO4zcFIuU0FlRyTrUvZF%2FNdNd2mmembX9uTywIHfp%2F9%0A%2F4m8tb2JHNG0uZzROFc%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765324137/5a703daaa464e4b877efcae480b5/image.png?expires=1795451400&signature=9dd99c246806e6e155a6859c4c19a1713bce922b7acce76f423d7dab044af9b6&req=dichE8p8mYBcXvMW1HO4zcFIuUwClBiUrUvZF%2FNdNd2ykmJHwf5xrAqdyZrf%0A0e5Uu1SPMXAkALznAF8%3D%0A)
 
 To update your theme's Catalog sizes:
 
@@ -102,7 +102,7 @@ To update your theme's Catalog sizes:
 
 ## **Upload a New Theme Version**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2753066781/282dc5f4fff0a6b9f222949fcebd/Screenshot+2026-10-20+at+3_04_27%E2%80%AFAM.png?expires=1794345300&signature=6446ee6af09b243e90c3f29a02228e08d1f9aa2516768b4bf2e318f4d682a2f0&req=diciFcl4m4ZXWPMW1HO4zdTyMds7SjvwkVVYk%2FjBfu2p1fW%2B47CkNbmUoj7T%0AKJKrtF1NPOp5bTFV2Zc%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2753066781/282dc5f4fff0a6b9f222949fcebd/Screenshot+2026-10-20+at+3_04_27%E2%80%AFAM.png?expires=1795451400&signature=7cbdb7c7c12a55badfd068c84d9d8b6dc52514dcf430d620c3f1d851b6604b71&req=diciFcl4m4ZXWPMW1HO4zdTyMdo8Sz%2F3kVVYk%2FjBfu3cmir0WahQVAUzNSNf%0AAFUh9ATMQOk1g6%2BGMYk%3D%0A)
 
 - Log in to your Partner Dashboard (https://partner.zid.sa/).
 
@@ -126,11 +126,11 @@ You can modify your theme details and images as long as the theme is in Draft st
 
 Themes with Draft or Rejected status can be deleted to tidy up your theme list.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1545454146/fc3f4c10b8ea4303f320291fddea/9b40148b-6dd7-4ecd-a0c1-72a79f3e36d3.png?expires=1794345300&signature=0128312bd0fdaba13c0f567d0b51ee296cdba82bc2ee672c37e4e72d2353e9ac&req=dSUjE817mYBbX%2FMW1HO4zbViPRgRUqNFPSDkHQmycGxoJ9gLnrDN%2B3jqj%2Fm7%0AqWTtuCMHx3Gkj7mj0rU%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1545454146/fc3f4c10b8ea4303f320291fddea/9b40148b-6dd7-4ecd-a0c1-72a79f3e36d3.png?expires=1795451400&signature=fc341ab59d25c1ab942514b9cf91d67100199bbab85112d93c1e4c845bfc996c&req=dSUjE817mYBbX%2FMW1HO4zbViPRkWU6dCPSDkHQmycGzfyvqVExsUxQNhVko5%0A8Ih3OPYEHti7S54UT%2FE%3D%0A)
 
 # Hide Your Theme from the Theme Store
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715573299/6fb2adcf9aa0433dd2019c57865c/image.png?expires=1794345300&signature=3e4f1c2f96bf25dfca26082959830f39ad3d0d1ee8e0519a553c517061b6a59c&req=dicmE8x5noNWUPMW1HO4zR9yeqxOF7FprsqJQQ9y4UUPjJ3Gxi919eZqUHpw%0AImKefjZfkLMwz84QuVw%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715573299/6fb2adcf9aa0433dd2019c57865c/image.png?expires=1795451400&signature=1898843d0462b682d631449257765ea097068ef0f068c31f77236f2a65c5f385&req=dicmE8x5noNWUPMW1HO4zR9yeq1JFrVursqJQQ9y4UXGDcwamY2LO4f4nRx2%0AnYi8kJTRFrzt3NtZlFU%3D%0A)
 
 You can temporarily hide a published theme from the Theme Store without unpublishing or deleting it.
 
@@ -160,7 +160,7 @@ You can make the theme visible in the Theme Store again at any time.
 
 Our team reviews new themes for essential features, flexibility, resilience, and performance. The review process takes up to 2 days, and you can track the status through the partner dashboard.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1545454144/8c1fb15f75af640a0fa656618523/64655b31-acd1-499f-9ce3-813843bdbe40.png?expires=1794345300&signature=8af46e3b2f0513f31de04e59468f7abb992650832230e32cc4f9897afa622b36&req=dSUjE817mYBbXfMW1HO4zYaKw1rS4lIvXBV0mrsAprjWiKoaUK0suBeCV6Zm%0AgSDIQlD0FNesi2gKaK8%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1545454144/8c1fb15f75af640a0fa656618523/64655b31-acd1-499f-9ce3-813843bdbe40.png?expires=1795451400&signature=35b7d7305752e1a8d6c37fb72c7eb3e0685983e0134d05337e911596db6ae24b&req=dSUjE817mYBbXfMW1HO4zYaKw1vV41YoXBV0mrsAprjcGo90XSA7Z8J%2Fhr2I%0AHwN%2FsaW8OrvwuHtaId4%3D%0A)
 
 If your theme meets our requirements, it will be considered for approval. If it lacks any requirements or needs major changes, it will be rejected.
 

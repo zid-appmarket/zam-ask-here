@@ -24,10 +24,6 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/8750100-for-subscription-app-partners)
 
-- For Theme Partners
-
-(https://help-partner.zid.sa/en/articles/8750109-for-theme-partners)
-
 - App Payouts
 
 (https://help-partner.zid.sa/en/articles/11501759-app-payouts)
@@ -35,3 +31,7 @@ Related Articles
 - Creation of the Last Mile Shipping App part 2
 
 (https://help-partner.zid.sa/en/articles/15545303-creation-of-the-last-mile-shipping-app-part-2)
+
+- New: Explore Your Partner Dashboard
+
+(https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard)

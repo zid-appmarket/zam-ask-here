@@ -60,7 +60,7 @@ Use Keywords of your app features in a short description so your app will be eas
 
 ​
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1403808589/6447105cd2b7c16b08aace61ea74/image+%288%29.png?expires=1794345300&signature=e220e483d6fdcb011448951652a687423b87497004174c7c7cdff1fec82491b9&req=dSQnFcF%2BlYRXUPMW1HO4zeVmWBjWJUXIUXFk5Fkz6Vir2D2Iy%2BRnU5qeEbvL%0A1Ygu%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1403808589/6447105cd2b7c16b08aace61ea74/image+%288%29.png?expires=1795451400&signature=719cae1a6d4d0a5459002e3e2ee191381d3062d9d39c23e9e924bcc9a5a80008&req=dSQnFcF%2BlYRXUPMW1HO4zeVmWBnRJEHPUXFk5Fkz6VgLojO%2BM%2Bwkuu0Go1z0%0AdU7y%0A)
 
 - **Developed by**
 

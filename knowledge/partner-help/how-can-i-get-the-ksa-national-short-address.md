@@ -12,7 +12,7 @@ source_url: https://help-partner.zid.sa/en/articles/12981222-how-can-i-get-the-k
 tags: [from-docs-site, partner-help-center]
 language: en
 ---
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1896193327/f68dd7484d1b7c858f5940427755/Partner+Update.png?expires=1794345300&signature=d297cee56899734de874f029268ae24375e3fcb522c63a4c7b8bcd337c7c312c&req=dSguEMh3noJdXvMW1HO4zeSOXOOobiGR6oL33WNP442sGiH%2ByZ1r%2FfMu5ayF%0AB7NwCteQyi%2FAkpduia0%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1896193327/f68dd7484d1b7c858f5940427755/Partner+Update.png?expires=1795451400&signature=3c0fec6ef123450255762b8174d09a91d6e07d7e4b1a2bf6b0e2453781e82270&req=dSguEMh3noJdXvMW1HO4zeSOXOKvbyWW6oL33WNP443mlPXFXYd8ckizEwHL%0AvI2ouHTk78iaBKARvl8%3D%0A)
 
 In compliance with the Kingdom of Saudi Arabia’s Logistics Mandate, all shipments within KSA must utilize the **National Short Address** (e.g., `RCTA4483`). To ensure successful Waybill (AWB) generation and delivery rates, Zid ensured exposing these fields clearly for both the **Origin** (Merchant Inventory) and **Destination** (Customer Location).
 

@@ -7,7 +7,7 @@ title: "Integration and Development Cycle"
 product: zam
 audience: all
 status: verified
-updated: 2026-10-27
+updated: 2026-11-12
 source_url: https://help-partner.zid.sa/en/articles/8716995-integration-and-development-cycle
 tags: [from-docs-site, partner-help-center]
 language: en
@@ -42,13 +42,11 @@ Before developing an app or a theme, you must create a Zid Partner account. This
 
 - **Looking for Ideas?**: Opt-in to receive guidance
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1574612163/d15f3ce7fb46a19a019875aea5b5/image+%2835%29.png?expires=1794346200&signature=6f14fa74da71ed9f99a872de36c91a52f608b5ed7c2c109d5ec036d611d626cb&req=dSUgEs9%2Fn4BZWvMW1HO4zUx1vBsqbOTnIQVPccoNlbQZOGb2iSLr4YL5TSdU%0AHFb%2Bx%2BgAr4pKFzWtfJk%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1574612163/d15f3ce7fb46a19a019875aea5b5/image+%2835%29.png?expires=1795451400&signature=e02d54fcf10adacb86b3752f40c5ff41755b0d20bf3e4318cdc5d88a9a30c83b&req=dSUgEs9%2Fn4BZWvMW1HO4zUx1vBotbePhIQVPccoNlbSavBG8riqLqZDaYHjI%0AJn%2FfD18L279ogefl4pE%3D%0A)
 
 **Through the Partner Dashboard, you can:**
 
-- Submit partnership details to receive your agreement to publish your App in our marketplace.
-
-⚠️ **Note:** This process applies to **public** integrations only. For private apps or themes, please refer to the respective private integration guides.
+Complete your required bank and business details and accept the current Terms & Conditions before creating apps, themes, or landing pages. These requirements apply to both new and existing partners. For detailed prerequisites and acceptance instructions, see Accepting Zid Partner Terms & Conditions (https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions).
 
 - Build and create your applications and themes, update, monitor installations, and subscriptions.
 
@@ -74,9 +72,9 @@ Note: Shipping apps must be public. Private shipping apps are not supported.
 
 ## Public App Flow
 
-- Complete Partnership Details (https://partners.zid.sa/en-sa/partner/17/partnership) to receive your agreement
+- Complete your required bank and business details in the Partner Dashboard (https://partners.zid.sa).
 
-- Create your application (https://help-partner.zid.sa/en/articles/8637655-create-a-public-app)
+- Navigate to **Apps → All Apps → Create application**. If prompted, review the current App Terms & Conditions, select the acceptance checkbox, and click **Accept** to proceed with creating your application (https://help-partner.zid.sa/en/articles/8637655-create-a-public-app).
 
 - Start development using the Zid Merchant API (https://docs.zid.sa/start-here)
 
@@ -100,7 +98,9 @@ A private app is created for **one specific Zid store** and is not listed public
 
 ## How it works
 
-- Create a new application in the **Partner Dashboard (https://partners.zid.sa/)** and select **Private**.
+- Complete your required bank and business details, then navigate to **Apps → All Apps → Create application** in the Partner Dashboard (https://partners.zid.sa).
+
+- If prompted, review and accept the current App Terms & Conditions, then select **Private** as the application type.
 
 - Enter the required technical details and the target **Store ID**.
 
@@ -124,17 +124,19 @@ For complete setup instructions, Store ID rules, activation behavior, and detail
 
 ## Public Theme Flow
 
-- Complete Partnership Details (https://partners.zid.sa/en-sa/partner/17/partnership)
+- Complete your bank and business details in the Partner Dashboard (https://partners.zid.sa).
 
 - Start development following the Theme Development Roadmap (https://help-partner.zid.sa/en/articles/8683883-theme-development-roadmap)
 
-- Create and upload (https://help-partner.zid.sa/en/articles/8684798-create-a-new-theme) your theme in the dashboard
+- Click **Add theme** in the Partner Dashboard. If prompted, review the current Theme Terms & Conditions, select the acceptance checkbox, and click **Accept** to proceed with creating and uploading your theme (https://help-partner.zid.sa/en/articles/11471777-create-update-your-public-theme).
 
 - Test your theme (https://help-partner.zid.sa/en/articles/11461482-test-your-theme) using a development store
 
 - Submit your theme for review
 
 - Once approved, your theme is published in the Zid Theme Market
+
+**Note:** Terms & Conditions acceptance applies to the entire partner account. Once an authorized user accepts the current version, other team members can proceed according to their permissions. If Zid publishes a new version, it must be accepted before creating another item under the affected document type. See Accepting Zid Partner Terms & Conditions (https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions) for details.
 
 ## Private Theme Flow
 
@@ -162,7 +164,7 @@ If you’re willing to develop a theme for one or more specific stores, so these
 
 The testing flow is similar to public themes, but occurs inside the live merchant store.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1574616214/9ca87b57ed961930052c6dbec5d3/image+%2838%29.png?expires=1794346200&signature=1f24aae83fc4717e6fe2bda350eb66e6d42404402855fa50eb32e3651216e408&req=dSUgEs9%2Fm4NeXfMW1HO4zWTQUc%2BxW2rti8CaszMSC%2FFZfO7rmuJzZEm7%2FWmn%0AMHtarY1hKUxxgQzLQMM%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1574616214/9ca87b57ed961930052c6dbec5d3/image+%2838%29.png?expires=1795451400&signature=2bbb9735d13fab9f67d0e39846ba30964cc253bce97d1ad4000dca22f1c39eff&req=dSUgEs9%2Fm4NeXfMW1HO4zWTQUc62Wm3ri8CaszMSC%2FFACvNvY7amzYGk2Q15%0ADLeWX7iaWrO3KY%2Fbdeg%3D%0A)
 
 ## Next Steps
 
@@ -192,6 +194,6 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/11471800-create-a-private-theme)
 
-- Guide to Integrating Shipping Systems with the Zid Platform
+- New: Explore Your Partner Dashboard
 
-(https://help-partner.zid.sa/en/articles/15544622-guide-to-integrating-shipping-systems-with-the-zid-platform)
+(https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard)

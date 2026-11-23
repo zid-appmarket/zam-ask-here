@@ -46,7 +46,7 @@ x-manager token is expired
 
 connect with us via chat support and share the cURL command. This will enable us to conduct a more in-depth analysis and provide thorough support.
 
-(https://downloads.intercomcdn.com/i/o/908115027/26b16809a6cf4ee47c4012ee/IMG_20231112_195857.png?expires=1794345300&signature=0824dbef724e31ac3442c0acd22d5c2f04f5c031e959dcb6746f6c6da49c0ab4&req=fSAvF8h7nYNYFb4f3HP0gK1Y6PYWY9BDnc2W4OjU4QmxP7fEQRhFKXLrUSTZ%0AYdQ%2BC9g6NhjD9oODWA%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/908115027/26b16809a6cf4ee47c4012ee/IMG_20231112_195857.png?expires=1795451400&signature=7130882f4a42111afb306041a45b9fa11baf98ef0f6d82ddb97ec742794a83d4&req=fSAvF8h7nYNYFb4f3HP0gK1Y6fEXZ9dDnc2W4OjU4QmFBqhhkkWwzNJ2pQmI%0A5OHjvD%2B2Wm1InrMyHg%3D%3D%0A)
 
 Related Articles
 
@@ -58,10 +58,6 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/8718037-no-such-user-unauthorized-request)
 
-- OAuth Authorization Server Error
-
-(https://help-partner.zid.sa/en/articles/8718045-oauth-authorization-server-error)
-
 - Unauthenticated
 
 (https://help-partner.zid.sa/en/articles/8718048-unauthenticated)
@@ -69,3 +65,7 @@ Related Articles
 - Invalid order status
 
 (https://help-partner.zid.sa/en/articles/8718076-invalid-order-status)
+
+- Too Many Attempts, Please slow down for few seconds !
+
+(https://help-partner.zid.sa/en/articles/8718081-too-many-attempts-please-slow-down-for-few-seconds)

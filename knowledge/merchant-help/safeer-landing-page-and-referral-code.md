@@ -7,7 +7,7 @@ title: "صفحة الهبوط وكود الإحالة"
 product: general
 audience: all
 status: verified
-updated: 2026-11-03
+updated: 2026-11-23
 source_url: https://help.zid.sa/ar/safeer/landing-page-and-referral-code
 tags: [from-docs-site, merchant-help-center]
 language: ar
@@ -46,10 +46,6 @@ language: ar
 
 - مع رابط صفحة الهبوط، تأكيدًا للإحالة.
 
-## الأولوية لكود الإحالة
-
-إذا فتح التاجر صفحة هبوط شريك وأدخل كود شريك آخر، نُسبت الإحالة إلى صاحب الكود.
-
 ## مشاركة الاثنين معًا
 
 إذا سألك تاجر عن طريقة التسجيل، فأرسل رابطك وكودك في رسالة واحدة. مثلًا:
@@ -74,7 +70,7 @@ language: ar
 
 - الحصول على أول إحالة
 
-آخر تحديث: 3 نوفمبر 2026
+آخر تحديث: 23 نوفمبر 2026
 
 هل حلّ المقال مشكلتك؟
 

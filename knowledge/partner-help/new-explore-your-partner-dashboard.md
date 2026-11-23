@@ -7,7 +7,7 @@ title: "New: Explore Your Partner Dashboard"
 product: zam
 audience: all
 status: verified
-updated: 2026-11-02
+updated: 2026-11-23
 source_url: https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard
 tags: [from-docs-site, partner-help-center]
 language: en
@@ -58,7 +58,7 @@ The left sidebar is your primary navigation tool. Some sections contain expandab
 
 ## **2. Dashboard Overview**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765176445/e865025a77781e06ab9eb931e62e/image.png?expires=1794346200&signature=ce82369ee4b18fc795e8f1dfd2dd86f8707c55af9fff2b1022d27a207b5621bc&req=dichE8h5m4VbXPMW1HO4zekYfKlSJ83%2B%2BO9xvn%2Bff3jUuO3%2FS77z3kfsZmx2%0AigEmwYMVXCcS1BR2SqQ%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765176445/e865025a77781e06ab9eb931e62e/image.png?expires=1795543200&signature=ff19147b77c7f1ba220cd3a007ad8a4c74c8160bd24798838c46c590b059987f&req=dichE8h5m4VbXPMW3nq%2BgXaSWst6QEtlgft9aBlTkCx6u64K8aVlzTIm3enA%0AmNBYzCqzOkgG5J66HgDNtkY3jXk%3D%0A)
 
 **Navigation:** `Partner Dashboard → Dashboard`
 
@@ -170,7 +170,7 @@ To review a specific reporting period:
 
 ## **3. Apps**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765180145/5505a29fda5e9521e1a6df6bc278/image.png?expires=1794346200&signature=e56b6241d0d8718f4bd83c6998e4019cec00b4e6e81a20da89f0349fd5f1ac49&req=dichE8h2nYBbXPMW1HO4zZ5MyIbvwS0ede3Dbp15d8EWBRd4HWFEes1gDTCg%0AolYkBnj5MH8yCKTwe1A%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765180145/5505a29fda5e9521e1a6df6bc278/image.png?expires=1795543200&signature=df507bab61a413d89ad35fb50580ca1babe85fcfc11856b936b7dbd6404d36a1&req=dichE8h2nYBbXPMW3nq%2BgbTV%2FfyvmA15aHio6nnwoBPaARhg7Ze%2FMIBd93IH%0Aqn%2FKSh%2BEVRZ2UWOaU%2BPY79WXaXc%3D%0A)
 
 **Navigation:** `Partner Dashboard → Apps`
 
@@ -206,21 +206,25 @@ Depending on the application and its status, you can use this area to:
 
 - Manage available application settings.
 
-#### Creating a new application
-
 To start creating an application:
 
-- Open **Apps → All Apps**.
+- Complete your required bank and business details in the Partner Dashboard.
 
-- Select the available application creation action.
+- Navigate to **Apps → All Apps**.
 
-- Choose the appropriate application type.
+- Click **Create application**.
+
+- If prompted, review and accept the current **App Terms & Conditions**.
+
+- Select the appropriate application type.
 
 - Complete the required application information.
 
 - Follow the relevant application creation and submission process.
 
-The available steps depend on whether you're developing a public or private application.
+**Important:** Both new and existing partners must complete their bank and business details and accept the current Terms & Conditions before creating an application. If Zid publishes a new version, an authorized user must accept it before the account can create another application.
+
+For detailed prerequisites, see Accepting Zid Partner Terms & Conditions (https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions).
 
 **Related guides:**
 
@@ -332,7 +336,7 @@ This is particularly useful when investigating installation issues, subscription
 
 ## **4. Themes**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765212075/3b5df78916244fa18244230b14c8/image.png?expires=1794346200&signature=ed2d3ad2145e25da363ea61a6ba7441ea41dd7c667719e8c5bd28ce451d8e059&req=dichE8t%2Fn4FYXPMW1HO4zYNYsLg6eS%2BaX6v%2BFmRLfIvy82FBK20%2BfmoB2jX4%0AhrfmWr10hu7dUxkqX5c%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765212075/3b5df78916244fa18244230b14c8/image.png?expires=1795543200&signature=a1c381b756f3b577edd5ab4556634d4325b9551cd390efa2b4734f7e15636a02&req=dichE8t%2Fn4FYXPMW3nq%2BgdnXTw1PluEi7vRt8g35tmABZLS0legV2NdrcvWc%0AfsFAqx00C75Wmob7BNkMcpZ7oKg%3D%0A)
 
 **Navigation:** `Partner Dashboard → Themes`
 
@@ -366,17 +370,21 @@ You can use it to:
 
 - Access theme management actions.
 
-### Create or update a theme
+## Create or update a theme
 
 - Navigate to **Themes → All Themes**.
 
-- Select the available creation action to start a new theme, or open an existing theme.
+- Click **Add theme** to create a new theme, or open an existing theme to update it.
+
+- When creating a theme, ensure your bank and business details are complete. If prompted, review and accept the current **Theme Terms & Conditions**.
 
 - Complete or update the relevant theme information.
 
 - Follow the submission or change-request workflow when applicable.
 
 Changes to a published theme may require review before becoming visible to merchants.
+
+**Note:** These prerequisites also apply to existing partners. If Zid publishes a new version of the Theme Terms & Conditions, an authorized user must accept it before creating another theme.
 
 For detailed instructions, see Create & Update Your Public Theme (https://help-partner.zid.sa/en/articles/11471777-create-update-your-public-theme).
 
@@ -388,7 +396,13 @@ The **Product Landing Pages** section provides access to landing-page offerings 
 
 Use this section to review and manage the available product landing-page listings and their related information.
 
-For guidance on preparing and publishing themes or landing-page offerings, visit the Theme Support collection (https://help-partner.zid.sa/en/collections/7131520-theme-support).
+**Note:** Before creating a landing page, you must complete your required bank and business details and accept the current Terms & Conditions.
+
+Landing pages use the same Terms & Conditions text as themes, but acceptance is recorded separately. Even if you've already accepted the Theme Terms & Conditions, you'll be asked to accept them once for landing pages when creating your first landing page.
+
+- For more information, see Accepting Zid Partner Terms & Conditions (https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions).
+
+- For guidance on preparing and publishing themes or landing-page offerings, visit the Theme Support collection (https://help-partner.zid.sa/en/collections/7131520-theme-support).
 
 ### 4.3 Theme Dashboard
 
@@ -450,7 +464,7 @@ This information is useful when tracking theme sales, reviewing merchant purchas
 
 ## **5. Shipping Apps**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765185380/0588c2fe86f2540a65de269b66a7/image.png?expires=1794346200&signature=1d65d95c676b3025f93c68d3c0e6ffa1342d55143dbacec3ff5eafe165218da8&req=dichE8h2mIJXWfMW1HO4zcVVbatGHy4twOjlP2DcEbjzhVrViFdseXTmnO3q%0AJhVF0q4%2FHK820UcaAVU%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765185380/0588c2fe86f2540a65de269b66a7/image.png?expires=1795543200&signature=aed0a4495feb81fce82e20e7bad91279fe7f7de89c66b7e3934bf6d692885b1f&req=dichE8h2mIJXWfMW3nq%2BgZJHiaW1MgM6xCKmiVrUnVdQM3%2BlifdBpUONlDeb%0AHCTGBPangm9ao%2BrXfKdftPgWDQ4%3D%0A)
 
 **Navigation:** `Partner Dashboard → Shipping Apps`
 
@@ -486,7 +500,7 @@ Review merchant activation activity associated with your shipping applications.
 
 ## **6. Coupons**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765187397/83e1439e78380e2c7b59db472e71/image.png?expires=1794346200&signature=9c241958cce6581c404a995d07336875bbb57e185f9b24e2692cf0c81a2aa6e3&req=dichE8h2moJWXvMW1HO4zeFBTX4Jzp3AxBnly50wOY4bCW7Nz%2B%2F6tunDwNTy%0AIEmbW3itv%2BN5HNWQix8%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765187397/83e1439e78380e2c7b59db472e71/image.png?expires=1795543200&signature=082978feaca9606288d412d0fc91121cdba28d3d533d53e59c19324e699ca52e&req=dichE8h2moJWXvMW3nq%2BgRyrkTEj5l8TqOzcWnmgK0tgcVmJ28SKZaU8r%2BAq%0AyzRNek6t48B%2BQxj3zdz74Yno8yQ%3D%0A)
 
 **Navigation:** `Partner Dashboard → Coupons`
 
@@ -584,7 +598,7 @@ You can also restrict usage at the individual store level when supported.
 
 ## **7. Development Store**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765216353/62a700f75aeed0418fe00e0dfe0a/image.png?expires=1794346200&signature=fe6510f1314607a7d2f13b0a7210e72b27ce8177bc81aa3c25de3d4e68d228a5&req=dichE8t%2Fm4JaWvMW1HO4zbzeJkEq5LwQcFZ%2BJmlZJ9YCyyRyx%2Fa%2BKqvblTvZ%0A%2FrbsNaEeEJ5BbiO5Vj0%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765216353/62a700f75aeed0418fe00e0dfe0a/image.png?expires=1795543200&signature=c471d32dc78afd8fbb7748f40721d164e9c50eae5832de744ca722232bd4c67c&req=dichE8t%2Fm4JaWvMW3nq%2BgQFjsF20fjodf9Rk%2FVb96idGja28QRaDQW%2BRSkCt%0AOFx8X6rLWJGHEjgd77wb923pzRc%3D%0A)
 
 **Navigation:** `Partner Dashboard → Development Store`
 
@@ -642,7 +656,7 @@ For more guidance on development and publishing, see Integration and Development
 
 ## **8. AI Connections**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765217705/9a981ee36746409b4196a93c7de9/image.png?expires=1794346200&signature=5b2111fd4b0f5eff20e4445b6722cac7e079f92efccf90bd0f523e7c7baa1438&req=dichE8t%2FmoZfXPMW1HO4zehZPMtNcZDG%2F78lZHQp2GdH5Wz%2BT%2FfmLiu%2Bm9hm%0AC6M%2FPgnDA8J0q5jXRtA%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765217705/9a981ee36746409b4196a93c7de9/image.png?expires=1795543200&signature=96aa9d2486e51675a415c4bcef1fd69c9ddb7d16cfb897082d3153565b08be7c&req=dichE8t%2FmoZfXPMW3nq%2BgRHBemlvYAxLDCFLnqkR%2BpSYgc9jnXexWUMZoezQ%0AQPrady3MEsdosqs7qKBf2Swt%2BXs%3D%0A)
 
 **Navigation:** `Partner Dashboard → AI Connections`
 
@@ -678,7 +692,7 @@ For setup instructions and supported tools, see Connect Your Zid Partner Account
 
 ## **9. Webhooks**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765219849/7bb46fd4ecaeb34d8903cb3bfbc5/image.png?expires=1794346200&signature=9739faac832192d7a9ef87c4c07ba8f78c6bd3bdfd34bdab51a55b5c8651990d&req=dichE8t%2FlIlbUPMW1HO4zbodG4zs4Pd8%2FSP%2B3I0mg%2FKHxnj2YJGLbnQN9ahm%0AoU4QnkgDNEpmSenEIQQ%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765219849/7bb46fd4ecaeb34d8903cb3bfbc5/image.png?expires=1795543200&signature=6c8bd14347b15c9de58006c73c1d46412922bb76e0bb7b7304de4a6ccfe4a62b&req=dichE8t%2FlIlbUPMW3nq%2BgSEt%2FpjA3gUEy43jFIFcur17hz0Ehg%2BnYnUP0hGC%0AjWY6h9oSP0Zs6ClnzwQTFK6x8Ps%3D%0A)
 
 **Navigation:** `Partner Dashboard → Webhooks`
 
@@ -746,93 +760,91 @@ When investigating a delivery issue:
 
 For technical integration details, refer to the Zid Developer Documentation (https://docs.zid.sa/).
 
-## **10. Partnership**
+## 10. Partnership
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765220996/d68f783e753183a1a3d94c771e1c/image.png?expires=1794346200&signature=b0d9054cd0befcad99fa3a193c43212a9567152c34fde867613186318abaec5e&req=dichE8t8nYhWX%2FMW1HO4zfEKvid1NvU%2B0DS1D9ty2UBfh64CLVLbcoCC9xlG%0AzhPk6pM3B5osCbsnwkA%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2802261354/474035de93cf71f63372c02dfe30/image.png?expires=1795543200&signature=96ae684c27854c4bbeb0a4ce4eedb7c0550b221521c11c484d56b3cc564e488b&req=dignFMt4nIJaXfMW3nq%2BgfYk6v3Y%2FlQ%2F0Z9oGLMY9eu4mRq0dVgiEk2wQAth%0AaVAcxz2bOfcid2SeeM%2BWd8Cazg4%3D%0A)
 
 **Navigation:** `Partner Dashboard → Partnership`
 
-The **Partnership** section helps you manage the business and agreement information associated with your relationship with Zid.
+The Partnership section helps you manage your business information and partnership details with Zid.
 
-This section is relevant when completing formal partnership requirements for eligible public applications, themes, and shipping integrations.
+Before creating an app, theme, or landing page, you must complete your required bank and business details and accept the current Terms & Conditions.
 
-### Partnership information
+### Partnership Information
 
-Depending on the partnership process, you may need to provide information about:
+The following information is required based on your bank account location and partner type.
 
-- The authorized partnership representative.
+**Bank Details**
 
-- Contact information.
+- **IBAN:** Provide a valid IBAN, or a bank account number if your country doesn't use IBAN.
 
-- Business registration information.
+- **SWIFT Code:** Required for all bank accounts.
 
-- Financial contacts.
+- **Routing Number:** Required for US bank accounts.
 
-- Required documents and agreements.
+**Business Details**
 
-### Assign a partnership representative
+- **Companies:** Provide your Commercial Registration (CR) number and upload the CR document.
 
-The partnership representative serves as an authorized point of contact for the agreement process.
+- **Saudi-banked companies:** Indicate whether you're VAT-registered. If yes, provide your VAT number.
 
-The representative may be:
+- **Freelancers:** Provide a passport or national ID.
+
+**Important:** These requirements apply to both new and existing partner accounts. If your information is incomplete, you cannot create a new app, theme, or landing page until you provide the missing details.
+
+### Accepting Terms & Conditions
+
+Zid uses electronic Terms & Conditions acceptance instead of the previous contract upload and approval process.
+
+To accept the terms:
+
+- Complete your required bank and business details in the Partner Dashboard.
+
+- Select the appropriate creation action:
+
+- **Apps:** Navigate to **Apps → All Apps → Create application**.
+
+- **Themes:** Click **Add theme**.
+
+- **Landing Pages:** Click **Create Landing Page**.
+
+- Review the Terms & Conditions document when prompted.
+
+- Select the acceptance checkbox and click **Accept**.
+
+- Continue creating your app, theme, or landing page.
+
+**Note:** Apps, themes, and landing pages have separate acceptance records. Landing pages use the same Terms & Conditions text as themes, but you'll be asked to accept it separately when creating your first landing page, even if you've already accepted it for themes.
+
+For detailed instructions, see Accepting Zid Partner Terms & Conditions (https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions).
+
+### Who Can Accept?
+
+Only the following users can accept the Terms & Conditions:
 
 - The partner account owner.
 
-- An authorized member of the partner's organization.
+- A team member with the `manage.partner.partnership.details` permission.
 
-Make sure the selected person is authorized to manage the partnership process and communicate with Zid.
+**Account-Level Acceptance**
 
-### Individual and company information
+Acceptance applies to the entire partner account, not individual team members.
 
-The information required may differ based on your partner type.
+Once an authorized user accepts the current Terms & Conditions, other team members can proceed with creation according to their assigned permissions without accepting the same version again.
 
-**Individual partners**
+Acceptance is recorded separately for each document type and version and is recognized across both Partner Dashboards.
 
-**Company partners**
+**New Terms & Conditions Versions**
 
-Country and city
+If Zid publishes a new version, an authorized user must review and accept it before the account can create another app, theme, or landing page under the affected document type.
 
-Legal company name
+**Important:** There is no fixed acceptance deadline. However, you cannot create new apps, themes, or landing pages until the required account information is complete and the current Terms & Conditions have been accepted.
 
-Business or correspondence address
-
-Registered business address
-
-Identification documents
-
-Commercial registration information
-
-Applicable freelance documentation
-
-Applicable VAT registration information
-
-Additional details may be requested depending on the agreement and partner type.
-
-### Partnership agreements
-
-The Partnership section also provides access to relevant agreement workflows and records.
-
-Depending on your service type and agreement status, you may be able to:
-
-- Review agreement requirements.
-
-- Provide the requested partnership details.
-
-- Initiate an applicable agreement process.
-
-- Track agreement progress.
-
-- Review existing agreements.
-
-- Access approved agreement documents.
-
-**Important:** Partnership requirements differ by offering type. Private app activation follows its own process and should not be assumed to require the same agreement workflow as public marketplace offerings.
-
-For more information, see Integration and Development Cycle (https://help-partner.zid.sa/en/articles/8716995-integration-and-development-cycle).
+For more information about the development process, see Integration and Development Cycle (https://help-partner.zid.sa/en/articles/8716995-integration-and-development-cycle).
 
 ## 11. Team Management
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765222053/acb37eac5539bea46fb9e47194c9/image.png?expires=1794346200&signature=43b222f81453f708c7a5e6b4332528113eee9557067ea693d31e2ad6ecbf4efc&req=dichE8t8n4FaWvMW1HO4zV%2FqRjDdHWU5Ok9bJiXDM8lnnkpv5v2MpCTP07OO%0AcAPQcKe8z5KWc8g7tdo%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765222053/acb37eac5539bea46fb9e47194c9/image.png?expires=1795543200&signature=c25b6d3fee7d3bc21b797934d59b71b7dce160d2e97183fda1b9da8075f11e92&req=dichE8t8n4FaWvMW3nq%2BgWqywvtaSRGxPt27Nd52X2zpyg1OpXFypW5lKYZw%0AzT4CkX8nBf9cGQTZ3%2B7VH7RQMaM%3D%0A)
 
 **Navigation:** `Partner Dashboard → Team Management`
 
@@ -900,7 +912,7 @@ Available permission categories can include:
 
 - **Users Management:** Add, update, and manage team members.
 
-- **Manage Partnership Information:** Maintain partnership details and update the account's Zid Communications Email. Team members without this permission can view the email but cannot edit it.
+- **Manage Partnership Information:** Allows authorized team members to manage partnership details, update the Zid Communications Email, and accept the current Partner Terms & Conditions. Accepting the terms requires the `manage.partner.partnership.details` permission.
 
 - **Manage Development Stores:** Create and manage development stores.
 
@@ -922,7 +934,7 @@ To remove someone who no longer requires access:
 
 ## 12. **Payments**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765224300/6df0007cff6c2d48408378d79c86/image.png?expires=1794346200&signature=1db9ca69c95e8ae64f0cc6d786e08077374044e4f127311822557287b2513aea&req=dichE8t8mYJfWfMW1HO4zXufIVqtebUgrUoxgQ75uBbbOiIrHvMUo0FVlG5r%0AmCOW1ncDNxHNjLYvfj8%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765224300/6df0007cff6c2d48408378d79c86/image.png?expires=1795543200&signature=b18416c54c3c40f77d3f293d42dd30bc4feca2d3996f1319d1b55dcc41ee2bb5&req=dichE8t8mYJfWfMW3nq%2BgdaobhgCVjyMR%2BS%2Bvk7Y5npIhfRg9G%2B8ManWbQaa%0AJPdeTMbLlk0tx1hNYOFYxs5%2FhHo%3D%0A)
 
 **Navigation:** `Partner Dashboard → Payments`
 
@@ -1058,7 +1070,7 @@ Use this section to review or manage available bank account details as permitted
 
 ## **13. My Profile and Account Settings**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2781754395/f99c49d49e47a32efaac0b7815ad/image.png?expires=1794346200&signature=0decc88f7a5fb65dbac4420044ba69f1897e8f1602de0407c4f8f3dc1b5bac32&req=dicvF857mYJWXPMW1HO4zbLJVLD2C%2F6BplNcI6LS3yMaD3M0PIUF1FqZMSiJ%0AWsjtyiz3xULlt0TbXeQ%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2781754395/f99c49d49e47a32efaac0b7815ad/image.png?expires=1795543200&signature=cf97d11962b512147b664aa3ee5aa6fd5ab92d3e84d16aaa7c72bf97f65b0481&req=dicvF857mYJWXPMW3nq%2BgWdj%2FOYy%2BQDSYzaeITlx4cxgRl6ocxLrCx9LhxyU%0AM%2FBKlPoY5%2BGHTHaiVKfmvbkmC%2F0%3D%0A)
 
 You can access personal and account-related controls through the account menu in the upper-right area of the dashboard.
 
@@ -1086,7 +1098,7 @@ Keep these details accurate so Zid can contact you when needed.
 
 ### Z**id Communications Email**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2781758406/574392fd8641779ac5659a894e7b/image.png?expires=1794346200&signature=95a679ab89a9c8762757c4c78d8a25a804056093fcfa3b42fa4cb8d31006c8d2&req=dicvF857lYVfX%2FMW1HO4zZchzCT1RJYCfjPwx3U88wNP4PZLolI0UZjGbKqz%0AHzBwc0d04eqVxp%2F1%2F5U%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2781758406/574392fd8641779ac5659a894e7b/image.png?expires=1795543200&signature=0e385f587120ac711058d7062970dd340acacf2db8abaf58b933c02796d39075&req=dicvF857lYVfX%2FMW3nq%2BgRX1Mc%2BAmv32cz8Q8RV0BDa7H3NsOMd909HqkLcP%0AqoQP3KD%2FbnvSWtgCOZYs0yCSI5M%3D%0A)
 
 The **Zid Communications Email** is your partner account's dedicated email address for receiving:
 
@@ -1154,9 +1166,33 @@ The top navigation bar includes interface preferences such as:
 
 These preferences help you customize your dashboard experience.
 
-## **14. Help & Support**
+## **14. Support Tickets**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765226334/3e50704df225d81a2ad712f048b9/image.png?expires=1794346200&signature=a713e20fa792ed038e19e8baf7248cdcf5f09c2baeb41c8faeacfb22a1a16849&req=dichE8t8m4JcXfMW1HO4zRcW4x3SyM73PB%2BVEF8UZnXTgMa4EgAvTyuO7EGt%0AyKii%2BJhRsKgNhkek%2Ffg%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2828227146/b9de68f55b60d3969e64fab14bdc/image.png?expires=1795451400&signature=4d759b871b63c226a5a11aeecce92384df98c5d4ef6ad8b0b0d4ea0b87cdc523&req=diglHst8moBbX%2FMW1HO4zZfJ8ESyh2Q78VPGrvXtrh1u3fwFWEoQvDfnPQSv%0ATqzM68DqIFYImNIa%2F%2Fk%3D%0A)
+
+Navigation: `Partner Dashboard → Support Tickets`
+
+The **Support Tickets** section allows you to manage merchant support requests assigned by Zid for your published apps or themes.
+
+From this page, you can:
+
+- View and filter assigned support tickets.
+
+- Reply to merchants and add internal notes.
+
+- Escalate issues that require Zid's assistance.
+
+- Submit resolutions for merchant confirmation.
+
+- Track ticket progress and status.
+
+**Note:** This section is available to partners with at least one published app or theme. Shipping app support tickets are handled directly by Zid's team.
+
+For detailed instructions, see Manage Merchant Support Tickets (https://help-partner.zid.sa/en/articles/18488807-manage-merchant-support-tickets).
+
+## **15. Help & Support**
+
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2765226334/3e50704df225d81a2ad712f048b9/image.png?expires=1795543200&signature=f13b7371e0d15a7f70c7a9bdfc247e87a4fe02488f964ccf30e673e9fac2da8a&req=dichE8t8m4JcXfMW3nq%2BgeVwy53MqefIEo7SjKLRYWre5B2BjBDSrd4FFc7d%0AY1jKnbWEjiZtdgwUQWePGKXoBTE%3D%0A)
 
 If you encounter an issue or need assistance with your Zid Partner account, you can access support resources from the dashboard.
 
@@ -1238,7 +1274,7 @@ You may also find options for community participation, meetings, and additional 
 
 For general partner documentation, visit the Zid Partners Help Center (https://help-partner.zid.sa/en/).
 
-## 1**5. Developer Documentation**
+## 1**6. Developer Documentation**
 
 If you're building applications, integrating with Zid APIs, or developing storefront themes, the technical documentation provides implementation details beyond this dashboard guide.
 
@@ -1258,7 +1294,7 @@ Visit the Zid Developer Documentation (https://docs.zid.sa/) to explore:
 
 **Tip:** Use the Partner Help Center for dashboard workflows and partner operations. Use the Developer Documentation when you need technical implementation details or API specifications.
 
-## **16. Frequently Asked Questions**
+## **Frequently Asked Questions**
 
 ### What's the difference between the main Dashboard and the Theme Dashboard?
 
@@ -1318,7 +1354,7 @@ Open **AI Connections** to access your partner MCP connection information and av
 
 Open **Help & Support** in the Partner Dashboard, or visit the Zid Partners Help Center (https://help-partner.zid.sa/en/).
 
-## **17. Related Guides and Resources**
+## **Related Guides and Resources**
 
 Use the following resources when you need detailed instructions beyond this dashboard overview.
 
@@ -1376,6 +1412,10 @@ If you need assistance, the Zid support team is available through the dashboard'
 
 Related Articles
 
+- Create your partner account
+
+(https://help-partner.zid.sa/en/articles/8635315-create-your-partner-account)
+
 - Old: Explore the Previous Partner Dashboard
 
 (https://help-partner.zid.sa/en/articles/8635324-old-explore-the-previous-partner-dashboard)
@@ -1387,10 +1427,6 @@ Related Articles
 - Get Started with Partner Payouts
 
 (https://help-partner.zid.sa/en/articles/8750045-get-started-with-partner-payouts)
-
-- Theme Type and Appearance
-
-(https://help-partner.zid.sa/en/articles/11471758-theme-type-and-appearance)
 
 - Connect your Zid partner account to your AI assistant with Partner MCP
 

@@ -26,7 +26,7 @@ Before you start testing your landing page, ensure that you have developed it fu
 
 - **Testing Setup**: For testing purposes, you can upload your landing page in a development store or by following the testing process outlined in the Partner Dashboard.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1612696902/ff91c48359387cd432a0c62ea682/image%2B-2846-29.png?expires=1794345300&signature=3ed370b415f5580f9a42ca444ff3ca47ca6397b38c76033fd74cff20939e1d2a&req=dSYmFM93m4hfW%2FMW1HO4zaovJ%2FsAcraZ5%2BBLTPbetysTkrIsPWbKQgHGorEy%0AE23suDb5uMgL1H3I9mE%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1612696902/ff91c48359387cd432a0c62ea682/image%2B-2846-29.png?expires=1795451400&signature=ca3c7df329c2b6613d89180add8f5a4a543b34c3bddd2fe9b5b1b70a99bab0ac&req=dSYmFM93m4hfW%2FMW1HO4zaovJ%2FoHc7Ke5%2BBLTPbetyt4Rk4I4XjC7xq0OeO5%0AQ%2BgktyXKjcQqPQvCsvQ%3D%0A)
 
 # **Test Your Landing Page**
 
@@ -40,11 +40,11 @@ Here's how to test your landing pages based on your development path.
 
 - Go to Development Stores (https://partner.zid.sa/development-stores)
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610780381/f4cf3325a4e35b13b0ecedd4290e/image.png?expires=1794345300&signature=d1fed8fdf8d1c3d74cace51f855dd3c97d69a121874656496c0f53697295c8c6&req=dSYmFs52nYJXWPMW1HO4zeqXGuzJVOgPMocIQ%2BrCxjnC0lsrsopwlltFy6ep%0A4JEH%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610780381/f4cf3325a4e35b13b0ecedd4290e/image.png?expires=1795451400&signature=242f32b2557d969b4ae74249e0a19e8c143453edbcddf943b3d4c317126b2714&req=dSYmFs52nYJXWPMW1HO4zeqXGu3OVewIMocIQ%2BrCxjnQp%2By4yz5H2nE7W8C4%0AQSKQ%0A)
 
 - To log in directly, click on ** Dashboard Access **
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610780167/54062690e6011af7f8a97efd5642/image.png?expires=1794345300&signature=e7e572d435c0ab1e21213f4ec33e991088dda5c4ca6077b7468d1b9166780575&req=dSYmFs52nYBZXvMW1HO4zTZRPLn3KgTcE0AKQ5USDrctW6bFROBSNSs9CIso%0AGrPx%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610780167/54062690e6011af7f8a97efd5642/image.png?expires=1795451400&signature=fb1722fbc4f2f4c278ba34640f2285f1942fb5cfe71eaca275fb9ebeb5303f51&req=dSYmFs52nYBZXvMW1HO4zTZRPLjwKwDbE0AKQ5USDrdiSiH4tmT%2F5lu8bss3%0AzQro%0A)
 
 ​
 
@@ -56,7 +56,7 @@ Here's how to test your landing pages based on your development path.
 
 - Add Bank account "make sure to add accurate account information"
 
-(https://downloads.intercomcdn.com/i/o/912157071/e3f44b5b1b662e92d662d392/image.png?expires=1794345300&signature=b59e3583fedcbf07678571c282b474f6e71d784155dbece695820dd739ec5575&req=fSElF8x5nYZeFb4f3HP0gDClqObxwCGkQ5ByMuENXvaRLF0hfE%2BQ6SeJw6Ap%0AiEY%3D%0A)
+(https://downloads.intercomcdn.com/i/o/912157071/e3f44b5b1b662e92d662d392/image.png?expires=1795451400&signature=66483d1b098878c3e5f270c16945f334eb9d85bf9a46dcdda4d52709c43ce69b&req=fSElF8x5nYZeFb4f3HP0gDClqeHwxCakQ5ByMuENXvbzLBc4Audz92cUz7lK%0A5lE%3D%0A)
 
 ## Cash On Delivery "COD"
 
@@ -64,11 +64,11 @@ Here's how to test your landing pages based on your development path.
 
 ​
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610786467/c768ad386932765862789f97fc76/image.png?expires=1794345300&signature=b7aa83dde7d23898f4d0f456bbfabbbf31e8c7f8d0f8684741d548c7acfa708c&req=dSYmFs52m4VZXvMW1HO4zdZEpOTbHvvjL%2BgXiVuMqZYg3RAaPpwtEJ96xYqc%0A5ILT%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1610786467/c768ad386932765862789f97fc76/image.png?expires=1795451400&signature=d450947ff45015fc65e067332a8d31fc24fe5ac0e8192985656f11b06ad37d05&req=dSYmFs52m4VZXvMW1HO4zdZEpOXcH%2F%2FkL%2BgXiVuMqZbESf3zMNua5n9aCa7N%0AUanx%0A)
 
 - Activate cash on delivery
 
-(https://downloads.intercomcdn.com/i/o/912160504/81b7c0aa0fd01a7dc1d2fd12/image.png?expires=1794345300&signature=a7c850f4edb291ffbc03a8f1b3007b13bd0e01b5a8579b64666e1c96c97fb42f&req=fSElF89%2BmIFbFb4f3HP0gAXXN0nI7TZry99YeWKLo9Vmbqma%2BT9hsNJf5w77%0AAhc%3D%0A)
+(https://downloads.intercomcdn.com/i/o/912160504/81b7c0aa0fd01a7dc1d2fd12/image.png?expires=1795451400&signature=0b257cbb834d839da67e3e1c047d6aa8b1e988a44e3ec57e19c2c362cae77234&req=fSElF89%2BmIFbFb4f3HP0gAXXNk7J6TFry99YeWKLo9VSbm16gwAEaznWLQ3L%0A7B4%3D%0A)
 
 ## Cards payment
 
@@ -84,7 +84,7 @@ You are publishing a new application and you want to test it, but you still don'
 
 - Click the **import products** button to bulk upload a list of products to your store, or click the **Add new Product** button to use the UI form to add a new product.
 
-(https://downloads.intercomcdn.com/i/o/902426949/99856fdd4bd82bbb73baed66/Screenshot+2023-12-06+at+5.41.36%E2%80%AFPM.png?expires=1794345300&signature=3631582bd640921f697c6853b6bb36d0dfd7a5f15fcc16d69235b653b5a371fc&req=fSAlEst4lIVWFb4f3HP0gKU1i4JUmJ0uB3uUYgNYBYk%2Bkebtu1XFtqo8%2FYCO%0AudU%3D%0A)
+(https://downloads.intercomcdn.com/i/o/902426949/99856fdd4bd82bbb73baed66/Screenshot+2023-12-06+at+5.41.36%E2%80%AFPM.png?expires=1795451400&signature=3ad7196d6bae40d2377ab3512b0f435d76fc27c9764a4736e64c615a32009c43&req=fSAlEst4lIVWFb4f3HP0gKU1ioVVnJouB3uUYgNYBYlr7fay6Ocr9G8m1uQ7%0ADlI%3D%0A)
 
 - **Adding Demo customers (https://web.zid.sa/customers)**
 
@@ -92,7 +92,7 @@ You are publishing a new application and you want to test it, but you still don'
 
 - Click on Add new customer
 
-(https://downloads.intercomcdn.com/i/o/912165131/dfbd38ba833b1a06dccc93a8/image.png?expires=1794345300&signature=d8d12799c89ece66e984ba967cca41804703402f91aabb42ed47b3a76916d307&req=fSElF897nIJeFb4f3HP0gFLVWzTogmqf%2Bwh21oHsljE0weXubLqNSejIJfRF%0Ahj8%3D%0A)
+(https://downloads.intercomcdn.com/i/o/912165131/dfbd38ba833b1a06dccc93a8/image.png?expires=1795451400&signature=954331367949129252510d41b35cb7bf4529320bff2bb3922f15a1e5f53d18e0&req=fSElF897nIJeFb4f3HP0gFLVWjPphm2f%2Bwh21oHsljES3IzbHnkD638J9KMr%0AjNo%3D%0A)
 
 - **Creating Demo Orders (https://web.zid.sa/orders)**
 
@@ -100,7 +100,7 @@ You are publishing a new application and you want to test it, but you still don'
 
 - Fill in all required information to be able to place an order.
 
-(https://downloads.intercomcdn.com/i/o/902431142/8404a4175582cc2c611786a5/Screenshot+2023-12-06+at+5.45.24%E2%80%AFPM.png?expires=1794345300&signature=8d1af902e0d465b6c44e2dda9abe6256da69b9d33f3f8a058ebdd111a3db8c98&req=fSAlEsp%2FnIVdFb4f3HP0gDlOpqjRH2hOqbVL%2FcPaN8p5K%2F7deo6NKM7UCQ34%0A5pg%3D%0A)
+(https://downloads.intercomcdn.com/i/o/902431142/8404a4175582cc2c611786a5/Screenshot+2023-12-06+at+5.45.24%E2%80%AFPM.png?expires=1795451400&signature=111b23498e39bf7e8e91c3edd31566968cc728d92e0a5b823797a2c6832bbb04&req=fSAlEsp%2FnIVdFb4f3HP0gDlOp6%2FQG29OqbVL%2FcPaN8px1sGn%2BqbvfRWDBxnb%0AIvw%3D%0A)
 
 ## **4. Prepare the Store for Testing**
 
@@ -110,7 +110,7 @@ To simulate a fully functional storefront, set up your development store with ne
 
 - Navigate to the **“Marketing”** section, select **“Landing Pages,”** and import sample landing page using the provided upload tool. (Reference Video (https://jam.dev/c/d2dea004-5c19-4a20-b72c-662a69c9c5cc))
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1612691529/eeb69f5b5a49de2411effeda0ed2/image+%2847%29.png?expires=1794345300&signature=2b3f9a62b1b98e731240487469382eec4e0edb6092f612766c1c89469a4110eb&req=dSYmFM93nIRdUPMW1HO4zdIz5n8LFRNeGT6jfj5EugAPGEGWpw%2FwBIC7%2BR2G%0AwF4Z%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1612691529/eeb69f5b5a49de2411effeda0ed2/image+%2847%29.png?expires=1795451400&signature=8dc72188b1d14c61715e291fb2716a5d9edcc3409442881323237f63a13eb01f&req=dSYmFM93nIRdUPMW1HO4zdIz5n4MFBdZGT6jfj5EugBBOIGNNR%2F0rL72zodK%0Az88p%0A)
 
 - Activate Zid features in the store
 
@@ -120,7 +120,7 @@ To simulate a fully functional storefront, set up your development store with ne
 
 ## **5. Validate Landing Page Behavior**
 
-Once your landing page is uploaded, begin a full-cycle test to validate using the **testing cases (https://downloads.intercomcdn.com/i/o/u7vuis4c/1620720523/5a0533d5c9f45ae263ba7badcfe4/Landing+Page+TC+-+Sheet1.pdf?expires=1794474000&signature=ac121dde4c175ceaccc5e8e253810988c0328e3beb78e50e75dde8947f0dcd2f&req=dSYlFs58nYRdWvMW3Hu4gWQ4iD4SOihwqZfFs826c5u76Qdf%2BxBvqJR%2FTlGp%0AXQ%3D%3D%0A)** guide:
+Once your landing page is uploaded, begin a full-cycle test to validate using the **testing cases (https://downloads.intercomcdn.com/i/o/u7vuis4c/1620720523/5a0533d5c9f45ae263ba7badcfe4/Landing+Page+TC+-+Sheet1.pdf?expires=1795554000&signature=b427b9f05053f0dd5981653affcf91e86e49adb692ac0ec2f178522fb15bfcfd&req=dSYlFs58nYRdWvMW3Hu4gWQ4iD4SOylyqZfFs826c5v6BRda3tQR0zaJEOxp%0A2g%3D%3D%0A)** guide:
 
 ### **Visual Layout**
 

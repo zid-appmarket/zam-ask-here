@@ -7,7 +7,7 @@ title: "Change Order Status"
 product: zam
 audience: all
 status: verified
-updated: 2026-11-10
+updated: 2026-11-23
 source_url: https://docs.zid.sa/update-order-by-id
 tags: [from-docs-site, partner-docs]
 language: en
@@ -369,6 +369,13 @@ Response Response Example
 "discount" : "string" ,
 "discount_string" : "string"
 } ,
+"coupons" : [
+{
+"code" : "عرض-الشحن-المجاني" ,
+"is_compliment" : true ,
+"free_shipping" : true
+}
+] ,
 "products" : [
 {
 "id" : "003140e2-9d8e-462d-b823-373407746871" ,

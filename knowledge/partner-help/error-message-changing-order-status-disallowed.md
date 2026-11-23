@@ -56,17 +56,13 @@ make sure the order status is not ready because you can’t reverse it at this s
 
 connect with us via chat support and share the cURL command. This will enable us to conduct a more in-depth analysis and provide thorough support.
 
-(https://downloads.intercomcdn.com/i/o/908115027/26b16809a6cf4ee47c4012ee/IMG_20231112_195857.png?expires=1794345300&signature=0824dbef724e31ac3442c0acd22d5c2f04f5c031e959dcb6746f6c6da49c0ab4&req=fSAvF8h7nYNYFb4f3HP0gK1Y6PYWY9BDnc2W4OjU4QmxP7fEQRhFKXLrUSTZ%0AYdQ%2BC9g6NhjD9oODWA%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/908115027/26b16809a6cf4ee47c4012ee/IMG_20231112_195857.png?expires=1795451400&signature=7130882f4a42111afb306041a45b9fa11baf98ef0f6d82ddb97ec742794a83d4&req=fSAvF8h7nYNYFb4f3HP0gK1Y6fEXZ9dDnc2W4OjU4QmFBqhhkkWwzNJ2pQmI%0A5OHjvD%2B2Wm1InrMyHg%3D%3D%0A)
 
 Related Articles
 
-- Create a shipping app or Fulfillment App
+- HTTP Error 429
 
-(https://help-partner.zid.sa/en/articles/8637270-create-a-shipping-app-or-fulfillment-app)
-
-- Inventory ID isn't appearing on order details payload or API request
-
-(https://help-partner.zid.sa/en/articles/8718056-inventory-id-isn-t-appearing-on-order-details-payload-or-api-request)
+(https://help-partner.zid.sa/en/articles/8718001-http-error-429)
 
 - Invalid order status
 
@@ -75,6 +71,10 @@ Related Articles
 - Guide to Integrating Shipping Systems with the Zid Platform
 
 (https://help-partner.zid.sa/en/articles/15544622-guide-to-integrating-shipping-systems-with-the-zid-platform)
+
+- Creation of the Last Mile Shipping App part 3
+
+(https://help-partner.zid.sa/en/articles/15545496-creation-of-the-last-mile-shipping-app-part-3)
 
 - Shipping Technical Troubleshooting Guide and Best Practices
 

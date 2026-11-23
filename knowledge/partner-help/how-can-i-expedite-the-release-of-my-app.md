@@ -20,9 +20,9 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/8486185-how-can-i-promote-my-app-or-theme)
 
-- Create your partner account
+- Old: Explore the Previous Partner Dashboard
 
-(https://help-partner.zid.sa/en/articles/8635315-create-your-partner-account)
+(https://help-partner.zid.sa/en/articles/8635324-old-explore-the-previous-partner-dashboard)
 
 - Integration and Development Cycle
 

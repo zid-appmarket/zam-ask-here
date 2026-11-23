@@ -16,13 +16,13 @@ If the app type is a shipping or shipping and fulfillment app the webhook will b
 
 Related Articles
 
-- App type and appearance
-
-(https://help-partner.zid.sa/en/articles/8637255-app-type-and-appearance)
-
 - Create a shipping app or Fulfillment App
 
 (https://help-partner.zid.sa/en/articles/8637270-create-a-shipping-app-or-fulfillment-app)
+
+- Creation of the Last Mile Shipping App part 1
+
+(https://help-partner.zid.sa/en/articles/15545034-creation-of-the-last-mile-shipping-app-part-1)
 
 - Creation of the Last Mile Shipping App part 3
 

@@ -46,7 +46,7 @@ This is the most critical point in this phase, as the selection here will dictat
 
 **Very Critical Warning:** We reiterate that this step is **Irreversible**. If you choose the wrong type that does not align with your company's Business Model, you will be forced to recreate a new application from scratch. You must accurately define the service type based on what your company provides.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484177342/2b582432b5a534129598e08a276f/Screenshot+2026-06-17+213213.png?expires=1794346200&signature=08586affc5c14d671ae8e78209ed6857b50d521e9771fca2823d4d960d2b3ed5&req=diQvEsh5moJbW%2FMW1HO4zdrBgQGRAAuztOx9KEUXGUQ9%2Bd9%2F%2BNL%2FIDzWtLrA%0AiLDwx1dOTiQaWqrdr7g%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484177342/2b582432b5a534129598e08a276f/Screenshot+2026-06-17+213213.png?expires=1795451400&signature=ea0f5df79edc50957b3f0a0539ebe0c7858afb6391b03f3eaaeee4fc572ccdfd&req=diQvEsh5moJbW%2FMW1HO4zdrBgQCWAQy1tOx9KEUXGURlKu4ucTDk6MwJS%2FJI%0AtalmEFV0vEtyIc1egwE%3D%0A)
 
 ## **III. Additional Details (Description, Logo, and Shipping Type)**
 
@@ -62,7 +62,7 @@ After determining the application type, we move on to completing the application
 
 - **Heavy Shipping**. If your company supports these types, activate them (check the box) next to them. If they are not available, leave them unchecked.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484181269/53b1447af8909090a78e1e747f62/image.png?expires=1794346200&signature=bb902b2ecf35b15d89a2e726c6ff7ab6fe2f042e780fff7d4190189784661ea6&req=diQvEsh2nINZUPMW1HO4zbatP%2BrRnCHEkhgsVkuhVlhiaJsJd0T0W3ABVojQ%0AjwOg%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484181269/53b1447af8909090a78e1e747f62/image.png?expires=1795451400&signature=e67bd0c61873b447d4e22f25447fba22a3e5d46f33683ad116088f6d86056c23&req=diQvEsh2nINZUPMW1HO4zbatP%2BvWnSbCkhgsVkuhVlg7%2B46hoKTNv%2BE0YJL5%0AMaTh%0A)
 
 ## **IV. Setting Up Authorization URLs**
 
@@ -76,7 +76,7 @@ In this step, you must enter two highly important URLs to execute and receive th
 
 (You can refer to the Zid API Documentation under the Authorization section to learn how to build these links and how they work, or use the ready-made "Sample Auth Clients" explained in the previous chapter).
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484182395/f5ed353d2193cdb69ee88b41ee23/image.png?expires=1794346200&signature=3b16987cdab270a31e82bee054c650e8c5b3dd8db6b8cfc564dd318984d4ada4&req=diQvEsh2n4JWXPMW1HO4zT2AVmcZorIT5i2Sa4HjZVdpnRIfnRHIWaqiUxjI%0AnKyfCxBGuMe5nEAXOFs%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484182395/f5ed353d2193cdb69ee88b41ee23/image.png?expires=1795451400&signature=0f0b5e85f48b5a9338ad16146e61d546b81216d1ff27b0f6060a8cd13b0ed53e&req=diQvEsh2n4JWXPMW1HO4zT2AVmYeo7UV5i2Sa4HjZVf4ewx3LU0Bk1nci0hy%0ApKsGxf64htsu7N38MZo%3D%0A)
 
 ## **V. Using Tunneling Services for Local Development**
 
@@ -92,7 +92,7 @@ To solve this issue and complete the authorization process during development, i
 
 The final step on this screen is choosing the Development Store you previously created from the Partner Dashboard to test the application on. You can do this step now, or postpone it since the application settings (like Webhooks) are not yet fully completed, which will be explained in detail in the next part.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484194053/0f4418cf834ac99453167b383936/image.png?expires=1794346200&signature=a1a5e09945fbda0cf0b8a29bb3caa5050a047208310f419220bd9e2ef93687e0&req=diQvEsh3mYFaWvMW1HO4zcw5pjkfl3gYPVqb6Qa9xAmnqZ3mD9cFG5OPergO%0A3DUPRfG2dfc9w%2B3Eizw%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484194053/0f4418cf834ac99453167b383936/image.png?expires=1795451400&signature=2b3ebfda87e535f513e870573a4a736fb77e685be1fdc3a9e9a5618049bf1aaf&req=diQvEsh3mYFaWvMW1HO4zcw5pjgYln8ePVqb6Qa9xAkgUVTR6VRmJZmQNb2v%0AmsgipYnveOccPn4xlv8%3D%0A)
 
 Related Articles
 

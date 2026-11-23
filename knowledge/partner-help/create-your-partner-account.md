@@ -7,7 +7,7 @@ title: "Create your partner account"
 product: zam
 audience: all
 status: verified
-updated: 2026-10-27
+updated: 2026-11-12
 source_url: https://help-partner.zid.sa/en/articles/8635315-create-your-partner-account
 tags: [from-docs-site, partner-help-center]
 language: en
@@ -20,13 +20,15 @@ To start building awesome applications or themes and consume Zid's expressive AP
 
 Through the Partner Dashboard, you can do the following:
 
-- Submit partnership details to receive your agreement to publish your App in our marketplace.
+- Complete your required bank and business details, then review and accept the current Terms & Conditions when creating an app, theme, or landing page. These requirements apply to both new and existing partners. For detailed prerequisites and acceptance instructions, see Accepting Zid Partner Terms & Conditions (https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions).
 
 - Build and create your applications and themes, update, monitor installations, and subscriptions.
 
 - Create a development store so you can test your App until you are ready to publish it on the market.
 
 - Submit your App to be reviewed and listed on the market.
+
+**Note:** Terms & Conditions acceptance applies to the entire partner account. Once the account owner or an authorized team member accepts the current version for a document type, other team members can proceed according to their permissions. **Landing pages require separate acceptance**, even if you've already accepted the Theme Terms & Conditions. You'll be asked to accept them once when creating your first landing page.
 
 You can register your account in a few easy guided steps, and you can track the progress of your account completion from the dashboard.
 
@@ -62,7 +64,7 @@ You can register your account in a few easy guided steps, and you can track the 
 
 - **Are You Looking For Ideas To Build?**: "We may suggest to you some needed ideas to build your Apps"
 
-(https://downloads.intercomcdn.com/i/o/893329655/1864926fdeedb61bc4f47945/Screenshot+2023-11-26+at+4.24.40%E2%80%AFPM.png?expires=1794346200&signature=e7f1c041586c0e164f321ebcb05b3b678390d856088ace6d202dc6f318107675&req=fCkkFct3m4RaFb4f3HP0gGzvylydPwCOXBT57z80gjo4c2YhJoVGbvm8mHSI%0AU6c%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893329655/1864926fdeedb61bc4f47945/Screenshot+2023-11-26+at+4.24.40%E2%80%AFPM.png?expires=1795451400&signature=b08ec370bacd7a718548c6c5d83a6ae7e7d769dad44c9966024b89db84a54b30&req=fCkkFct3m4RaFb4f3HP0gGzvy1ucOAaOXBT57z80gjoPwTg3rsvYNb7ogyee%0A4Xk%3D%0A)
 
 Log in to your account (https://partner.zid.sa/login)
 
@@ -74,13 +76,9 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/8716995-integration-and-development-cycle)
 
-- Test Your Theme
+- Creating a New Landing Page
 
-(https://help-partner.zid.sa/en/articles/11461482-test-your-theme)
-
-- Create a Private Theme
-
-(https://help-partner.zid.sa/en/articles/11471800-create-a-private-theme)
+(https://help-partner.zid.sa/en/articles/11646413-creating-a-new-landing-page)
 
 - Connect your Zid partner account to your AI assistant with Partner MCP
 
@@ -89,3 +87,7 @@ Related Articles
 - New: Explore Your Partner Dashboard
 
 (https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard)
+
+- Accepting Zid Partner Terms & Conditions
+
+(https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions)

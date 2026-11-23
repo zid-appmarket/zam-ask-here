@@ -12,7 +12,7 @@ source_url: https://help-partner.zid.sa/en/articles/17603812-shipping-technical-
 tags: [from-docs-site, partner-help-center]
 language: en
 ---
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2741330904/85587ff7453a601ce84fbe50e0c2/Gemini_Generated_Image_uspveruspveruspv.jpg?expires=1794346200&signature=fac0c08946b3deae7d24430ba94fa1b1df173d9b855a30b2cca9b88868b5da1d&req=dicjF8p9nYhfXfMW1HO4zXNQTQVQXz9jQ00QBjCSVR%2F5q%2FJc3VR%2FovyyT4ja%0A%2BH0Q60MmmPTh4McIyuk%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2741330904/85587ff7453a601ce84fbe50e0c2/Gemini_Generated_Image_uspveruspveruspv.jpg?expires=1795451400&signature=d3bf9c414ed44dbe360b4afb99a4db66cdf92c2e3d66c1471f3c0b2e9bd50782&req=dicjF8p9nYhfXfMW1HO4zXNQTQRXXjhlQ00QBjCSVR%2BUw0pRF%2BTHmXBomx%2Fv%0A%2BV3AeMiucoGfPTJz5kk%3D%0A)
 
 ##
 

@@ -7,7 +7,7 @@ title: "Create a Private App"
 product: zam
 audience: all
 status: verified
-updated: 2026-10-06
+updated: 2026-11-12
 source_url: https://help-partner.zid.sa/en/articles/17348249-create-a-private-app
 tags: [from-docs-site, partner-help-center]
 language: en
@@ -18,41 +18,53 @@ A **private app** is an application created for **one specific Zid store**. It i
 
 Private apps can now be created and activated through a self-service flow. You do not need to upload a contract, submit the app for Zid review, or wait for Zid to install or activate it.
 
-## Create a private app
+Before creating a private app, make sure your bank and business details are complete and the current **App Terms & Conditions** have been accepted.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715611813/612e73b6b905b0857f14c260a54b/image.png?expires=1794346200&signature=fd195ce2d9c1ae6f85cb2971a2dbf34e502f5d6348e5c83c305c2b18af65af75&req=dicmE89%2FnIleWvMW1HO4zcxqixH%2BnuxJvwOVKZQtgEAMBNIG8nlcQzvyuauF%0AfqwfrMsiLOO5P2sy6ws%3D%0A)
+These requirements apply to both new and existing partner accounts. Incomplete account information prevents app creation.
 
-To create a private app:
+For detailed prerequisites, see Accepting Zid Partner Terms & Conditions (https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions).
 
-- Open the **Partner Dashboard (https://partners.zid.sa/)**.
+**Note:** Existing partners who never completed their bank or business details cannot create a private app until they provide the missing information.
 
-- Go to **All Apps (https://partners.zid.sa/en-sa/partner/186/apps?page=1)**.
+**To create a private app:**
 
-- Click **Create Application**.
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2804824930/c4fbd595efe4b84e100d00885a79/image.png?expires=1795451400&signature=a78055c4446b6b9fcf1049f5dbcedb05ae9fb6ed8b4ed2c2bf1698ea6e0d8517&req=dignEsF8mYhcWfMW1HO4zStSnpMVx1qEsVP%2F%2Fitmywx3LSJnaIVdK1aZxUfe%0ArPDEfAaHxe7KRGF1wug%3D%0A)
+
+- Sign in to your Partner Dashboard (https://partners.zid.sa).
+
+- Navigate to **Apps → All Apps**.
+
+- Click **Create application**.
+
+- If prompted, review the current **App Terms & Conditions**, select the acceptance checkbox, and click **Accept** to proceed.
 
 - Select **Private** as the application type.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715614087/74c5b9a64e5cefcd9f1946c47269/image.png?expires=1794346200&signature=bee0d44bc183cf7f141a7f7abf72d0e2dffadf6020f53c1798f8f7f776fce30a&req=dicmE89%2FmYFXXvMW1HO4zWDvsvBL3qLGZdMvvtVAEdf2G7UZYUpRMXP82P%2B8%0ANdjD%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2804825465/cf94085249e2479586b218d1ab54/image.png?expires=1795451400&signature=9e15eb74db54e83e072f60984e07db1c02543a42c5ecfa2391a0c5894189ca87&req=dignEsF8mIVZXPMW1HO4zQJUwErIDKUeRNkOCJkXPYqqZLkeRLZCLpe9zBGJ%0AD7tO%0A)
 
 - Enter the required technical information:
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715615095/91b44a22dd4afec60a39fabb064f/image.png?expires=1794346200&signature=c6103b03ebc69304e174526d19a7432314d489ff6b0b20ed6d18a529b33f43e7&req=dicmE89%2FmIFWXPMW1HO4zRXfQjtnqZVmgcJwbjSDDW07IEFyodK0PLh0XNIs%0Arp%2FW%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2804825851/4ac988d74a762501bf9c81818498/image.png?expires=1795451400&signature=b0c38dc5a68d461008d5fda3d987cf37a2e716fc0c9000bfdc460c29d89d1d62&req=dignEsF8mIlaWPMW1HO4zWTIYjrZDfZ1PthAvwo6lZXmEEWGxrUeH9KEQbrH%0AZl1x%0A)
 
-- **Application Name (Arabic)**
+- Application Name (Arabic)
 
-- **Application Name (English)**
+- Application Name (English)
 
-- **Application URL**
+- Application URL
 
-- **Maintainer Email**
+- Maintainer Email
 
-- **Application Scopes**
+- Application Scopes
 
 - Enter the **Store ID** of the merchant who will use the app.
 
 - Complete the application creation.
 
-**Note:** A private app can be connected to only **one store**. The system validates that the Store ID exists and that the store is not already linked to the private app.
+**Note:** Only the account owner or a team member with the `manage.partner.partnership.details` permission can accept the Terms & Conditions. Acceptance applies to the entire partner account, so other team members don't need to accept the same version individually.
+
+If Zid publishes a new version, an authorized user must accept it before the account can create another application. No contract upload or manual contract approval is required.
+
+**Important:** A private app can be connected to only one store. The system validates that the Store ID exists and that the store is not already linked to the private app.
 
 ## Store eligibility
 
@@ -74,7 +86,7 @@ For more information, see the Zid **Authorization Documentation (https://docs.zi
 
 ## Select application scopes
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715656345/8222a2e8ae8f215ec6da129fbdee/image.png?expires=1794346200&signature=8b9cef8cb773ecb912758717817742230c9dfe23ae22f8ae97f0d3945e78648b&req=dicmE897m4JbXPMW1HO4zaIiWL1risDaWkTe0dVe2wzAhMXJIlosyekN2BhL%0AB19ntD14DE%2BbVafUHi4%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715656345/8222a2e8ae8f215ec6da129fbdee/image.png?expires=1795451400&signature=ab087f791ef0aa3491577b3afc431ad326c05d814a509226d55735768c97a83d&req=dicmE897m4JbXPMW1HO4zaIiWLxsi8fcWkTe0dVe2wwvRQy5eBJ9ySp%2FIuvY%0ARb%2BT%2B%2B80OxaMap3kpZc%3D%0A)
 
 Select the permissions your app requires from the **Application Scopes** section.
 
@@ -84,7 +96,7 @@ Private apps do not require Zid to review or approve the selected scopes before 
 
 ## Activate the private app
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715649632/a522e6a7b4cb121337c6fcb3f3d7/image.png?expires=1794346200&signature=21dd7dd532232a19106d0f58de1159d1eadc08559a68a8675cc509baa7d2068f&req=dicmE896lIdcW%2FMW1HO4zZtnlfzLvz9Q2RBeluGSZQAiR1IwNH2hADa5xsfv%0AYyZJW%2Fmm0zHzHmpa%2B8Q%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715649632/a522e6a7b4cb121337c6fcb3f3d7/image.png?expires=1795451400&signature=96f455617fd3c37dd0b2a019c24e358394d1edc913e9ed6bcbabb6ce416d8c78&req=dicmE896lIdcW%2FMW1HO4zZtnlf3MvjhW2RBeluGSZQDVsbuTovwXn7RjRTny%0Ay24RLPFelX3Mj1pOBfg%3D%0A)
 
 After the app is created, the Partner Dashboard displays a confirmation indicating that the app has been added and that the merchant must activate it.
 
@@ -120,11 +132,11 @@ Receiving the OAuth callback confirms that the merchant has activated the app.
 
 ## Webhooks
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715653541/cf72361f856e8add5fee236cd8dc/image.png?expires=1794346200&signature=31c7b3e493d486f562f13363547a0168de1f3f98c13d3d9c2cdd1c13a2a7bafe&req=dicmE897noRbWPMW1HO4zQmOGUD0njMx1pFwlRKFe2uzPDhg%2Bm316mElgCM1%0AFhPLgFbzoydaqMSmTcc%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715653541/cf72361f856e8add5fee236cd8dc/image.png?expires=1795451400&signature=b0dc5b163db29fa124c27ff6780e7d80050b021c08902cc631372c2214435825&req=dicmE897noRbWPMW1HO4zQmOGUHznzQ31pFwlRKFe2vcb8y0dFFN46SgeJvU%0AmSyzPo0pg0Krslw8L70%3D%0A)
 
 You can configure webhooks while creating the application or later from the application's webhook settings.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715654553/82c3c95934123664df8ccb30b0de/image.png?expires=1794346200&signature=23c0956db29390766a1d9bbc5b42b1b32e20a53c721bd4289d3c77fc15a10632&req=dicmE897mYRaWvMW1HO4zcI1ECBBgEAqb9bPHwA%2Fe0En21UQaginRDJF2S9I%0Ahd1BM2MA0WeTgccQgqQ%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2715654553/82c3c95934123664df8ccb30b0de/image.png?expires=1795451400&signature=ab5079168f947f67bac1d60936900c17c6e1152f58b89c403d0d2c753e5880ea&req=dicmE897mYRaWvMW1HO4zcI1ECFGgUcsb9bPHwA%2Fe0H1W5SBiqhZFQlyVYCn%0AvFMas1LLSrT6KDYPBq4%3D%0A)
 
 For more information, see the Zid technical documentation for **Webhooks (https://docs.zid.sa/webhooks)**.
 
@@ -184,13 +196,13 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/8637270-create-a-shipping-app-or-fulfillment-app)
 
+- Integration and Development Cycle
+
+(https://help-partner.zid.sa/en/articles/8716995-integration-and-development-cycle)
+
 - Create a Private Theme
 
 (https://help-partner.zid.sa/en/articles/11471800-create-a-private-theme)
-
-- Oddo Integration - Arabic session on how to connect Odoo with Zid App Market APIs
-
-(https://help-partner.zid.sa/en/articles/12867648-oddo-integration-arabic-session-on-how-to-connect-odoo-with-zid-app-market-apis)
 
 - New: Explore Your Partner Dashboard
 

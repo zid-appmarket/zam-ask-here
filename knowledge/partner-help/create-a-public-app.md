@@ -7,7 +7,7 @@ title: "Create a Public App"
 product: zam
 audience: all
 status: verified
-updated: 2026-11-10
+updated: 2026-11-18
 source_url: https://help-partner.zid.sa/en/articles/8637655-create-a-public-app
 tags: [from-docs-site, partner-help-center]
 language: en
@@ -38,7 +38,7 @@ If you are not familiar with OAUTH 2.0 or you need more information about OAUTH 
 
 Select the App permissions from the **Application scopes** section. Check the radio buttons of each App permission that you want to use. When you submit your application to be published, our team will review the selected scopes and notify you.
 
-(https://downloads.intercomcdn.com/i/o/893883232/4c536c807cd2d2a8ea0173e1/P2.png?expires=1794441600&signature=90ea61b4d21213d6af92ac948437d5aee9502a2bc632779bb26ad1c5351b307d&req=fCkkHsF9n4JdFb4V1XW4gSnGpRBojHWlpRpwjJaN8cgwV0xwxZyB4HU7P1rj%0AcOA63kTCzvEVtqfrPsKGGld7xg%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893883232/4c536c807cd2d2a8ea0173e1/P2.png?expires=1795451400&signature=062050eee74a7866e5c3831e140d999b52fcc139862b738b40fea1d4a689ae70&req=fCkkHsF9n4JdFb4f3HP0gELk72HZ4cAAgGruuy8UmKt5v6ussDCSxdsNTy%2F%2B%0AM2HTsHFSsTinfR%2FDFA%3D%3D%0A)
 
 ##
 
@@ -46,7 +46,7 @@ Select the App permissions from the **Application scopes** section. Check the ra
 
 Give merchants the ability to access the app directly from their dashboard, click here (https://docs.zid.sa/embedded-apps-2168216m0)to view the documentation.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1371965284/b9d51d5ec114fa70b34476b60f42/image.png?expires=1794441600&signature=ae3cf2bbf62a5a6ee6dcd8e8d3d84f1100c29aa9d2cd6b983fd7dc673d6e6016&req=dSMgF8B4mINXXfMW3nq%2BgTN%2FzN1p%2FNr0bqftkIUzO%2Fb%2FvlGso3oMOUtgjKNe%0A7G2AWtMxCXH6ou8BTZRV%2F5Cszb8%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1371965284/b9d51d5ec114fa70b34476b60f42/image.png?expires=1795451400&signature=bc73947c3447e4d544bbb939423c9fe251da383f011f7488a741080030d26771&req=dSMgF8B4mINXXfMW1HO4zWqAeTFfuhuTnLJUZNJV1h590X%2BBn5SKTZomzrhr%0AJC%2F7yAAix94FJB8y5NU%3D%0A)
 
 Example:
 
@@ -58,9 +58,9 @@ Add custom HTML and JavaScript snippets to stores using your app.
 
 ​
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1371985989/8c797db7eca5fb9c7358f2367547/image.png?expires=1794441600&signature=153dd29fe479f998dd5f8892312843a336099700c87a5de461e437287e414d94&req=dSMgF8B2mIhXUPMW3nq%2Bgd6OQGavm2LJRwqQ6xMzgWRUT%2BVFCJ4WuVgsdXfz%0A3fh9JKqDtw8pmk6HXih2Oj57ytU%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1371985989/8c797db7eca5fb9c7358f2367547/image.png?expires=1795451400&signature=b189d740b25249f1b0cf7bcb2137ca95ea540d5437755e4e4ab9ab183b765ec6&req=dSMgF8B2mIhXUPMW1HO4zYKBJI1k3RLM1P14H69ri7ZC4LlU9DoHa%2Bm47Cm3%0A4JDcHPHfa11Tt9Ktn30%3D%0A)
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1371986511/2b850714bcc4d3c5e64b902302a3/image.png?expires=1794441600&signature=8e5836cc0721afc93cd11c1638276f116789aafa6e20e09dcc69e5fef8154a2a&req=dSMgF8B2m4ReWPMW3nq%2BgT%2BGTDamfntRQZZ38qU43bo8UJbqv86ZeJJBvMlb%0A0n3Ig8V7zL%2F4AgEUAo%2FfwGZ1L5s%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1371986511/2b850714bcc4d3c5e64b902302a3/image.png?expires=1795451400&signature=b153278576150d19b7f0fbb4add5f5ee18fc4b6ee9be16e3022e4de68cd25750&req=dSMgF8B2m4ReWPMW1HO4zbjz95fFOkeX1Y8B8cGD0oMylJrQP5WPQfsD%2BEHJ%0A9L0g5yRWX%2FKOe4QSkGo%3D%0A)
 
 # Application Details
 
@@ -96,7 +96,7 @@ Add custom HTML and JavaScript snippets to stores using your app.
 
 Download your app on your development store
 
-(https://downloads.intercomcdn.com/i/o/893996477/8f6620961bffeed089fb144a/Partner+Dashboard.png?expires=1794441600&signature=a9049ab14aa7339c046cdf833b01bcb1e43f69d7f850937fa31e33dcf61f366f&req=fCkkH8B4mYZYFb4V1XW4gfx4eiKgzxJp2ClY4NNcuE7%2BF59pzMsQIZG9EqYA%0ANNDHx6b0Gkw6JuQMH8c9WkOn0A%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893996477/8f6620961bffeed089fb144a/Partner+Dashboard.png?expires=1795451400&signature=5405447922d83fe96a23423894f6af47c7c1c1160e783abe889fe7ccd215a2fe&req=fCkkH8B4mYZYFb4f3HP0gIoq0Mg%2FNrk56%2B8jqr5UrYrQg%2Femvyy1Fy0Ppcsc%0AxrnS4Z9IPg3povqd6w%3D%3D%0A)
 
 # Webhook Management
 
@@ -110,7 +110,7 @@ For more information about webhooks, check our technical references (https://doc
 
 You can add a maximum of four plans to the application with features and description details.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1372015931/f0c3162fbaf9c974129b0c022d07/image.png?expires=1794441600&signature=32eec53aad22f682df78fdcbe53673722e6924f89cbdf94468db8298db630dc9&req=dSMgFMl%2FmIhcWPMW3nq%2Bgax%2BFMVj184HEFIPX4uhynS9KE4FAUEVwr5E2nPj%0Aim4KXrsqNMzSLWwb7uniCureka0%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1372015931/f0c3162fbaf9c974129b0c022d07/image.png?expires=1795451400&signature=27a7714fab5816962ad57c3ce1e2e6a084b79e1ce5bc650b08ff9c82720f44c0&req=dSMgFMl%2FmIhcWPMW1HO4zXjNyerEmPGwpUq8IuOXKdOwXmImdbcXw%2FZnsQsD%0A51%2FUGdsKgZGL%2FZyYeag%3D%0A)
 
 **Note: **Subscription plans are displayed from the lowest price to the highest price on the app details page, regardless of the order in which they were created.
 
@@ -148,7 +148,7 @@ You can add a maximum of 4 subscription plans so that ZId merchants can benefit 
 
 ​
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1372018554/d7bacdce27847abb59e45bdb285a/image.png?expires=1794441600&signature=46a0046414868281e72f09757d10987ced4cd81046536cefbf1d86a07f158f32&req=dSMgFMl%2FlYRaXfMW3nq%2BgYxGNHuKm%2FE1iVy9ZZrkhmEPPytIsdPxFP1tBxqE%0A%2BCWx8PjeyuX9dbPMVLMQcLx1q3Q%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1372018554/d7bacdce27847abb59e45bdb285a/image.png?expires=1795451400&signature=8a4f453d54a28f080f375fa52cc5b34c9731e5abe355db09beaeb61928126784&req=dSMgFMl%2FlYRaXfMW1HO4zcWY7woB1I0wgjY7PIWJS6VKQIEmFqkSIX4cZG2R%0AJWvkT0w4FnmoDuADT%2BY%3D%0A)
 
 #### **Plan Details**
 
@@ -210,13 +210,29 @@ A one-time fee is an additional setup or onboarding charge applied when a mercha
 
 Allows you to create an offer for the plan (e.g., discount, Buy X get X).​
 
+## What Happens When a Merchant Buys Your Offer
+
+When merchants purchase a plan offer, the following rules apply:
+
+- **Renewals:** Offers apply only to the initial purchase. Subsequent renewals use the plan's regular price, which is shown to merchants before purchase.
+
+- **Offer eligibility:** Each merchant can purchase an offer only once. Merchants with more than four years of committed subscription time (active and frozen combined) cannot purchase additional offers.
+
+- **Refunds:** Refunds are available within **24 hours** of purchase. The normal refund process applies: the app is uninstalled, and any paused subscription behind the refunded offer is cancelled rather than restored.
+
+- **Downgrades:** Downgrades during an active offer are blocked at checkout. However, merchants can move to a lower-priced plan that has its own active offer. In this case, the current subscription is paused and automatically resumes when the new offer ends.
+
+- **Switching to a different plan:** If the new plan has an active offer, the merchant's current subscription is frozen and automatically resumes when the offer ends.
+
+- **Purchasing an offer on the same plan:** The subscription duration is extended by the offer period without generating an invoice for the extension.
+
 ## **Usage-Based Subscription**
 
 Charge merchants based on their app usage with flexible pay-as-you-go pricing options to suit various strategies.
 
 ​
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1372056055/9b910b908e514d6c9cd4950a8865/image.png?expires=1794441600&signature=75cd9324cee12713e2c15ab21cce0d8edceed253efbc701882db7877838fc14c&req=dSMgFMl7m4FaXPMW3nq%2BgdFNYVA0Hmq3UTf55u5N1M%2FlVbSUwDbTZNaLkeNU%0AxsG7xbhZatuAmMM2Mk4%2Fzyr73sA%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1372056055/9b910b908e514d6c9cd4950a8865/image.png?expires=1795451400&signature=2c04522ea1d1d3a6f86f4af496ba3bb01f4f5540fc26cd5f5e60fa0383e6c6c2&req=dSMgFMl7m4FaXPMW1HO4zTc8oGJKfoGdKfA6V1O8y58lGTELtVbAs7wP2Jbf%0AT2Vav76IM7Q0Ck%2BGsvc%3D%0A)
 
 - **Plan Details**
 
@@ -260,7 +276,7 @@ Include the integration and setup fee prior to usage-based charges.
 
 ## **App Add-ons**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2800401816/78f37d1b0c99ab75086c1bdc922c/image.png?expires=1794346200&signature=4ce351249d7e4506e951abe68a418bd157eb7d8ef61cfeaedc3d8c2f5719c1ce&req=dignFs1%2BnIleX%2FMW1HO4zXMQi0C9Zh3C9JG%2BEM9vdnRhzGFJT4IG5NrcOWjk%0AlRGavrcdULGyaRP1WtA%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2800401816/78f37d1b0c99ab75086c1bdc922c/image.png?expires=1795451400&signature=37990d4115017c8f5d176ce93287951fb23e78a7caa6cef112ea1efa1d2010c1&req=dignFs1%2BnIleX%2FMW1HO4zXMQi0G6ZxrE9JG%2BEM9vdnTxvp0Cf%2Ba7WHIwikhW%0Ai1xcNBWBSUqSjSX3lCQ%3D%0A)
 
 **App Add-ons** allow you to sell additional features or services separately from your application's subscription plans. Merchants can purchase add-ons through Zid's payment flow without changing their existing subscription plan.
 
@@ -404,9 +420,9 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/8637270-create-a-shipping-app-or-fulfillment-app)
 
-- Test your app
+- Public App Management
 
-(https://help-partner.zid.sa/en/articles/8645309-test-your-app)
+(https://help-partner.zid.sa/en/articles/8718248-public-app-management)
 
 - App Payouts
 

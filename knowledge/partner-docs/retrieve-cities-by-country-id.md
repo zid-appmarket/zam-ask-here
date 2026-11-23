@@ -7,7 +7,7 @@ title: "List Cities for Country"
 product: zam
 audience: all
 status: verified
-updated: 2026-11-10
+updated: 2026-11-23
 source_url: https://docs.zid.sa/retrieve-cities-by-country-id
 tags: [from-docs-site, partner-docs]
 language: en
@@ -78,9 +78,9 @@ Response Response Example
 "status" : "object" ,
 "cities" : [
 {
+"name" : "Other" ,
 "id" : 1 ,
 "national_id" : 3 ,
-"name" : "Other" ,
 "priority" : 10 ,
 "country_id" : 184 ,
 "country_name" : "السعودية" ,

@@ -36,7 +36,7 @@ To create a new application, follow these steps:
 
 ​
 
-(https://downloads.intercomcdn.com/i/o/893756245/47843cc57ca0dd2267a3524d/SHipping+1.png?expires=1794346200&signature=0dbf9e0a349c968abc71ccee65ef741fbb2f6971fd2d560070ffe983fb855052&req=fCkkEcx4n4VaFb4f3HP0gEPlU%2Fd0kjln%2FG3xllGBKoxNo6rpkg6jXVOayjTj%0A9sw%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893756245/47843cc57ca0dd2267a3524d/SHipping+1.png?expires=1795451400&signature=68d33753d7cb8308406ad1fd470ac17393dc74775bbe9ac05ee52b588ccaa732&req=fCkkEcx4n4VaFb4f3HP0gEPlUvB1lT9n%2FG3xllGBKoyNRrxYA3gSdOLWp2K7%0ADlE%3D%0A)
 
 - **company name:** The name of your App that will appear to the merchant. "make sure to write the App name in Arabic and English Language"
 
@@ -66,7 +66,7 @@ To create a new application, follow these steps:
 
 ## 2. Implement OAuth
 
-(https://downloads.intercomcdn.com/i/o/893758024/ddc2b353e0425c69dc646b13/Shipping+2.png?expires=1794346200&signature=44557fcdb3b0fa585288b33e41c89d85031ea435d6a5e48d87fe76cb1d2f2a03&req=fCkkEcx2nYNbFb4f3HP0gBf7kS0SxRS2BIw%2BxE%2FfskTov9icHxjcXy2g5Nel%0A%2BI2%2FM1Df%2FLZXqR6YwA%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893758024/ddc2b353e0425c69dc646b13/Shipping+2.png?expires=1795451400&signature=dd0ed793c536a8df09f2c67be06b5fc479a578c337ae2dd67182545b3b42db45&req=fCkkEcx2nYNbFb4f3HP0gBf7kCoTwhK2BIw%2BxE%2FfskRzZZ6yVFvW1UF6tylr%0AZtBbkLsGe%2FUzoEoHPg%3D%3D%0A)
 
 In this section, you can set up your OAuth. You'll be provided with your OAUTH 2.0 ENDPOINT, CLIENT ID, and CLIENT SECRET, to set up three requirements:
 
@@ -90,7 +90,7 @@ Our Standard APIs (https://docs.zid.sa/start-here)
 
 In this section, you can set up your shipping option details to appear in your App page and be seen by the merchants.
 
-(https://downloads.intercomcdn.com/i/o/893760116/8fa391e439fadcf481a9e9a8/Shipping+3.png?expires=1794346200&signature=c6d7baa03990da61ea9d2ec51d6c7f34e7dcc6a9db2b4f568d8ab191a865e7bd&req=fCkkEc9%2BnIBZFb4f3HP0gMFwITBRn3fg7bpq4LdIBJyTTh0RXQ2srKGlD6%2Fv%0A5GzPiA81bKa6N9zJfA%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893760116/8fa391e439fadcf481a9e9a8/Shipping+3.png?expires=1795451400&signature=100fb866942f399f9b33f1591ed70437d46cef881a1cb5f4e9291c79b3929668&req=fCkkEc9%2BnIBZFb4f3HP0gMFwIDdQmHHg7bpq4LdIBJx9D9R1z2UlHtTwARbt%0A914sWsFhEHwwWiOdsw%3D%3D%0A)
 
 - **Delivery/Pickup coverage:** Select the countries and cities covered by your company
 
@@ -122,13 +122,13 @@ The merchant needs to request an activation and prices are according to the cont
 
 **Note that the merchant** will need to set up the shipping option manually from his dashboard.
 
-(https://downloads.intercomcdn.com/i/o/893786951/2c8724dd8fb28fa5ef5aceac/Screenshot+2023-11-27+at+12.33.59%E2%80%AFPM.png?expires=1794346200&signature=f26982d18c955a01a5a114a47b9a2c96f71d7cae68fee195774175a0afd0711f&req=fCkkEcF4lIReFb4f3HP0gNFDb4ixWRnw9V2q0tIvGKx5XgGixo4r93i%2FiYDA%0AK1Tw8haJrQJnIf3b7Q%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893786951/2c8724dd8fb28fa5ef5aceac/Screenshot+2023-11-27+at+12.33.59%E2%80%AFPM.png?expires=1795451400&signature=88e58b95ea7eaf699e0ce52c3fe5f160eb662f2ea9fcfcaae71ca440d1c445f4&req=fCkkEcF4lIReFb4f3HP0gNFDbo%2BwXh%2Fw9V2q0tIvGKxOP1J6H0ilpfEc6p5O%0AUi1l%2FK6EZcL8XCtXVw%3D%3D%0A)
 
 ### Fixed price
 
 By using this model, the merchant account will activate immediately and the prices are fixed
 
-(https://downloads.intercomcdn.com/i/o/893785556/dd23fa10d40fdb55d0bc73f9/Shipping+4.png?expires=1794346200&signature=9642e56bb3529563889b3d2b740fa890ebf95938d0ef36916ad5489bf75c2ef3&req=fCkkEcF7mIRZFb4f3HP0gKO0v17wTXcV1245s7%2BHpfo5cNn8HLJEEiBUA4TE%0ANg2FOkttENbbEBaDqg%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893785556/dd23fa10d40fdb55d0bc73f9/Shipping+4.png?expires=1795451400&signature=ec2cdfa3850d5ced8c29c98f8018d776a46e632bab9ed8a4de2373b0c2e1322a&req=fCkkEcF7mIRZFb4f3HP0gKO0vlnxSnEV1245s7%2BHpfpJqpj63j2ElIE%2F%2B3Io%0ABW2k7GJIV91kaUPi6A%3D%3D%0A)
 
 - Add customization
 
@@ -172,7 +172,7 @@ For more information about webhooks, check our technical references (https://doc
 
 These webhooks are for companies that provide **only** Shipping services. As a shipping system, you're required to subscribe in **4 webhooks**. 2 for order updates, and 2 for App updates
 
-(https://downloads.intercomcdn.com/i/o/893798406/dd3d88449bf96ca9c49b5765/webhooks+sh.png?expires=1794346200&signature=a99736ea4e000b4a9ffb5d651546878f5400e5a505b27889398859ea731a756c&req=fCkkEcB2mYFZFb4f3HP0gIte%2BK%2Bkv0LbUgKKzEvLo4Dq%2FMCHIZ7tjmSpFVJ%2B%0AcoYibgGl0UgJ1MaIMQ%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893798406/dd3d88449bf96ca9c49b5765/webhooks+sh.png?expires=1795451400&signature=2868411833338f4113198c28b7c9f1d3363425a2775343696f09a91b252f4b3c&req=fCkkEcB2mYFZFb4f3HP0gIte%2BailuETbUgKKzEvLo4ALCrzbAS%2F8grIP14G%2B%0Aiv%2BdKYEXl1%2Fu62zSWA%3D%3D%0A)
 
 - **Create webhooks for Order updates:**
 
@@ -194,9 +194,9 @@ These webhooks are for companies that provide Shipping and Fulfillment services,
 
 As a Shipping and Fulfillment company, you're required to subscribe to **13 webhooks**. 3 for order updates, 2 for App updates, 4 for products updates, and 4 for Fulfillment options
 
-(https://downloads.intercomcdn.com/i/o/893800704/b5bfb4a7cedf39227bc01a09/ff+1.png?expires=1794346200&signature=56f588a330ace24bba9ebb9e58e02caede5ceefaec380b230c32eb02ab248e03&req=fCkkHsl%2BmoFbFb4f3HP0gC2wt6%2F9SD1vUBhAVJxziA9bH1i5rfaEAEhIrKSQ%0AOgCvQNEfG6%2FicpkZZg%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893800704/b5bfb4a7cedf39227bc01a09/ff+1.png?expires=1795451400&signature=e5641dd1c3cc9bbc548c8b91a83e990ec087f5500145528ffdea4d4a1c5d4167&req=fCkkHsl%2BmoFbFb4f3HP0gC2wtqj8TztvUBhAVJxziA%2B9BKrYtWziuoU6YQX0%0AImjOs%2BioyGyFOyR%2BoA%3D%3D%0A)
 
-(https://downloads.intercomcdn.com/i/o/893800796/2cbfed3ad3fede426ff85fbd/ff2+.png?expires=1794346200&signature=ea7f687baed0c979e4fdfa5b2ce6b23979c9c3e846bf6fee107b281a12b80549&req=fCkkHsl%2BmohZFb4f3HP0gCaMQW7XUiGW4U0tkAtzhVxQ3QSsIxsllRvqZ5D%2B%0AjQjRREuxexQXHR9stA%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/893800796/2cbfed3ad3fede426ff85fbd/ff2+.png?expires=1795451400&signature=ba135cbc3dfff4921e6c2fc2312221e2e0d2959e43495327164ab648b6a7d6a3&req=fCkkHsl%2BmohZFb4f3HP0gCaMQGnWVSeW4U0tkAtzhVyxE3ebnRmKDvrhYlOI%0A%2BkBoszxBAdbXHupokQ%3D%3D%0A)
 
 **1. Create webhooks for Orders updates:**
 

@@ -50,7 +50,7 @@ Your request is missing one or more required parameter/s and has duplicate value
 
 connect with us via chat support and share the cURL command. This will enable us to conduct a more in-depth analysis and provide thorough support.
 
-(https://downloads.intercomcdn.com/i/o/908115027/26b16809a6cf4ee47c4012ee/IMG_20231112_195857.png?expires=1794346200&signature=5925068e3691e7a610cfc522ff2b5662c2835d889f702abc34eff04536ac4937&req=fSAvF8h7nYNYFb4f3HP0gK1Y6PYWYNFDnc2W4OjU4QmPbkdkWnXcAwS0GWL%2F%0ApKqahwdfvK5o65WiKw%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/908115027/26b16809a6cf4ee47c4012ee/IMG_20231112_195857.png?expires=1795451400&signature=7130882f4a42111afb306041a45b9fa11baf98ef0f6d82ddb97ec742794a83d4&req=fSAvF8h7nYNYFb4f3HP0gK1Y6fEXZ9dDnc2W4OjU4QmFBqhhkkWwzNJ2pQmI%0A5OHjvD%2B2Wm1InrMyHg%3D%3D%0A)
 
 Related Articles
 

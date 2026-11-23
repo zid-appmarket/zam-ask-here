@@ -20,7 +20,7 @@ In the Zid App Market, we support two types of Applications: Public/private Appl
 
 ## 1. **Public/Private Application**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2767517078/4202680074e14258832db6c2fe6f/Screenshot+2026-10-27+at+2_43_59%E2%80%AFAM.png?expires=1794346200&signature=428dedeef738f5d935d3602cc5224444d244fe3e2a6685ee9b4dd488f65f223a&req=dichEcx%2FmoFYUfMW1HO4zcvHnLLJLUnliWGXFFYWYbWGeUnlydrCxk5Y6Nj4%0AE9HPURv7BjHMxHX3yIc%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2767517078/4202680074e14258832db6c2fe6f/Screenshot+2026-10-27+at+2_43_59%E2%80%AFAM.png?expires=1795451400&signature=f13ab09b51cf3081c964a2059458314123dab8b05cf5ef2d3563c95c99bced68&req=dichEcx%2FmoFYUfMW1HO4zcvHnLPOLE7jiWGXFFYWYbWgY6ivz3BtZZEaBhS1%0AGll5gn%2FUCJhzNADpokg%3D%0A)
 
 Public applications are organized into six main categories in the Zid App Market, each containing subcategories to help merchants discover relevant solutions.
 
@@ -98,7 +98,7 @@ Public applications are organized into six main categories in the Zid App Market
 
 ## 2. **Shipping Application**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2767514937/a9b651e0e13028341aae2db76923/image.png?expires=1794346200&signature=653b98638ce97b9b3b182915f622d777f077a6db6761547a74adf6a94e753b38&req=dichEcx%2FmYhcXvMW1HO4zSgUCIbTo1Ueb0nDjaxyu%2BF%2F62HzT3LJ5gM8g5jw%0AEaRW9wRB%2BJRH1lbONzM%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2767514937/a9b651e0e13028341aae2db76923/image.png?expires=1795451400&signature=462bae44046c292dce616975622cb6b26de2ed65d14987ca8871b59083c847ab&req=dichEcx%2FmYhcXvMW1HO4zSgUCIfUolIYb0nDjaxyu%2BGO39m%2Fwcbs2zb0ELaa%0AtAX04nQjD7z0EgtArzg%3D%0A)
 
 This type includes any logistics services such as:
 
@@ -112,7 +112,7 @@ Shipping applications are listed under **Shipping & Fulfilment** on the public Z
 
 ## **Embedded App Tag**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2767507764/a35a6121067dcf8254574e92fc06/image.png?expires=1794346200&signature=8c16e6b8e184f55d35cba318817596a444b4062a8720d6e7645e74778e6cacc7&req=dichEcx%2BmoZZXfMW1HO4zR9TLubuxjsnNRQHwDiNCeDImMS3gGnd1mrkBfzl%0AlrhGef%2FIT%2BmjSPbRR1c%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2767507764/a35a6121067dcf8254574e92fc06/image.png?expires=1795451400&signature=5cc3083f1963c23503739cad950217d437175bdefbae9b92baed7c8903f471cf&req=dichEcx%2BmoZZXfMW1HO4zR9TLufpxzwhNRQHwDiNCeCREatF1Uz2yjV7dRG7%0AmqaouGoaSwtTYVPgoH4%3D%0A)
 
 Embedded applications are now identified with an **"Embedded"** tag on their app cards in the Zid App Market, replacing the previous separate embedded apps section.
 

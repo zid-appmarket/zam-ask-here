@@ -7,7 +7,7 @@ title: "واتساب زد"
 product: general
 audience: all
 status: verified
-updated: 2026-10-28
+updated: 2026-11-18
 source_url: https://help.zid.sa/ar/whatsapp
 tags: [from-docs-site, merchant-help-center]
 language: ar
@@ -204,7 +204,7 @@ language: ar
 
 - حل مشكلات واتساب زد
 
-آخر تحديث: 28 أكتوبر 2026
+آخر تحديث: 18 نوفمبر 2026
 
 ## صفحات هذا القسم
 

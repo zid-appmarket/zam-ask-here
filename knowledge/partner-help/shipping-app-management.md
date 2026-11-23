@@ -18,7 +18,7 @@ language: en
 
 List of your App's orders from Zid stores, with the ability to filter them by Order status, create date, and Delivery date.
 
-(https://downloads.intercomcdn.com/i/o/912522732/91ac50da9c0052dcaa235b22/image.png?expires=1794345300&signature=3eebc0f8074f888ce5af0a7bfe73011a2fe429a3f13129111db79c8c93ba9503&req=fSElE8t8moJdFb4f3HP0gGVuxPTKiNEdX7kMYfJfaMHaa5rtUPIjk59oFfgl%0ANtIczgEPvvG8%2FKDcEw%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/912522732/91ac50da9c0052dcaa235b22/image.png?expires=1795451400&signature=92be7afed26b4fe9a44d82b4c3620e1597b9e8224c217aeff2468f0fa4b18f5d&req=fSElE8t8moJdFb4f3HP0gGVuxfPLjNYdX7kMYfJfaMFnVicVqiNaw16gyV8R%0A1lou1iHCt%2BFnSRCpTA%3D%3D%0A)
 
 Also, the main order information will be listed such as:
 
@@ -58,7 +58,7 @@ This section will display your App activation events by the merchants, with abil
 
 - Activation date
 
-(https://downloads.intercomcdn.com/i/o/912524266/4ca990bed7184c8ce6fc2de5/image.png?expires=1794345300&signature=c979bd604b091a8f052d9891194bb9b1c837adc1284d9a6793a7f1875261617d&req=fSElE8t6n4dZFb4f3HP0gF4S3txK87Bopw2HQcGSuMD5Dzc2hLrk9IodJ8RA%0A5Ob7pGUjVpv2JR6u%2Bw%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/912524266/4ca990bed7184c8ce6fc2de5/image.png?expires=1795451400&signature=aa15cad8768e0ab55aa2d6b9e7fe071b1231c71ef5d6ea0ebfd7372d328cdff7&req=fSElE8t6n4dZFb4f3HP0gF4S39tL97dopw2HQcGSuMC0iL6scAU3oycC0ypy%0A0mJH2%2FIPAs9UXo0X3w%3D%3D%0A)
 
 ​
 

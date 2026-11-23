@@ -24,7 +24,7 @@ In this step, you will precisely define the geographical scope covered by your s
 
 - **Ship To:** Define the destinations you deliver to. Similarly, you can choose the country and all cities, or exclude specific areas that your service does not cover.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484259785/065db23c8ddb2412e526dcc41ea2/image.png?expires=1794346200&signature=bc5d5768b1ca72d86413af78e1d03b3cee55db27146b30d99cf9124752b30d95&req=diQvEst7lIZXXPMW1HO4zdjI3vbEYl5A0OXug60dV7yeRZluK2LcH5ARqv8G%0AP%2BUR%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2484259785/065db23c8ddb2412e526dcc41ea2/image.png?expires=1795451400&signature=f3c3afbaa4514a196c0a5cb07aa3b4b5e01f0ef00cb15cc0756eaf6c6f72b429&req=diQvEst7lIZXXPMW1HO4zdjI3vfDY1lG0OXug60dV7xdDZ1h9wzoTnRzO9WX%0Ateo3%0A)
 
 ## **VIII. Delivery & Collection Durations**
 

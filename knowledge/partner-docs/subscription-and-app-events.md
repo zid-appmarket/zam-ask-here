@@ -7,7 +7,7 @@ title: "Subscription and app events"
 product: zam
 audience: all
 status: verified
-updated: 2026-11-10
+updated: 2026-11-23
 source_url: https://docs.zid.sa/subscription-and-app-events-2490915m0
 tags: [from-docs-site, partner-docs]
 language: en
@@ -160,7 +160,11 @@ Check `plan_type` in the payload if you need to tell them apart.
 
 App add-on webhook events notify your application when a merchant purchases, renews, cancels, or receives a refund for an add-on, or when a monthly add-on expires or its renewal payment fails.
 
-Subscribe to these events through your application's **Webhooks** section in the Partner Dashboard. Each event is delivered only to the application that sold the add-on. Subscriptions also cover stores that have already installed your application.
+Subscribe to each add-on webhook event separately through your application's **Webhooks** section in the Partner Dashboard. Zid only delivers an event to webhook subscriptions registered for that exact event name.
+
+For example, subscribing to `app.market.addon.purchased` does not automatically subscribe your application to `app.market.addon.renewed` or the other add-on events.
+
+Each event is delivered only to the application that sold the add-on. Once an event is subscribed to, its notifications include purchases from existing app installations as well as future installations.
 
 Event Name When It Fires
 
@@ -170,11 +174,13 @@ Event Name When It Fires
 
 `app.market.addon.payment_failed` An automatic monthly renewal payment fails. The add-on remains active during the 5-day grace period while payment is retried.
 
-`app.market.addon.cancelled` A monthly add-on is cancelled by the merchant, the app is uninstalled, or the merchant's app subscription ends.
+`app.market.addon.cancelled` Fires when a merchant cancels a monthly add-on, uninstalls the application, or the merchant's application subscription expires.
 
 `app.market.addon.expired` A cancelled monthly add-on reaches the end of its paid period, or an unpaid add-on passes the 5-day grace period.
 
 `app.market.addon.refunded` Zid refunds an add-on payment.
+
+**Note:** Suspending an application subscription only pauses automatic add-on renewals. Suspension does not trigger `app.market.addon.cancelled `or a separate add-on pause event.
 
 **Note:** Add-on events use a separate purchase-based payload containing the add-on, purchase, billing period, and payment details. They do not use the standard application subscription event payload.
 
@@ -224,7 +230,15 @@ Field Type Description
 
 `payment` object or null Associated payment details, when applicable.
 
-`next_attempt_at` ISO 8601 or null Next retry timestamp for failed renewal payments.
+**Event-specific field: `next_attempt_at`**
+
+The `next_attempt_at` field is included only in `app.market.addon.payment_failed` events.
+
+**Type:** ISO 8601 datetime or `null`.
+
+**Description:** Indicates when the next automatic renewal payment retry is scheduled. Returns `null` when no further retry is scheduled.
+
+For the other five add-on events, the `next_attempt_at` field is **absent from the payload**, not returned as `null`.
 
 #### Payment Object #
 
@@ -721,7 +735,7 @@ Scope needed None — it's dashboard configuration `third_webhook_write`
 
 See Webhooks for store data webhooks.
 
-Modified at 2026-11-10 13:47:45
+Modified at 2026-11-11 08:05:50
 
 Previous
 

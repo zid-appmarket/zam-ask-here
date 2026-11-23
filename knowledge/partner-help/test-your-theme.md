@@ -38,7 +38,7 @@ By leveraging the development store, you can:
 
 - Experience your theme just like an actual merchant would
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1542467158/160a3f6ef1ccffbb8db014ac0118/image+%285%29.png?expires=1794345300&signature=a8cbf3370159eab19a430093fd274669da2badb08191812b108ea4f1b1654024&req=dSUjFM14moBaUfMW1HO4zQRtsRgzdFGCt3xbdjINPX5Qo1%2Fb%2FJdEvRoSLpT%2B%0AsSKMx5hllDmzn6S5lVw%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1542467158/160a3f6ef1ccffbb8db014ac0118/image+%285%29.png?expires=1795451400&signature=cf51a52cbbb5c3b6c7acf9d5ac3985a3cc3f58ba74fbd934a3a4269afd8f892f&req=dSUjFM14moBaUfMW1HO4zQRtsRk0dVWFt3xbdjINPX6j1F3E9%2FxjI1DufIMF%0AgRCh1RbWldvoU3rXVJI%3D%0A)
 
 ## 2. Access Your Development Store
 
@@ -56,7 +56,7 @@ To simulate a fully functional storefront, set up your development store with ne
 
 - This helps you verify how product cards, collections, and filters render.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1542468666/698d7e8d8cb9c2b6fdc75bd56758/image.png?expires=1794345300&signature=6569e15021944353775b953c129d68c6e75710707138b94bdd49b9b0ff62bbed&req=dSUjFM14lYdZX%2FMW1HO4ze6pZlRTgmCpyCPByyWXaPs3SIZWYuDHwFP4NmOo%0AD%2F0hyBlpZtsBbqrwV38%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1542468666/698d7e8d8cb9c2b6fdc75bd56758/image.png?expires=1795451400&signature=adb1ef5bb45c90491fe7e754b6396d298a310027fc6ed76327d6f5af06e4b3f8&req=dSUjFM14lYdZX%2FMW1HO4ze6pZlVUg2SuyCPByyWXaPt%2BEmCfpCHnYSFPqD4Q%0AKfkkxLVjYqTIsmozDGY%3D%0A)
 
 - Activate Zid features in the store
 
@@ -70,7 +70,7 @@ To simulate a fully functional storefront, set up your development store with ne
 
 - Scroll to the **bottom of the page** and click **Upload Theme**
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1542469799/e972ae28669f86d61bb06ef9a08c/image.png?expires=1794345300&signature=d5a9760c82ebf679361d51047bfaba50be73e34384e802b8c98cf47d33d49571&req=dSUjFM14lIZWUPMW1HO4zUE5gtFv0Ag12qWSmCsTJY%2FBoaQ%2FXIA9JW1kB19a%0A5TqtW5Ymnr6ldk9xCEE%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1542469799/e972ae28669f86d61bb06ef9a08c/image.png?expires=1795451400&signature=b6e7e866b775f1b48e82993a616b32e0bf4a4973790d3e1cd177855678569f8e&req=dSUjFM14lIZWUPMW1HO4zUE5gtBo0Qwy2qWSmCsTJY8s2751peCyrhE7Ky1%2F%0Adg%2Fkt4ccwHapVtz6P0I%3D%0A)
 
 Fill out the theme upload form:
 
@@ -80,7 +80,7 @@ Fill out the theme upload form:
 
 - **Theme File** – Upload your `.zip` package created using the Zid Theme Packager.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1542495449/59d3b0512d8d0de812fdbdb42df9/image+%288%29.png?expires=1794345300&signature=c487a0edb2eb5617069303c1f30fb4e49ce18d608a8e8b3b8b8fdf6c74ba8719&req=dSUjFM13mIVbUPMW1HO4zb4nt20eLXpU3u9VWlpZZJDrYlkye5ZtizH87o%2Ff%0AR%2F3JrGwpQPW%2F8IZQrv8%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1542495449/59d3b0512d8d0de812fdbdb42df9/image+%288%29.png?expires=1795451400&signature=4a779113093b7d1b8e5dca7e2e0e1951bb1f07600b158be78b9475ee61281f94&req=dSUjFM13mIVbUPMW1HO4zb4nt2wZLH5T3u9VWlpZZJAQdg1WILFvRpJ%2Bhifn%0AijEfUm23TaMhTgjIl0U%3D%0A)
 
 ## 5. Validate Theme Behavior
 
@@ -116,7 +116,7 @@ Once your theme is uploaded, begin a full-cycle test to validate using the testi
 
 - Adjust store settings and observe how your theme adapts (e.g., store logos, banners, custom CSS, RTL support).
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1542494558/b043c6761380429d77b0dfc2f572/image+%289%29.png?expires=1794345300&signature=dd086dd119c1b722f6ecf93fc62fd5a5dce8e123d8be623ef7395a81cf63ff82&req=dSUjFM13mYRaUfMW1HO4zfGERz2mhjdltsj4BihDp5w5gWJzTAgLaE2dbMLt%0AXv%2FbzUEKp%2BeMpbJK0X8%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1542494558/b043c6761380429d77b0dfc2f572/image+%289%29.png?expires=1795451400&signature=f8e1f2761940af665511d06d3e0eff3365bc5a12fd27518a5332295a95e37d67&req=dSUjFM13mYRaUfMW1HO4zfGERzyhhzNitsj4BihDp5yriWPGUooJ97qFoJtj%0ACYcPj1yneJvqhH1O3uM%3D%0A)
 
 # **Private Themes Flow**
 
@@ -150,10 +150,6 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/11471758-theme-type-and-appearance)
 
-- Create & Update Your Public Theme
-
-(https://help-partner.zid.sa/en/articles/11471777-create-update-your-public-theme)
-
 - Create a Private Theme
 
 (https://help-partner.zid.sa/en/articles/11471800-create-a-private-theme)
@@ -161,3 +157,7 @@ Related Articles
 - Publish Your Theme
 
 (https://help-partner.zid.sa/en/articles/11471817-publish-your-theme)
+
+- New: Explore Your Partner Dashboard
+
+(https://help-partner.zid.sa/en/articles/17731590-new-explore-your-partner-dashboard)

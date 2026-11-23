@@ -94,7 +94,7 @@ Your submission has been accepted, and payment is being processed!
 
 Upon issuance of the monthly payout, the partner can check the details of a single payout, each payout contains all the payments which can be accessed by clicking on the **Download Report** icon as shown below:
 
-(https://downloads.intercomcdn.com/i/o/918628355/df6d0e716c7f0b5d0d97624d/Download+Report.png?expires=1794345300&signature=29457f4071873af00e0e68ccdd4ff7116c3fb55b31dabc24b91566c9b995f69e&req=fSEvEMt2noRaFb4f3HP0gAb%2BCg9XDI2sVeMKhodsymRYLurhnyhxtrpspEMa%0Av157LwI42dK0kf%2FGtQ%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/918628355/df6d0e716c7f0b5d0d97624d/Download+Report.png?expires=1795451400&signature=4709723a4b46af50e11c99073f5c8fda2e4e22731631a8908c151d1d5fe13d37&req=fSEvEMt2noRaFb4f3HP0gAb%2BCwhWCIqsVeMKhodsymT9V13Vghoe%2BpwJ%2B5M3%0AAv%2BybtdicuRdynbVag%3D%3D%0A)
 
 The payment initial status is **Pending**
 
@@ -102,7 +102,7 @@ The default status for payouts is "Pending", in this phase, you need to initiate
 
 **Action:** Once amounts has been confirmed, please upload and submit your VAT invoice by clicking on the Payout Details icon. Partners located outside of KSA must include withholding tax before submission.
 
-(https://downloads.intercomcdn.com/i/o/918639202/889b49555349305787cda6f3/2023-12-27+00.17.34.gif?expires=1794345300&signature=982da7168c5bf0d0595824d73813545621a73d2dee171a9e8d5114fd837a8b64&req=fSEvEMp3n4FdFb4f3HP0gLowLt85mt3ZFncfqfDri6UycicbilL6S5KkspGI%0ABUKKzPn5nowlOgf8IQ%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/918639202/889b49555349305787cda6f3/2023-12-27+00.17.34.gif?expires=1795451400&signature=cd56efd44cda102701755a2a019f598dcf53b8b50d8ebaac446069505259a458&req=fSEvEMp3n4FdFb4f3HP0gLowL9g4ntrZFncfqfDri6XXcoBIQ3qAwCfFLso%2F%0AmOJgkDbpV4B7%2FYhmaA%3D%3D%0A)
 
 The payment status is **In Review**
 
@@ -126,7 +126,7 @@ You can access payment information and receipts at any time. 🎉
 
 In case of concerns or issues with the report, contact our team through the support chat widget, navigating to **Finance Concerns → Payout Issue**.
 
-(https://downloads.intercomcdn.com/i/o/918631428/61ccc82092779748f5197a89/2023-12-27+00.00.38.gif?expires=1794345300&signature=c5b425c99de0477bbf3e21eb4bfaba419264a950b0f8ae57a2367e6881bdb7a5&req=fSEvEMp%2FmYNXFb4f3HP0gJWydlW08IdVjBHUNX9qosKswkwyWOU4GHy6QSVZ%0A2TZUtoGLsUQgLZzwTg%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/918631428/61ccc82092779748f5197a89/2023-12-27+00.00.38.gif?expires=1795451400&signature=0305ab002e9364036703e3c9bce110568b1aaeb1208b741e0439366bff6d14fe&req=fSEvEMp%2FmYNXFb4f3HP0gJWyd1K19IBVjBHUNX9qosLo9H79%2Fs5FVcbF2%2F3m%0AeqM40o4r870xyG8rNw%3D%3D%0A)
 
 Related Articles
 

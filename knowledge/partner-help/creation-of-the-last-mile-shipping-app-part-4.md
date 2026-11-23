@@ -80,10 +80,6 @@ When inspecting this Webhook, we will find that it contains a highly important d
 
 Related Articles
 
-- Guide to Integrating Shipping Systems with the Zid Platform
-
-(https://help-partner.zid.sa/en/articles/15544622-guide-to-integrating-shipping-systems-with-the-zid-platform)
-
 - Creation of the Last Mile Shipping App part 1
 
 (https://help-partner.zid.sa/en/articles/15545034-creation-of-the-last-mile-shipping-app-part-1)
@@ -95,6 +91,10 @@ Related Articles
 - Creation of the Last Mile Shipping App part 3
 
 (https://help-partner.zid.sa/en/articles/15545496-creation-of-the-last-mile-shipping-app-part-3)
+
+- Creating and Setting Up a Shipping & Fulfillment App - part 2
+
+(https://help-partner.zid.sa/en/articles/15545648-creating-and-setting-up-a-shipping-fulfillment-app-part-2)
 
 - Creating and Setting Up a Shipping & Fulfillment App - part 3
 

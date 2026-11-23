@@ -7,7 +7,7 @@ title: "Managing your app's support channels on Zid App Market"
 product: zam
 audience: all
 status: verified
-updated: 2026-09-24
+updated: 2026-11-23
 source_url: https://help-partner.zid.sa/en/articles/17129233-managing-your-app-s-support-channels-on-zid-app-market
 tags: [from-docs-site, partner-help-center]
 language: en
@@ -18,19 +18,23 @@ Every app listing on Zid App Market includes a set of support-contact fields tha
 
 These are listing fields only — they do not affect your app's API integration, webhooks, OAuth scopes, or embedded-app behavior.
 
-## The contact fields
+**Note:** Support contact channels are separate from tickets assigned by Zid. You can manage assigned merchant support requests under **Partner Dashboard → Support Tickets**, where you can reply to merchants, escalate issues, and submit resolutions.
+
+For more information, see Manage Merchant Support Tickets (https://help-partner.zid.sa/en/articles/18488807-manage-merchant-support-tickets).
+
+## **The contact fields**
 
 Alongside your app's email and website, the submission form includes the following fields:
 
-Field
+**Field**
 
-Requirement
+**Requirement**
 
-Purpose
+**Purpose**
 
 Privacy Policy URL
 
-**Always required**
+Always required
 
 Merchant-facing privacy terms for your app
 
@@ -52,7 +56,7 @@ Optional
 
 Self-service answers before contacting you
 
-## The conditional requirement rule
+## **The conditional requirement rule**
 
 Phone number and Support channel URL are linked: **at least one of the two must be filled in.**
 
@@ -68,7 +72,7 @@ Each becomes mandatory when the other is empty. In practice:
 
 Privacy Policy URL is required independently of this rule.
 
-## How to fill them in
+## **How to fill them in**
 
 - Open **Partner Dashboard → Apps** and select the app.
 
@@ -134,6 +138,6 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/12867648-oddo-integration-arabic-session-on-how-to-connect-odoo-with-zid-app-market-apis)
 
-- Connect your Zid partner account to your AI assistant with Partner MCP
+- Manage Merchant Support Tickets
 
-(https://help-partner.zid.sa/en/articles/17430435-connect-your-zid-partner-account-to-your-ai-assistant-with-partner-mcp)
+(https://help-partner.zid.sa/en/articles/18488807-manage-merchant-support-tickets)

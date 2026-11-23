@@ -26,7 +26,7 @@ language: en
 
 - Select **Landing Pages**. This will direct you to the landing page dashboard where you can manage your created landing pages.
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/1612677149/11d42d58bdaa6de174f53d3f7ae8/image+%2844%29.png?expires=1794345300&signature=9397cfadf987d0a695139a9752fcc1e7249e123957ca5dd1b795cafd789db972&req=dSYmFM95moBbUPMW1HO4zTDxDWvUQAcTjcITdfnSWpdTkJkh24Qf7jWmauK6%0ANEpiPQyJwNZeD0G1gsw%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/1612677149/11d42d58bdaa6de174f53d3f7ae8/image+%2844%29.png?expires=1795451400&signature=c9beb5112078ff9fadbcc4ca34f899b25c332e4f43f14b1f0b2164c9d88ac594&req=dSYmFM95moBbUPMW1HO4zTDxDWrTQQMUjcITdfnSWpfRCgHcACXtp9rJYKr%2B%0AR%2FSyOANfnk%2B04UYjohA%3D%0A)
 
 # **Pre-Publishing Checklist**
 

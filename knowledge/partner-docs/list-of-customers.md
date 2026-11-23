@@ -7,7 +7,7 @@ title: "List Customers"
 product: zam
 audience: all
 status: verified
-updated: 2026-11-10
+updated: 2026-11-23
 source_url: https://docs.zid.sa/list-of-customers
 tags: [from-docs-site, partner-docs]
 language: en
@@ -25,6 +25,36 @@ Retrieves a paginated list of store customers, including customer details, order
 🔑Scopes
 
 `third_customers_read` - Customers Read
+
+## Read the full list (cursor pagination) #
+
+Use `after` instead of `page` to read every customer. Each cursor call costs the same no matter how deep you are in the list, while high page numbers get slower and can time out on large stores.
+
+1 .
+
+**First call:** `GET /v1/managers/store/customers?after=0&per_page=1000`
+
+2 .
+
+**Next calls:** `?after=<next_cursor>&per_page=1000`, where `<next_cursor>` is the value from the previous response.
+
+3 .
+
+**Stop** when a response returns fewer customers than `per_page`, or `next_cursor` is `null`.
+
+## Rules for `after` #
+
+Do not send `page`, `order_by` or `sort_by` together with `after`. The request is refused.
+
+`per_page` accepts 1 to 1000 (default 15).
+
+Results come back oldest first. `next_cursor` is a list position, not a customer `id`: always send back the value you received.
+
+Cursor responses return `customers` and `next_cursor` only. `grand_total` and the customer counts are not returned.
+
+To read only customers added in a date range (for example a daily sync), send both `date_from` and `date_to` (YYYY-MM-DD). `date_from` on its own has no effect.
+
+Calls without `after` work exactly as before.
 
 ## Request
 
@@ -126,7 +156,7 @@ Response Response Example
 } `
 ```
 
-Modified at 2026-05-18 16:34:34
+Modified at 2026-11-16 22:17:34
 
 Previous
 

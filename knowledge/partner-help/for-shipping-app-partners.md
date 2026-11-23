@@ -96,7 +96,7 @@ Your payment has been received, and payout is settled!
 
 Upon issuance of the monthly payout, the partner can check the details of a single payout, each payout contains all the payments which can be accessed by clicking on the **Download Report** icon as shown below:
 
-(https://downloads.intercomcdn.com/i/o/918628355/df6d0e716c7f0b5d0d97624d/Download+Report.png?expires=1794345300&signature=29457f4071873af00e0e68ccdd4ff7116c3fb55b31dabc24b91566c9b995f69e&req=fSEvEMt2noRaFb4f3HP0gAb%2BCg9XDI2sVeMKhodsymRYLurhnyhxtrpspEMa%0Av157LwI42dK0kf%2FGtQ%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/918628355/df6d0e716c7f0b5d0d97624d/Download+Report.png?expires=1795451400&signature=4709723a4b46af50e11c99073f5c8fda2e4e22731631a8908c151d1d5fe13d37&req=fSEvEMt2noRaFb4f3HP0gAb%2BCwhWCIqsVeMKhodsymT9V13Vghoe%2BpwJ%2B5M3%0AAv%2BybtdicuRdynbVag%3D%3D%0A)
 
 The payment initial status is **Pending**
 
@@ -110,7 +110,7 @@ Upon invoice submission by our finance team, the payment status transitions to "
 
 **Action:** Review the uploaded invoice, make the required payment, and upload the receipt to confirm the settlement.
 
-(https://downloads.intercomcdn.com/i/o/919211932/19ea43c702cd25fbd8f60a7c/2023-12-27+18.53.35.gif?expires=1794345300&signature=8bfcde8835ee3d402f56875257f48c5a15b569f4bc62eaeba19f1cf14fc225e9&req=fSEuFMh%2FlIJdFb4f3HP0gPYpAyLkk1fIbo%2BpW3aezok8chWNkAKf%2BNK8kfnf%0A%2BJCrL%2FWCVBBEMhppig%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/919211932/19ea43c702cd25fbd8f60a7c/2023-12-27+18.53.35.gif?expires=1795451400&signature=61d2525258690116fd2a2d203f3f992430125ec69657cad9837553798d6b9409&req=fSEuFMh%2FlIJdFb4f3HP0gPYpAiXll1DIbo%2BpW3aezon5GcHQjViZpVKqb9DX%0ARDZXFd1eAjEfETE7bw%3D%3D%0A)
 
 The payment status is **In Review**
 
@@ -124,7 +124,7 @@ In case of identified invoice issues or collection errors, our finance team may 
 
 **Action:** Review the reason for rejection, upload a new invoice, and proceed with resubmission.
 
-(https://downloads.intercomcdn.com/i/o/919218652/1060b7b4012e91eccd39f2d9/2023-12-27+19.00.55.gif?expires=1794345300&signature=cb08d6d4450dd202eacc453e61d51af6a73d5e79e4ee6d4aca6c153557b37894&req=fSEuFMh2m4RdFb4f3HP0gL9X5zf9MALpRMdSCaLTp3D3f8d20D3v0HzQ3A5X%0AksTa%2BXRsKxo6KeOwVw%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/919218652/1060b7b4012e91eccd39f2d9/2023-12-27+19.00.55.gif?expires=1795451400&signature=6012feca514e8cdd0e14a7afcec5791dbc575db9e4019f511dafb646a43b08d0&req=fSEuFMh2m4RdFb4f3HP0gL9X5jD8NAXpRMdSCaLTp3D5h9Q8QS4yj5w7Ye2%2F%0AiNVAd9z7fXGMIuLhZA%3D%3D%0A)
 
 The payment status is **Settled**
 
@@ -136,7 +136,7 @@ You can access payment information and receipts at any time. 🎉
 
 In case of concerns or issues with the report, contact our team through the support chat widget, navigating to **Finance Concerns → Payout Issue**.
 
-(https://downloads.intercomcdn.com/i/o/918631428/61ccc82092779748f5197a89/2023-12-27+00.00.38.gif?expires=1794345300&signature=c5b425c99de0477bbf3e21eb4bfaba419264a950b0f8ae57a2367e6881bdb7a5&req=fSEvEMp%2FmYNXFb4f3HP0gJWydlW08IdVjBHUNX9qosKswkwyWOU4GHy6QSVZ%0A2TZUtoGLsUQgLZzwTg%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/918631428/61ccc82092779748f5197a89/2023-12-27+00.00.38.gif?expires=1795451400&signature=0305ab002e9364036703e3c9bce110568b1aaeb1208b741e0439366bff6d14fe&req=fSEvEMp%2FmYNXFb4f3HP0gJWyd1K19IBVjBHUNX9qosLo9H79%2Fs5FVcbF2%2F3m%0AeqM40o4r870xyG8rNw%3D%3D%0A)
 
 ​
 

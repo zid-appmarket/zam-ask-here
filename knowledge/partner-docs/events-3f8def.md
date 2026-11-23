@@ -7,7 +7,7 @@ title: "Events"
 product: zam
 audience: all
 status: verified
-updated: 2026-11-10
+updated: 2026-11-23
 source_url: https://docs.zid.sa/events-878234m0
 tags: [from-docs-site, partner-docs]
 language: en
@@ -47,6 +47,32 @@ The table below lists the subscription events along with their descriptions. Eac
 `app.market.application.rated` Triggered when a merchant submits a rating or review for the app.
 
 `app.market.private.plan.request` Triggered when a merchant submits a request for a private plan.
+
+### Webhook Behavior for Offer-Aware Plan Changes #
+
+Offer-aware plan changes reuse existing subscription webhook events. No new webhook events are introduced.
+
+**Scenario** **Webhook Event** **Behavior**
+
+**Switch to an offer plan** `app.market.subscription.upgrade` Sent with `status: upgrade`, even if the offer plan is cheaper. `plan_name` identifies the offer plan, `old_plan_name` identifies the paused plan, and `end_date` reflects the offer's end date.
+
+**Automatic resumption** `app.market.subscription.renew` Sent within approximately 5 minutes after the offer ends, with `status: renew` and `amount_paid: 0`. `plan_name` identifies the resumed plan, `old_plan_name` identifies the offer plan, and `end_date` includes the remaining paused days.
+
+**Downgrade during an active offer** None Blocked at checkout. However, moving to a lower-priced plan with its own offer triggers `upgrade`, followed by `renew` when the paused plan resumes.
+
+**Same-plan offer or subscription extension** `app.market.subscription.renew` Sent with `status: renew`. For offer redemption, `end_date` includes the new period and bonus days. When an earlier plan is paused behind the offer, its `start_date` remains unchanged and `end_date` is extended.
+
+**Offer refund** `app.market.subscription.refunded` The normal refund event is sent. The app is uninstalled without a separate `uninstall` event. Any paused plan is cancelled rather than resumed, so no subsequent `renew` event is sent.
+
+**Offer expiry** Depends on subscription state If a paused plan exists, it resumes through `renew`. Otherwise, the normal lifecycle applies: renewal at the regular price or `warning` → `suspended` → `expired`.
+
+**Important:**
+
+When a paused subscription resumes after an offer, `warning`, `suspended`, and `expired` events are **not sent for the ending offer**.
+
+When a partner's offer expires or is deleted, no webhook is triggered solely by that change. Existing subscriptions retain their dates.
+
+Partners should check `event_name`, `status`, `plan_name`, `old_plan_name`, and `end_date` to identify the resulting subscription state.
 
 ## Subscribing to App Subscription Events #
 
@@ -543,7 +569,7 @@ If the payment fails → `app.market.subscription.usage_based.payment_failure` i
 
 Both events are delivered asynchronously after the payment attempt resolves.
 
-Modified at 2026-06-30 11:22:55
+Modified at 2026-11-18 09:17:50
 
 Previous
 

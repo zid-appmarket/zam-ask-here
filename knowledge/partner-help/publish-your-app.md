@@ -100,7 +100,7 @@ You can preview how merchants discover and compare your app on the Zid App Marke
 
 As soon as your application is ready, send it to review from your partner dashboard
 
-(https://downloads.intercomcdn.com/i/o/903208155/dce8a4300ef434447d7c1364/Screenshot+2023-12-07+at+1.41.09%E2%80%AFPM.png?expires=1794346200&signature=d2c08f85d6bbe126fa5d124eb85d97640b40ff8b229be5bfe03e310b7e3dab90&req=fSAkFMl2nIRaFb4f3HP0gKyYOXu1shH7l20t013GrIheuoimuYhXbUySJ64B%0AyTA%2FVEP3xx4TR1tF2w%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/903208155/dce8a4300ef434447d7c1364/Screenshot+2023-12-07+at+1.41.09%E2%80%AFPM.png?expires=1795451400&signature=362bbe5fc97670b6f16e010492003330fa4b8439c22f6e22a140a0d2f498637a&req=fSAkFMl2nIRaFb4f3HP0gKyYOHy0tRf7l20t013GrIiim7Cz7%2B3dEA9SudlY%0AaTJlP7jFdCeShitNIg%3D%3D%0A)
 
 # 3. Send testing requirements to our team
 
@@ -128,7 +128,7 @@ To do so:
 
 - You'll be contacted in your dashboard to follow up this phase with you.
 
-(https://downloads.intercomcdn.com/i/o/903242599/317bc0176a9c5debdd437ce7/support.png?expires=1794346200&signature=29c6922a28b08263263e8d8283cbc54af3d35714ba8d37d468e17cceac177b73&req=fSAkFM18mIhWFb4f3HP0gA66TsupLfND7QEJGorD9XWiSA5q0QgukgaHvvxU%0AdRfne07jxotmDy2X%2FA%3D%3D%0A)
+(https://downloads.intercomcdn.com/i/o/903242599/317bc0176a9c5debdd437ce7/support.png?expires=1795451400&signature=e02e45ddcd923912aafdb11e8c4b1e4c194dc040da53602470f92c272dada79a&req=fSAkFM18mIhWFb4f3HP0gA66T8yoKvVD7QEJGorD9XUikJ3N98LusuxfWN9a%0AlcQhJ7Vn50RYZDg%2FdA%3D%3D%0A)
 
 Related Articles
 

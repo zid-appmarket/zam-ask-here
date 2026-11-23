@@ -40,7 +40,7 @@ Landing pages that are not covered by the VAT automatic invoice flow follow a se
 
 ## Where to Access Payouts
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734084730/cd8e217f108e6c0154470fb7c82a/image.png?expires=1794345300&signature=b6ed93b28276eb6d9b187ee7d7d89ba04f411590020bb87f578142565c8f1321&req=dickEsl2mYZcWfMW1HO4zVtqhrLor9Yjxf2G0inYAfVfG4c%2B7CGisAKomFuN%0ArROHiRws1glKUI0Elrs%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734084730/cd8e217f108e6c0154470fb7c82a/image.png?expires=1795451400&signature=2fcc4180fdd0387d9ca7d44226943922acdd6f9b4d04ab43d60aa15fd19bb0c8&req=dickEsl2mYZcWfMW1HO4zVtqhrPvrtIkxf2G0inYAfUN2MIjm1pPsXom9tNH%0AZ6y%2BXzzyddk49Hx8J74%3D%0A)
 
 - Log in to the Partner Dashboard (https://partners.zid.sa/).
 
@@ -136,7 +136,7 @@ For example, if you have three VAT-eligible landing pages, three separate invoic
 
 ## View or Download Your Invoice
 
-(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734085145/7fb05637256f1eadd1044f973c5e/image.png?expires=1794345300&signature=5f0bb5e915483ee9424cd28afb3cd9fb4936b934f23d30faa69a1db111fda639&req=dickEsl2mIBbXPMW1HO4zXyIeBhaIHMnSwWXjSTBrjr8RdycYRuzE0T3mbZO%0AuUMKcbDk19ZQkimrqM4%3D%0A)
+(https://downloads.intercomcdn.com/i/o/u7vuis4c/2734085145/7fb05637256f1eadd1044f973c5e/image.png?expires=1795451400&signature=e584520f6fd8f0ef06769ac7150de7e0d540b794e4e7afde66301c2816f22674&req=dickEsl2mIBbXPMW1HO4zXyIeBldIXcgSwWXjSTBrjpzzaYWUzT3zAlqqdV1%0AWdMA0fy3n4CKOaXpHqA%3D%0A)
 
 To access an automatically generated invoice:
 

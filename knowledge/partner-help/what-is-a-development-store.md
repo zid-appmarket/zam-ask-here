@@ -18,10 +18,6 @@ A development store is a private store that you can use to test your apps AND th
 
 Related Articles
 
-- Create your partner account
-
-(https://help-partner.zid.sa/en/articles/8635315-create-your-partner-account)
-
 - Theme Development Cycle
 
 (https://help-partner.zid.sa/en/articles/8683883-theme-development-cycle)
@@ -37,3 +33,7 @@ Related Articles
 - Theme Type and Appearance
 
 (https://help-partner.zid.sa/en/articles/11471758-theme-type-and-appearance)
+
+- Create a Private Theme
+
+(https://help-partner.zid.sa/en/articles/11471800-create-a-private-theme)

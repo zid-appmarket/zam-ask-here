@@ -24,14 +24,14 @@ Related Articles
 
 (https://help-partner.zid.sa/en/articles/8716995-integration-and-development-cycle)
 
+- Zid App Market: App Review Requirements Checklist
+
+(https://help-partner.zid.sa/en/articles/10658329-zid-app-market-app-review-requirements-checklist)
+
 - Theme Type and Appearance
 
 (https://help-partner.zid.sa/en/articles/11471758-theme-type-and-appearance)
 
-- Oddo Integration - Arabic session on how to connect Odoo with Zid App Market APIs
+- Accepting Zid Partner Terms & Conditions
 
-(https://help-partner.zid.sa/en/articles/12867648-oddo-integration-arabic-session-on-how-to-connect-odoo-with-zid-app-market-apis)
-
-- Guide to Integrating Shipping Systems with the Zid Platform
-
-(https://help-partner.zid.sa/en/articles/15544622-guide-to-integrating-shipping-systems-with-the-zid-platform)
+(https://help-partner.zid.sa/en/articles/18346966-accepting-zid-partner-terms-conditions)

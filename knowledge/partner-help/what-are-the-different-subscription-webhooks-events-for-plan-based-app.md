@@ -7,30 +7,32 @@ title: "What are the different subscription webhooks events for plan-based apps?
 product: zam
 audience: all
 status: verified
-updated: 2026-04-23
+updated: 2026-11-17
 source_url: https://help-partner.zid.sa/en/articles/8486220-what-are-the-different-subscription-webhooks-events-for-plan-based-apps
 tags: [from-docs-site, partner-help-center]
 language: en
 ---
-Zid supports different webhooks subscription events that you have to subscribe to from the partner account. Read more here (https://help-partner.zid.sa/en/articles/8718248-public-app-management)
+Zid provides subscription webhook events to notify partners about app subscription activities, including activation, renewal, upgrades, and expiration.
+
+For the complete list of events, descriptions, and payload examples, see the App Subscription Events documentation (https://docs.zid.sa/events-878234m0).
 
 Related Articles
-
-- What webhook events does Zid support?
-
-(https://help-partner.zid.sa/en/articles/8486213-what-webhook-events-does-zid-support)
 
 - Old: Explore the Previous Partner Dashboard
 
 (https://help-partner.zid.sa/en/articles/8635324-old-explore-the-previous-partner-dashboard)
 
-- Create a shipping app or Fulfillment App
-
-(https://help-partner.zid.sa/en/articles/8637270-create-a-shipping-app-or-fulfillment-app)
-
 - Create a Public App
 
 (https://help-partner.zid.sa/en/articles/8637655-create-a-public-app)
+
+- Public App Management
+
+(https://help-partner.zid.sa/en/articles/8718248-public-app-management)
+
+- Creation of the Last Mile Shipping App part 3
+
+(https://help-partner.zid.sa/en/articles/15545496-creation-of-the-last-mile-shipping-app-part-3)
 
 - New: Explore Your Partner Dashboard
 
